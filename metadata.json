@@ -1,0 +1,6 @@
+{
+  "name": "رايات نجد للتشجير",
+  "description": "منصة رقمية متقدمة لتطوير المشهد الحضري، والتشجير، والاستدامة البيئية في المملكة العربية السعودية.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

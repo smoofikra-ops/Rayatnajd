@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Almarai", ui-sans-serif, system-ui, sans-serif;
+
+  --color-primary: #0E5A36;
+  --color-primary-light: #168a53;
+  --color-primary-dark: #07331e;
+  --color-secondary: #2E8B57;
+  --color-accent-gold: #D4AF37;
+  --color-accent-light: #e6c86e;
+
+  --color-bg-primary: var(--bg-primary);
+  --color-bg-secondary: var(--bg-secondary);
+  --color-text-main: var(--text-main);
+  --color-text-muted: var(--text-muted);
+}
+
+@layer base {
+  :root, .light {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8fafc;
+    --text-main: #0f172a;
+    --text-muted: #475569;
+  }
+  
+  .dark {
+    --bg-primary: #020617;
+    --bg-secondary: #0f172a;
+    --text-main: #ffffff;
+    --text-muted: #94a3b8;
+  }
+
+  body {
+    @apply font-sans text-text-main overflow-x-hidden transition-colors duration-300 bg-bg-primary;
+    min-height: 100vh;
+  }
+}
+
+.premium-card {
+  @apply bg-white dark:bg-bg-secondary rounded-[24px] border border-black/5 dark:border-white/5 
+         shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] dark:shadow-[0_4px_20px_-4px_rgba(0,0,0,0.3)]
+         transition-all duration-300 ease-out
+         hover:-translate-y-1 hover:scale-[1.02] 
+         hover:shadow-[0_12px_30px_-8px_rgba(14,90,54,0.15)] dark:hover:shadow-[0_12px_30px_-8px_rgba(14,90,54,0.3)]
+         hover:border-primary/20 dark:hover:border-primary/30;
+}
+
+.glass {
+  @apply bg-bg-secondary/70 backdrop-blur-md border border-text-main/10;
+}
+
+.glass-green {
+  @apply bg-primary-dark/30 backdrop-blur-md border border-primary/30;
+}
+
+.light .glass-green {
+  @apply bg-primary-light/10;
+}
+
+.text-gradient-gold {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-accent-gold to-accent-light;
+}
+
+.text-gradient-green {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-light to-secondary;
+}
+
+@layer utilities {
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  @keyframes marquee-rtl {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(50%); }
+  }
+  
+  .animate-marquee {
+    animation: marquee-rtl 40s linear infinite;
+  }
+  
+  .animate-marquee-reverse {
+    animation: marquee 40s linear infinite;
+  }
+  
+  [dir="ltr"] .animate-marquee {
+    animation: marquee 40s linear infinite;
+  }
+
+  [dir="ltr"] .animate-marquee-reverse {
+    animation: marquee-rtl 40s linear infinite;
+  }
+
+  .pause-marquee:hover {
+    animation-play-state: paused;
+  }
+
+  @keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    15% { transform: scale(1.15); color: var(--color-primary-light); }
+    30% { transform: scale(1); }
+    45% { transform: scale(1.15); color: var(--color-primary-light); }
+    60% { transform: scale(1); }
+  }
+  
+  .animate-heartbeat {
+    animation: heartbeat 2.5s ease-in-out infinite;
+    display: inline-block;
+    transform-origin: center;
+  }
+
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+
+  .rotate-x-12 {
+    transform: rotateX(12deg);
+  }
+
+  .-rotate-y-12 {
+    transform: rotateY(-12deg);
+  }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes gradient-wave {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.text-gradient-animated {
+  background: linear-gradient(-45deg, var(--color-primary), var(--color-accent-gold), var(--color-secondary), var(--color-primary-light));
+  background-size: 300% 300%;
+  animation: gradient-wave 6s ease infinite;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.animate-gradient-x {
+  background-size: 200% auto;
+  animation: gradient-wave 5s ease infinite;
+}
+
+@keyframes gradient-wave-bg {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.bg-gradient-animated {
+  background: linear-gradient(-45deg, var(--color-primary), #0a9b6c, var(--color-accent-gold), var(--color-primary-dark));
+  background-size: 300% 300%;
+  animation: gradient-wave-bg 12s ease infinite;
+}
+
+@layer utilities {
+  @keyframes gradient-wave {
+    0% { background-position: 100% 50%; }
+    50% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+  }
+  .animate-gradient-wave {
+    background-size: 200% auto;
+    animation: gradient-wave 4s ease-in-out infinite;
+  }
+}
