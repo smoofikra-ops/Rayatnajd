@@ -11,13 +11,33 @@ export default function ContactForm() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate API call
+    
+    const form = e.target as HTMLFormElement;
+    const name = (form.elements.namedItem('name') as HTMLInputElement)?.value || '';
+    const phone = (form.elements.namedItem('phone') as HTMLInputElement)?.value || '';
+    const clientType = (form.elements.namedItem('clientType') as HTMLSelectElement)?.value || '';
+    const service = (form.elements.namedItem('service') as HTMLSelectElement)?.value || '';
+    const message = (form.elements.namedItem('message') as HTMLTextAreaElement)?.value || '';
+
+    const serviceText = form.querySelector(`#service option[value="${service}"]`)?.textContent || service;
+    const clientTypeText = form.querySelector(`#clientType option[value="${clientType}"]`)?.textContent || clientType;
+
+    const text = `طلب جديد عبر الموقع الإلكتروني:
+الاسم: ${name}
+رقم الجوال: ${phone}
+نوع العميل: ${clientTypeText}
+الخدمة المطلوبة: ${serviceText}
+الرسالة: ${message}`;
+
+    const whatsappUrl = `https://wa.me/966501234567?text=${encodeURIComponent(text)}`;
+
     setTimeout(() => {
       setIsSubmitting(false);
       setSuccess(true);
-      setTimeout(() => setSuccess(false), 3000);
-      (e.target as HTMLFormElement).reset();
-    }, 1500);
+      window.open(whatsappUrl, '_blank');
+      setTimeout(() => setSuccess(false), 5000);
+      form.reset();
+    }, 800);
   };
 
   return (
@@ -124,22 +144,46 @@ export default function ContactForm() {
                 </div>
               </div>
 
-              <div className="space-y-2">
-                <label htmlFor="service" className="text-sm font-semibold text-text-main">
-                  {t("الخدمة المطلوبة", "Requested Service")}
-                </label>
-                <select
-                  id="service"
-                  required
-                  defaultValue=""
-                  className="w-full bg-bg-primary border border-text-main/10 rounded-xl px-4 py-3 text-text-main focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-                >
-                  <option value="" disabled>{t("اختر الخدمة", "Select a service")}</option>
-                  <option value="landscaping">{t("تصميم وتنسيق الحدائق", "Landscape Design")}</option>
-                  <option value="tree-planting">{t("زراعة الأشجار", "Tree Planting")}</option>
-                  <option value="maintenance">{t("الصيانة والعناية", "Maintenance & Care")}</option>
-                  <option value="other">{t("أخرى", "Other")}</option>
-                </select>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="space-y-2">
+                  <label htmlFor="clientType" className="text-sm font-semibold text-text-main">
+                    {t("نوع العميل", "Client Type")}
+                  </label>
+                  <select
+                    id="clientType"
+                    required
+                    defaultValue=""
+                    className="w-full bg-bg-primary border border-text-main/10 rounded-xl px-4 py-3 text-text-main focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                  >
+                    <option value="" disabled>{t("اختر نوع العميل", "Select client type")}</option>
+                    <option value="individual">{t("فرد", "Individual")}</option>
+                    <option value="company">{t("شركة", "Company")}</option>
+                    <option value="government">{t("جهة حكومية", "Government Entity")}</option>
+                    <option value="contractor">{t("مقاول", "Contractor")}</option>
+                    <option value="other">{t("أخرى", "Other")}</option>
+                  </select>
+                </div>
+                <div className="space-y-2">
+                  <label htmlFor="service" className="text-sm font-semibold text-text-main">
+                    {t("الخدمة المطلوبة", "Requested Service")}
+                  </label>
+                  <select
+                    id="service"
+                    required
+                    defaultValue=""
+                    className="w-full bg-bg-primary border border-text-main/10 rounded-xl px-4 py-3 text-text-main focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                  >
+                    <option value="" disabled>{t("اختر الخدمة", "Select a service")}</option>
+                    <option value="landscaping">{t("تصميم وتنسيق الحدائق", "Landscape Design")}</option>
+                    <option value="tree-planting">{t("زراعة الأشجار", "Tree Planting")}</option>
+                    <option value="maintenance">{t("الصيانة والعناية", "Maintenance & Care")}</option>
+                    <option value="irrigation">{t("شبكات الري", "Irrigation Systems")}</option>
+                    <option value="hardscaping">{t("الهاردسكيب والممرات", "Hardscaping & Pathways")}</option>
+                    <option value="nurseries">{t("توريد النباتات والأشجار", "Plants & Trees Supply")}</option>
+                    <option value="consultation">{t("استشارات زراعية", "Agricultural Consultation")}</option>
+                    <option value="other">{t("أخرى", "Other")}</option>
+                  </select>
+                </div>
               </div>
 
               <div className="space-y-2">

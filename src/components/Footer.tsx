@@ -9,27 +9,23 @@ const FooterAccordion = ({ title, children, defaultOpen = false }: { title: stri
   return (
     <div className="border-b border-white/10 md:border-none py-4 md:py-0">
       <button 
-        className="flex items-center justify-between w-full md:cursor-auto text-right"
+        className="flex items-center justify-between w-full md:cursor-auto text-right md:pointer-events-none"
         onClick={() => setIsOpen(!isOpen)}
         aria-expanded={isOpen}
       >
         <h3 className="text-white font-semibold md:mb-6">{title}</h3>
         <ChevronDown className={`w-5 h-5 md:hidden transition-transform ${isOpen ? 'rotate-180': ''}`} />
       </button>
-      <AnimatePresence>
-        {(isOpen || window.innerWidth >= 768) && (
-          <motion.div 
-            initial={window.innerWidth < 768 ? { height: 0, opacity: 0 } : false}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            className="md:!h-auto md:!opacity-100 overflow-hidden"
-          >
-            <div className="pt-4 md:pt-0">
-              {children}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      
+      {/* Mobile view (collapsible) */}
+      <div className={`md:hidden overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-[500px] opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
+        {children}
+      </div>
+
+      {/* Desktop view (always visible) */}
+      <div className="hidden md:block">
+        {children}
+      </div>
     </div>
   );
 };
@@ -99,8 +95,8 @@ export default function Footer() {
                 <Linkedin className="w-4 h-4" />
               </a>
               <a href="#" className="w-10 h-10 rounded-full flex items-center justify-center transition-all hover:scale-110 shadow-lg bg-[#FFFC00] text-black hover:brightness-110">
-                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12.21,1.52A5.15,5.15,0,0,0,8.27,3a4.7,4.7,0,0,0-1.42,3.33,7,7,0,0,0,.15,1.55c.2.82.52,1.6.86,2.37a8.55,8.55,0,0,1,.87,2.22,1.21,1.21,0,0,1-.06.75A2.32,2.32,0,0,1,7.21,14c-1.21.36-2.48.51-3.69.74A1.66,1.66,0,0,0,2.15,16a1.32,1.32,0,0,0,.19,1.07A1.56,1.56,0,0,0,3.61,18a6.56,6.56,0,0,0,2.6-.45,4.71,4.71,0,0,1,2.06-.21,1.91,1.91,0,0,1,1.32.9,1.83,1.83,0,0,1,.19,1.14c-.06.58-.2,1.15-.36,1.72a2.38,2.38,0,0,0,1.59,2.83,5.17,5.17,0,0,0,3,.14,2.38,2.38,0,0,0,1.76-2.55c-.13-.67-.31-1.34-.41-2a1.86,1.86,0,0,1,1.48-2.18,4.72,4.72,0,0,1,2.2.14,6.57,6.57,0,0,0,2.5.55A1.56,1.56,0,0,0,21.66,17a1.32,1.32,0,0,0,.19-1.07A1.66,1.66,0,0,0,20.48,14.7c-1.21-.23-2.48-.38-3.69-.74a2.32,2.32,0,0,1-1.46-.77,1.21,1.21,0,0,1-.06-.75,8.55,8.55,0,0,1,.87-2.22c.34-.77.66-1.55.86-2.37a7,7,0,0,0,.15-1.55A4.7,4.7,0,0,0,15.73,3,5.15,5.15,0,0,0,11.79,1.52Z"/>
+                <svg className="w-5 h-5" viewBox="0 0 49.73 47.14" fill="currentColor">
+                  <path d="M24.87,0a15,15,0,0,0-5.88,1.21,11,11,0,0,0-4,2.83A9.23,9.23,0,0,0,12.7,8a10.88,10.88,0,0,0-.46,3.3A27.7,27.7,0,0,0,12.8,15a13.33,13.33,0,0,1,1.52,4.64,2.37,2.37,0,0,1-.52,1.83,3.48,3.48,0,0,1-1.78.93,12.56,12.56,0,0,1-2.22.25c-.71,0-1.42,0-2.11-.11a5.61,5.61,0,0,0-1.39-.08A3.33,3.33,0,0,0,4.63,23a4,4,0,0,0-1,1.4,4,4,0,0,0-.17,1.69A5.85,5.85,0,0,0,4.8,28.6a8.42,8.42,0,0,0,2.15,1.75,21.57,21.57,0,0,0,4.24,1.85,4.71,4.71,0,0,1,2.06,1.23,5.49,5.49,0,0,1,1,2.5c.34,1.44-.09,2.44-1.33,3.06a12,12,0,0,1-3.69,1c-1.4.15-2.82.26-4.24.41A16.29,16.29,0,0,0,2.14,40.8a4.13,4.13,0,0,0-1.89,2,3.13,3.13,0,0,0-.25,1.3,3.05,3.05,0,0,0,1,2.28A6.36,6.36,0,0,0,3.35,48a27,27,0,0,0,6.07.69,45.41,45.41,0,0,0,7.1-.64,15,15,0,0,1,4.69.06,4.6,4.6,0,0,1,2,1,10.63,10.63,0,0,1,1.65,1.58A6.6,6.6,0,0,0,26.78,52c.23.09.47.16.7.22h.74a7.12,7.12,0,0,0,1.75-.41A5.25,5.25,0,0,0,32,50.15a13.25,13.25,0,0,1,1.69-1.55,4.35,4.35,0,0,1,1.86-1A13.44,13.44,0,0,1,40,47.58a43.51,43.51,0,0,0,7-.61A29,29,0,0,0,53.22,46a5.77,5.77,0,0,0,2.43-1.6,2.83,2.83,0,0,0,1-2.26,3.06,3.06,0,0,0-.31-1.34,4.24,4.24,0,0,0-2-1.9,15.93,15.93,0,0,0-3-1,51.81,51.81,0,0,0-5.74-.77A9.45,9.45,0,0,1,42.53,36c-1.12-.58-1.46-1.56-1.07-2.91a5.6,5.6,0,0,1,1.2-2.52,4.8,4.8,0,0,1,1.87-1.16c1-.3,2-.5,2.94-.78a15.77,15.77,0,0,0,2.8-1,7,7,0,0,0,2-1.45,5.13,5.13,0,0,0,1.14-2.28,3.93,3.93,0,0,0-.24-2,4.14,4.14,0,0,0-1.63-1.89,4.42,4.42,0,0,0-2.31-.5c-1.5,0-3,.1-4.5.15a12.18,12.18,0,0,1-1.87-.19,3,3,0,0,1-1.44-.75,2.06,2.06,0,0,1-.53-1.62,11.59,11.59,0,0,1,1.38-4.43c.48-1,1-1.92,1.44-2.89a10.87,10.87,0,0,0,.55-3.66,9.22,9.22,0,0,0-2.12-5.46,11.13,11.13,0,0,0-4.08-3.08A15,15,0,0,0,30,.4Z" transform="translate(-7.4 -4.86)"/>
                 </svg>
               </a>
               <a href="#" className="w-10 h-10 rounded-full flex items-center justify-center transition-all hover:scale-110 shadow-lg bg-black text-white hover:brightness-110 border border-white/20">
@@ -113,35 +109,35 @@ export default function Footer() {
 
           <FooterAccordion title={t("روابط سريعة", "Quick Links") as string}>
             <ul className="space-y-4">
-              <li><a href="#about" className="text-white/80 hover:text-accent-gold transition-colors text-sm">{t("من نحن", "About Us")}</a></li>
-              <li><a href="#services" className="text-white/80 hover:text-accent-gold transition-colors text-sm">{t("خدماتنا", "Services")}</a></li>
-              <li><a href="#products" className="text-white/80 hover:text-accent-gold transition-colors text-sm">{t("الكتالوج", "Catalog")}</a></li>
+              <li><a href="#about" className="text-white/80 hover:text-white transition-colors text-sm mercury-effect inline-block px-3 py-1 -mx-3 rounded-lg">{t("من نحن", "About Us")}</a></li>
+              <li><a href="#services" className="text-white/80 hover:text-white transition-colors text-sm mercury-effect inline-block px-3 py-1 -mx-3 rounded-lg">{t("خدماتنا", "Services")}</a></li>
+              <li><a href="#products" className="text-white/80 hover:text-white transition-colors text-sm mercury-effect inline-block px-3 py-1 -mx-3 rounded-lg">{t("الكتالوج", "Catalog")}</a></li>
               <li>
-                <Link to="/tools" className="text-white/80 hover:text-accent-gold transition-colors text-sm">
+                <Link to="/tools" className="text-white/80 hover:text-white transition-colors text-sm mercury-effect inline-block px-3 py-1 -mx-3 rounded-lg">
                   {t("مركز الأدوات الذكية", "Smart Tools")}
                 </Link>
               </li>
               <li>
-                <Link to="/blog" className="text-white/80 hover:text-accent-gold transition-colors text-sm">
+                <Link to="/blog" className="text-white/80 hover:text-white transition-colors text-sm mercury-effect inline-block px-3 py-1 -mx-3 rounded-lg">
                   {t("المدونة", "Blog")}
                 </Link>
               </li>
-              <li><a href="#" className="text-white/80 hover:text-accent-gold transition-colors text-sm">{t("دليل العناية بالنباتات", "Plant Care Guide")}</a></li>
-              <li><a href="#" className="text-white/80 hover:text-accent-gold transition-colors text-sm">{t("مبادرات الرياض الخضراء", "Green Riyadh Initiatives")}</a></li>
-              <li><a href="#" className="text-white/80 hover:text-accent-gold transition-colors text-sm">{t("انضم إلينا", "Join Us")}</a></li>
+              <li><a href="#" className="text-white/80 hover:text-white transition-colors text-sm mercury-effect inline-block px-3 py-1 -mx-3 rounded-lg">{t("دليل العناية بالنباتات", "Plant Care Guide")}</a></li>
+              <li><a href="#" className="text-white/80 hover:text-white transition-colors text-sm mercury-effect inline-block px-3 py-1 -mx-3 rounded-lg">{t("مبادرات الرياض الخضراء", "Green Riyadh Initiatives")}</a></li>
+              <li><a href="#" className="text-white/80 hover:text-white transition-colors text-sm mercury-effect inline-block px-3 py-1 -mx-3 rounded-lg">{t("انضم إلينا", "Join Us")}</a></li>
             </ul>
           </FooterAccordion>
 
           <FooterAccordion title={t("القطاعات", "Sectors") as string}>
             <ul className="space-y-4">
-              <li><a href="#" className="text-white/80 hover:text-accent-gold transition-colors text-sm">{t("الجهات الحكومية", "Government Agencies")}</a></li>
-              <li><a href="#" className="text-white/80 hover:text-accent-gold transition-colors text-sm">{t("المطورون العقاريون", "Real Estate Developers")}</a></li>
-              <li><a href="#" className="text-white/80 hover:text-accent-gold transition-colors text-sm">{t("الفنادق والمنتجعات", "Hotels & Resorts")}</a></li>
-              <li><a href="#" className="text-white/80 hover:text-accent-gold transition-colors text-sm">{t("المقاولون", "Contractors")}</a></li>
-              <li><a href="#" className="text-white/80 hover:text-accent-gold transition-colors text-sm">{t("القصور والفلل الخاصة", "Private Palaces & Villas")}</a></li>
-              <li><a href="#" className="text-white/80 hover:text-accent-gold transition-colors text-sm">{t("المراكز التجارية", "Commercial Centers")}</a></li>
-              <li><a href="#" className="text-white/80 hover:text-accent-gold transition-colors text-sm">{t("المؤسسات التعليمية", "Educational Institutions")}</a></li>
-              <li><a href="#" className="text-white/80 hover:text-accent-gold transition-colors text-sm">{t("المستشفيات والمراكز الصحية", "Hospitals & Healthcare")}</a></li>
+              <li><a href="#" className="text-white/80 hover:text-white transition-colors text-sm mercury-effect inline-block px-3 py-1 -mx-3 rounded-lg">{t("الجهات الحكومية", "Government Agencies")}</a></li>
+              <li><a href="#" className="text-white/80 hover:text-white transition-colors text-sm mercury-effect inline-block px-3 py-1 -mx-3 rounded-lg">{t("المطورون العقاريون", "Real Estate Developers")}</a></li>
+              <li><a href="#" className="text-white/80 hover:text-white transition-colors text-sm mercury-effect inline-block px-3 py-1 -mx-3 rounded-lg">{t("الفنادق والمنتجعات", "Hotels & Resorts")}</a></li>
+              <li><a href="#" className="text-white/80 hover:text-white transition-colors text-sm mercury-effect inline-block px-3 py-1 -mx-3 rounded-lg">{t("المقاولون", "Contractors")}</a></li>
+              <li><a href="#" className="text-white/80 hover:text-white transition-colors text-sm mercury-effect inline-block px-3 py-1 -mx-3 rounded-lg">{t("القصور والفلل الخاصة", "Private Palaces & Villas")}</a></li>
+              <li><a href="#" className="text-white/80 hover:text-white transition-colors text-sm mercury-effect inline-block px-3 py-1 -mx-3 rounded-lg">{t("المراكز التجارية", "Commercial Centers")}</a></li>
+              <li><a href="#" className="text-white/80 hover:text-white transition-colors text-sm mercury-effect inline-block px-3 py-1 -mx-3 rounded-lg">{t("المؤسسات التعليمية", "Educational Institutions")}</a></li>
+              <li><a href="#" className="text-white/80 hover:text-white transition-colors text-sm mercury-effect inline-block px-3 py-1 -mx-3 rounded-lg">{t("المستشفيات والمراكز الصحية", "Hospitals & Healthcare")}</a></li>
             </ul>
           </FooterAccordion>
 

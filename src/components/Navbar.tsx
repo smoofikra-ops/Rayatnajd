@@ -163,7 +163,7 @@ export default function Navbar() {
                     key={link.name as string}
                     href={link.path}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="group px-5 py-3 flex items-center justify-between text-base font-medium text-text-main bg-white dark:bg-slate-800 rounded-xl border border-green-200 dark:border-green-800 border-b-[4px] shadow-sm active:border-b-[0px] active:translate-y-[4px] transition-all duration-200"
+                    className="group mercury-effect px-5 py-3 flex items-center justify-between text-base font-medium text-text-main bg-white dark:bg-slate-800 rounded-xl border border-green-200 dark:border-green-800 border-b-[4px] shadow-sm active:border-b-[0px] active:translate-y-[4px] transition-all duration-200"
                   >
                     <span className="group-hover:text-primary transition-colors">{link.name}</span>
                     {language === 'ar' ? (
