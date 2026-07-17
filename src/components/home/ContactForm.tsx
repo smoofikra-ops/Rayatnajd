@@ -29,7 +29,7 @@ export default function ContactForm() {
 الخدمة المطلوبة: ${serviceText}
 الرسالة: ${message}`;
 
-    const whatsappUrl = `https://wa.me/966501234567?text=${encodeURIComponent(text)}`;
+    const whatsappUrl = `https://wa.me/966553308786?text=${encodeURIComponent(text)}`;
 
     setTimeout(() => {
       setIsSubmitting(false);
@@ -93,7 +93,7 @@ export default function ContactForm() {
                 </div>
                 <div>
                   <h4 className="text-lg font-bold text-text-main mb-1">{t("رقم الهاتف", "Phone Number")}</h4>
-                  <p className="text-text-muted" dir="ltr">+966 50 123 4567</p>
+                  <p className="text-text-muted" dir="ltr">0553308786</p>
                 </div>
               </div>
 

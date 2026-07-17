@@ -238,6 +238,24 @@ export default function Hero() {
           ))}
         </div>
 
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 1.4 }}
+          className="mt-4 mb-8"
+        >
+          <button 
+            onClick={() => window.dispatchEvent(new CustomEvent('openQuoteModal'))}
+            className="group relative inline-flex items-center justify-center px-8 py-4 bg-primary text-white font-bold text-lg rounded-2xl overflow-hidden transition-transform hover:scale-105 shadow-[0_10px_40px_-10px_rgba(14,90,54,0.8)]"
+          >
+            <div className="absolute inset-0 bg-gradient-to-r from-primary-light to-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div className="absolute -inset-1 bg-white/20 blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-300 rounded-full"></div>
+            <span className="relative flex items-center gap-2">
+              {t("طلب عرض سعر", "Request a Quote")}
+              <ArrowLeft className={`w-5 h-5 transition-transform ${language === 'en' ? 'rotate-180 group-hover:translate-x-1' : 'group-hover:-translate-x-1'}`} />
+            </span>
+          </button>
+        </motion.div>
       </div>
 
       {/* Scroll indicator */}

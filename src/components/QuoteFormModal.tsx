@@ -145,7 +145,7 @@ export default function QuoteFormModal() {
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-text-main mb-2">{t("رقم الجوال", "Phone Number")}</label>
-                    <input required type="tel" dir="ltr" value={formData.phone} onChange={(e) => setFormData({ ...formData, phone: e.target.value })} className="w-full bg-bg-secondary border border-text-main/10 rounded-xl px-4 py-3 focus:outline-none focus:border-primary text-left" />
+                    <input required type="tel" dir="ltr" placeholder="0553308786" value={formData.phone} onChange={(e) => setFormData({ ...formData, phone: e.target.value })} className="w-full bg-bg-secondary border border-text-main/10 rounded-xl px-4 py-3 focus:outline-none focus:border-primary text-left" />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-text-main mb-2">{t("المدينة", "City")}</label>

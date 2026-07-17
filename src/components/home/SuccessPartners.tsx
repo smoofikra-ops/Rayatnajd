@@ -41,7 +41,6 @@ export default function SuccessPartners() {
       titleEn: "National Companies",
       partners: [
         { nameAr: "نادك", nameEn: "NADEC", logo: "https://res.cloudinary.com/erfajaoa/image/upload/v1783900208/9_ncs6pd.jpg", color: "#007843" },
-        { nameAr: "المراعي", nameEn: "Almarai", logo: "https://res.cloudinary.com/erfajaoa/image/upload/v1783962760/ALMARAI_pehxo0.jpg", color: "#004B87" },
       ]
     },
     {
@@ -49,16 +48,6 @@ export default function SuccessPartners() {
       titleEn: "Health Sector",
       partners: [
         { nameAr: "مدينة الملك فهد الطبية", nameEn: "King Fahd Medical City", logo: "https://res.cloudinary.com/erfajaoa/image/upload/v1783900212/11_qx1atq.jpg", color: "#00684A" }
-      ]
-    },
-    {
-      titleAr: "البنية التحتية والمرافق",
-      titleEn: "Infrastructure & Utilities",
-      partners: [
-        { nameAr: "المؤسسة العامة لتحلية المياه المالحة", nameEn: "Saline Water Conversion Corporation", logo: "https://res.cloudinary.com/erfajaoa/image/upload/v1783962771/TAHLIAT_ALMIYA_ua5ujk.jpg", color: "#006BB6" },
-        { nameAr: "محطة الشقيق", nameEn: "Shuqaiq Plant", logo: null, color: "#94a3b8" },
-        { nameAr: "محطة الشعيبة", nameEn: "Shoaiba Plant", logo: null, color: "#94a3b8" },
-        { nameAr: "محطة ينبع", nameEn: "Yanbu Plant", logo: null, color: "#94a3b8" },
       ]
     }
   ];
