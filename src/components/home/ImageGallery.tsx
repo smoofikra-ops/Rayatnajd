@@ -215,7 +215,7 @@ export default function ImageGallery() {
               onClick={(e) => e.stopPropagation()}
             >
               <CloudinaryImage
-                src={images[selectedImageIndex]?.url || images[selectedImageIndex]}
+                src={typeof images[selectedImageIndex] === 'string' ? (images[selectedImageIndex] as string) : (images[selectedImageIndex] as any).url}
                 alt="Enlarged view"
                 width={1600}
                 lazy={false}

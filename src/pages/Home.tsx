@@ -4,6 +4,7 @@ import GreenRiyadh from "../components/home/GreenRiyadh";
 import Vision2030 from "../components/home/Vision2030";
 import Services from "../components/home/Services";
 import TargetSectors from "../components/home/TargetSectors";
+import ProjectsGallery from "../components/home/ProjectsGallery";
 import SmartToolsTeaser from "../components/home/SmartToolsTeaser";
 import NurseriesCatalog from "../components/home/NurseriesCatalog";
 import ImpactSection from "../components/home/ImpactSection";
@@ -26,6 +27,7 @@ export default function Home() {
       <ScrollReveal><SuccessPartners /></ScrollReveal>
       <ScrollReveal><TargetSectors /></ScrollReveal>
       <ScrollReveal><Services /></ScrollReveal>
+      <ScrollReveal><ProjectsGallery /></ScrollReveal>
       <ScrollReveal><NurseriesCatalog /></ScrollReveal>
       <ScrollReveal><Vision2030 /></ScrollReveal>
       <ScrollReveal><GreenRiyadh /></ScrollReveal>

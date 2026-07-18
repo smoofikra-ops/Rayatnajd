@@ -18,6 +18,8 @@ import AiSiteAnalysisTool from "./pages/tools/AiSiteAnalysisTool";
 import FloatingHomeButton from "./components/FloatingHomeButton";
 import BlogList from "./pages/BlogList";
 import BlogPost from "./pages/BlogPost";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 
 export default function App() {
   return (
@@ -27,6 +29,8 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
+            <Route path="about" element={<About />} />
+            <Route path="contact" element={<Contact />} />
             <Route path="service/:id" element={<ServicePage />} />
             <Route path="tools" element={<ToolsCenter />} />
             <Route path="blog" element={<BlogList />} />

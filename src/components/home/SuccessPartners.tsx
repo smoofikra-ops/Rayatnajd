@@ -2,7 +2,7 @@ import { motion, AnimatePresence } from "motion/react";
 import { useSettings } from "../../contexts/SettingsContext";
 import { Building2 } from "lucide-react";
 import { CloudinaryImage } from "../cloudinary/CloudinaryImage";
-import { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 export default function SuccessPartners() {
   const { t, language } = useSettings();

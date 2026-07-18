@@ -109,9 +109,10 @@ export default function Footer() {
 
           <FooterAccordion title={t("روابط سريعة", "Quick Links") as string}>
             <ul className="space-y-4">
-              <li><a href="#about" className="text-white/80 hover:text-white transition-colors text-sm mercury-effect inline-block px-3 py-1 -mx-3 rounded-lg">{t("من نحن", "About Us")}</a></li>
-              <li><a href="#services" className="text-white/80 hover:text-white transition-colors text-sm mercury-effect inline-block px-3 py-1 -mx-3 rounded-lg">{t("خدماتنا", "Services")}</a></li>
-              <li><a href="#products" className="text-white/80 hover:text-white transition-colors text-sm mercury-effect inline-block px-3 py-1 -mx-3 rounded-lg">{t("الكتالوج", "Catalog")}</a></li>
+              <li><Link to="/about" className="text-white/80 hover:text-white transition-colors text-sm mercury-effect inline-block px-3 py-1 -mx-3 rounded-lg">{t("من نحن", "About Us")}</Link></li>
+              <li><Link to="/#services" className="text-white/80 hover:text-white transition-colors text-sm mercury-effect inline-block px-3 py-1 -mx-3 rounded-lg">{t("خدماتنا", "Services")}</Link></li>
+              <li><Link to="/#projects" className="text-white/80 hover:text-white transition-colors text-sm mercury-effect inline-block px-3 py-1 -mx-3 rounded-lg">{t("مشاريعنا", "Projects")}</Link></li>
+              <li><Link to="/catalog" className="text-white/80 hover:text-white transition-colors text-sm mercury-effect inline-block px-3 py-1 -mx-3 rounded-lg">{t("الكتالوج", "Catalog")}</Link></li>
               <li>
                 <Link to="/tools" className="text-white/80 hover:text-white transition-colors text-sm mercury-effect inline-block px-3 py-1 -mx-3 rounded-lg">
                   {t("مركز الأدوات الذكية", "Smart Tools")}
@@ -120,6 +121,11 @@ export default function Footer() {
               <li>
                 <Link to="/blog" className="text-white/80 hover:text-white transition-colors text-sm mercury-effect inline-block px-3 py-1 -mx-3 rounded-lg">
                   {t("المدونة", "Blog")}
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="text-white/80 hover:text-white transition-colors text-sm mercury-effect inline-block px-3 py-1 -mx-3 rounded-lg">
+                  {t("اتصل بنا", "Contact Us")}
                 </Link>
               </li>
               <li><a href="#" className="text-white/80 hover:text-white transition-colors text-sm mercury-effect inline-block px-3 py-1 -mx-3 rounded-lg">{t("دليل العناية بالنباتات", "Plant Care Guide")}</a></li>
