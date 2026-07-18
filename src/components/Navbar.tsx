@@ -67,9 +67,9 @@ export default function Navbar() {
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-2 lg:gap-3 p-1.5 rounded-2xl bg-gradient-to-r from-green-500/10 via-emerald-500/10 to-green-500/10 border border-green-500/20 shadow-inner">
             {NAV_LINKS.map((link) => (
-              <a
+              <Link
                 key={link.name as string}
-                href={link.path}
+                to={link.path}
                 className="group relative flex items-center gap-2 px-4 py-2 bg-white dark:bg-slate-800 rounded-xl border border-green-200 dark:border-green-800 border-b-[4px] shadow-sm hover:border-b-[2px] hover:translate-y-[2px] hover:shadow-md transition-all duration-200"
               >
                 {language === 'ar' ? (
@@ -81,7 +81,7 @@ export default function Navbar() {
                 {language !== 'ar' ? (
                   <ArrowRight className="w-4 h-4 text-green-600 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-1" />
                 ) : null}
-              </a>
+              </Link>
             ))}
           </nav>
 
@@ -161,9 +161,9 @@ export default function Navbar() {
             <nav className="flex flex-col p-4 bg-gradient-to-b from-green-500/5 to-emerald-500/10">
               <div className="flex flex-col gap-3">
                 {NAV_LINKS.map((link) => (
-                  <a
+                  <Link
                     key={link.name as string}
-                    href={link.path}
+                    to={link.path}
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="group mercury-effect px-5 py-3 flex items-center justify-between text-base font-medium text-text-main bg-white dark:bg-slate-800 rounded-xl border border-green-200 dark:border-green-800 border-b-[4px] shadow-sm active:border-b-[0px] active:translate-y-[4px] transition-all duration-200"
                   >
@@ -173,7 +173,7 @@ export default function Navbar() {
                     ) : (
                       <ArrowRight className="w-5 h-5 text-green-600 opacity-50 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
                     )}
-                  </a>
+                  </Link>
                 ))}
               </div>
               
