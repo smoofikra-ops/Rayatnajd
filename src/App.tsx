@@ -16,6 +16,7 @@ import CostCalculatorTool from "./pages/tools/CostCalculatorTool";
 import ProjectUploadTool from "./pages/tools/ProjectUploadTool";
 import AiSiteAnalysisTool from "./pages/tools/AiSiteAnalysisTool";
 import FloatingHomeButton from "./components/FloatingHomeButton";
+import GoogleAnalytics from "./components/GoogleAnalytics";
 import BlogList from "./pages/BlogList";
 import BlogPost from "./pages/BlogPost";
 import About from "./pages/About";
@@ -25,6 +26,7 @@ export default function App() {
   return (
     <HelmetProvider>
       <BrowserRouter>
+        <GoogleAnalytics />
         <FloatingHomeButton />
         <Routes>
           <Route path="/" element={<Layout />}>
