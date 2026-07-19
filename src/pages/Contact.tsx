@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useSettings } from "../contexts/SettingsContext";
 import { Phone, Mail, MapPin, Clock, Send, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
-import { useState } from "react";
+import React, { useState } from "react";
 import { toast } from "sonner";
 import { ScrollReveal } from "../components/ui/ScrollReveal";
 
