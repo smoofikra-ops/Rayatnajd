@@ -43,9 +43,9 @@ export default function Navbar() {
           : "bg-transparent py-5 border-transparent"
       )}
     >
-      <div className="container mx-auto px-6 max-w-7xl">
+      <div className="container mx-auto px-4 xl:px-8 max-w-[1600px]">
         <div className="flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2 group">
+          <Link to="/" className="flex items-center gap-2 group shrink-0">
             <motion.div
               animate={{ y: [-3, 3, -3] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
@@ -65,14 +65,15 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-2 lg:gap-3 p-1.5 rounded-2xl bg-gradient-to-r from-green-500/10 via-emerald-500/10 to-green-500/10 border border-green-500/20 shadow-inner">
+          <div className="hidden lg:flex flex-1 justify-center mx-2 xl:mx-4 overflow-hidden">
+            <nav className="flex items-center gap-1 xl:gap-2 p-1.5 rounded-2xl bg-gradient-to-r from-green-500/10 via-emerald-500/10 to-green-500/10 border border-green-500/20 shadow-inner overflow-x-auto no-scrollbar">
             {NAV_LINKS.map((link) => {
               const isHashLink = (link.path as string).includes('#');
               return isHashLink ? (
                 <a
                   key={link.name as string}
                   href={link.path}
-                  className="group relative flex items-center gap-2 px-4 py-2 bg-white dark:bg-slate-800 rounded-xl border border-green-200 dark:border-green-800 border-b-[4px] shadow-sm hover:border-b-[2px] hover:translate-y-[2px] hover:shadow-md transition-all duration-200"
+                  className="group relative flex items-center gap-1 xl:gap-2 px-2 xl:px-4 py-1.5 xl:py-2 bg-white dark:bg-slate-800 rounded-xl border border-green-200 dark:border-green-800 border-b-[4px] shadow-sm hover:border-b-[2px] hover:translate-y-[2px] hover:shadow-md transition-all duration-200 shrink-0"
                 >
                   {language === 'ar' ? (
                     <ArrowLeft className="w-4 h-4 text-green-600 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:-translate-x-1" />
@@ -88,7 +89,7 @@ export default function Navbar() {
                 <Link
                   key={link.name as string}
                   to={link.path}
-                  className="group relative flex items-center gap-2 px-4 py-2 bg-white dark:bg-slate-800 rounded-xl border border-green-200 dark:border-green-800 border-b-[4px] shadow-sm hover:border-b-[2px] hover:translate-y-[2px] hover:shadow-md transition-all duration-200"
+                  className="group relative flex items-center gap-1 xl:gap-2 px-2 xl:px-4 py-1.5 xl:py-2 bg-white dark:bg-slate-800 rounded-xl border border-green-200 dark:border-green-800 border-b-[4px] shadow-sm hover:border-b-[2px] hover:translate-y-[2px] hover:shadow-md transition-all duration-200 shrink-0"
                 >
                   {language === 'ar' ? (
                     <ArrowLeft className="w-4 h-4 text-green-600 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:-translate-x-1" />
@@ -103,8 +104,9 @@ export default function Navbar() {
               );
             })}
           </nav>
+          </div>
 
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden lg:flex items-center gap-2 xl:gap-4 shrink-0">
             <button 
               onClick={() => setIsInterestListOpen(true)}
               className="relative p-2 text-text-muted hover:text-text-main transition-colors flex items-center gap-2 group"
@@ -139,7 +141,7 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Menu Toggle */}
-          <div className="md:hidden flex items-center gap-4">
+          <div className="lg:hidden flex items-center gap-4 shrink-0">
             <button 
               onClick={() => setIsInterestListOpen(true)}
               className="relative p-2 text-text-muted hover:text-text-main transition-colors"
@@ -175,7 +177,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -10, scale: 0.98 }}
             transition={{ type: "spring", bounce: 0, duration: 0.4 }}
-            className="md:hidden absolute top-[calc(100%+0.5rem)] left-4 right-4 bg-white/70 dark:bg-[#0f172a]/70 backdrop-blur-2xl rounded-3xl shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] dark:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.5)] border border-black/5 dark:border-white/10 overflow-hidden"
+            className="lg:hidden absolute top-[calc(100%+0.5rem)] left-4 right-4 bg-white/70 dark:bg-[#0f172a]/70 backdrop-blur-2xl rounded-3xl shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] dark:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.5)] border border-black/5 dark:border-white/10 overflow-hidden"
           >
             <nav className="flex flex-col p-4 bg-gradient-to-b from-green-500/5 to-emerald-500/10">
               <div className="flex flex-col gap-3">
