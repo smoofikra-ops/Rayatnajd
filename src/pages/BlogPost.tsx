@@ -40,10 +40,21 @@ export default function BlogPost() {
         <title>{post.metaTitle}</title>
         <meta name="description" content={post.metaDescription} />
         <meta name="keywords" content={post.tags.join(', ')} />
+        <link rel="canonical" href={`https://rayatnajd.com/blog/${post.slug}`} />
+        
+        {/* Open Graph */}
         <meta property="og:title" content={post.title} />
         <meta property="og:description" content={post.metaDescription} />
         <meta property="og:image" content={post.image} />
         <meta property="og:type" content="article" />
+        <meta property="og:url" content={`https://rayatnajd.com/blog/${post.slug}`} />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={post.title} />
+        <meta name="twitter:description" content={post.metaDescription} />
+        <meta name="twitter:image" content={post.image} />
+        
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
         </script>
