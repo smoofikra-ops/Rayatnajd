@@ -65,40 +65,40 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Nav */}
-          <div className="hidden lg:flex flex-1 justify-center mx-2 xl:mx-4 overflow-hidden">
-            <nav className="flex items-center gap-1 xl:gap-2 p-1.5 rounded-2xl bg-gradient-to-r from-green-500/10 via-emerald-500/10 to-green-500/10 border border-green-500/20 shadow-inner overflow-x-auto no-scrollbar">
+          <div className="hidden lg:flex flex-1 justify-center mx-1 xl:mx-4 overflow-hidden">
+            <nav className="flex items-center gap-0.5 xl:gap-1.5 p-1 rounded-2xl bg-primary/5 dark:bg-primary/10 border border-primary/20 dark:border-primary/30 shadow-inner overflow-x-auto no-scrollbar">
             {NAV_LINKS.map((link) => {
               const isHashLink = (link.path as string).includes('#');
               return isHashLink ? (
                 <a
                   key={link.name as string}
                   href={link.path}
-                  className="group relative flex items-center gap-1 xl:gap-2 px-2 xl:px-4 py-1.5 xl:py-2 bg-white dark:bg-slate-800 rounded-xl border border-green-200 dark:border-green-800 border-b-[4px] shadow-sm hover:border-b-[2px] hover:translate-y-[2px] hover:shadow-md transition-all duration-200 shrink-0"
+                  className="group relative flex items-center gap-1 xl:gap-1.5 px-2 xl:px-3 py-1.5 bg-white dark:bg-slate-800 rounded-xl border border-primary/20 dark:border-primary/40 border-b-[3px] shadow-sm hover:border-b-[1px] hover:translate-y-[2px] hover:shadow-md transition-all duration-200 shrink-0"
                 >
                   {language === 'ar' ? (
-                    <ArrowLeft className="w-4 h-4 text-green-600 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:-translate-x-1" />
+                    <ArrowLeft className="w-3.5 h-3.5 xl:w-4 xl:h-4 text-primary opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:-translate-x-1" />
                   ) : null}
-                  <span className="text-sm font-bold text-text-main group-hover:text-primary transition-colors duration-300 whitespace-nowrap">
+                  <span className="text-[13px] xl:text-sm font-bold text-text-main group-hover:text-primary transition-colors duration-300 whitespace-nowrap">
                     {link.name}
                   </span>
                   {language !== 'ar' ? (
-                    <ArrowRight className="w-4 h-4 text-green-600 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-1" />
+                    <ArrowRight className="w-3.5 h-3.5 xl:w-4 xl:h-4 text-primary opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-1" />
                   ) : null}
                 </a>
               ) : (
                 <Link
                   key={link.name as string}
                   to={link.path}
-                  className="group relative flex items-center gap-1 xl:gap-2 px-2 xl:px-4 py-1.5 xl:py-2 bg-white dark:bg-slate-800 rounded-xl border border-green-200 dark:border-green-800 border-b-[4px] shadow-sm hover:border-b-[2px] hover:translate-y-[2px] hover:shadow-md transition-all duration-200 shrink-0"
+                  className="group relative flex items-center gap-1 xl:gap-1.5 px-2 xl:px-3 py-1.5 bg-white dark:bg-slate-800 rounded-xl border border-primary/20 dark:border-primary/40 border-b-[3px] shadow-sm hover:border-b-[1px] hover:translate-y-[2px] hover:shadow-md transition-all duration-200 shrink-0"
                 >
                   {language === 'ar' ? (
-                    <ArrowLeft className="w-4 h-4 text-green-600 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:-translate-x-1" />
+                    <ArrowLeft className="w-3.5 h-3.5 xl:w-4 xl:h-4 text-primary opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:-translate-x-1" />
                   ) : null}
-                  <span className="text-sm font-bold text-text-main group-hover:text-primary transition-colors duration-300 whitespace-nowrap">
+                  <span className="text-[13px] xl:text-sm font-bold text-text-main group-hover:text-primary transition-colors duration-300 whitespace-nowrap">
                     {link.name}
                   </span>
                   {language !== 'ar' ? (
-                    <ArrowRight className="w-4 h-4 text-green-600 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-1" />
+                    <ArrowRight className="w-3.5 h-3.5 xl:w-4 xl:h-4 text-primary opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-1" />
                   ) : null}
                 </Link>
               );
@@ -179,7 +179,7 @@ export default function Navbar() {
             transition={{ type: "spring", bounce: 0, duration: 0.4 }}
             className="lg:hidden absolute top-[calc(100%+0.5rem)] left-4 right-4 bg-white/70 dark:bg-[#0f172a]/70 backdrop-blur-2xl rounded-3xl shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] dark:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.5)] border border-black/5 dark:border-white/10 overflow-hidden"
           >
-            <nav className="flex flex-col p-4 bg-gradient-to-b from-green-500/5 to-emerald-500/10">
+            <nav className="flex flex-col p-4 bg-primary/5">
               <div className="flex flex-col gap-3">
                 {NAV_LINKS.map((link) => {
                   const isHashLink = (link.path as string).includes('#');
@@ -188,13 +188,13 @@ export default function Navbar() {
                       key={link.name as string}
                       href={link.path}
                       onClick={() => setIsMobileMenuOpen(false)}
-                      className="group mercury-effect px-5 py-3 flex items-center justify-between text-base font-medium text-text-main bg-white dark:bg-slate-800 rounded-xl border border-green-200 dark:border-green-800 border-b-[4px] shadow-sm active:border-b-[0px] active:translate-y-[4px] transition-all duration-200"
+                      className="group mercury-effect px-5 py-3 flex items-center justify-between text-base font-medium text-text-main bg-white dark:bg-slate-800 rounded-xl border border-primary/20 dark:border-primary/40 border-b-[4px] shadow-sm active:border-b-[0px] active:translate-y-[4px] transition-all duration-200"
                     >
                       <span className="group-hover:text-primary transition-colors">{link.name}</span>
                       {language === 'ar' ? (
-                        <ArrowLeft className="w-5 h-5 text-green-600 opacity-50 group-hover:opacity-100 group-hover:-translate-x-1 transition-all" />
+                        <ArrowLeft className="w-5 h-5 text-primary opacity-50 group-hover:opacity-100 group-hover:-translate-x-1 transition-all" />
                       ) : (
-                        <ArrowRight className="w-5 h-5 text-green-600 opacity-50 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+                        <ArrowRight className="w-5 h-5 text-primary opacity-50 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
                       )}
                     </a>
                   ) : (
@@ -202,13 +202,13 @@ export default function Navbar() {
                       key={link.name as string}
                       to={link.path}
                       onClick={() => setIsMobileMenuOpen(false)}
-                      className="group mercury-effect px-5 py-3 flex items-center justify-between text-base font-medium text-text-main bg-white dark:bg-slate-800 rounded-xl border border-green-200 dark:border-green-800 border-b-[4px] shadow-sm active:border-b-[0px] active:translate-y-[4px] transition-all duration-200"
+                      className="group mercury-effect px-5 py-3 flex items-center justify-between text-base font-medium text-text-main bg-white dark:bg-slate-800 rounded-xl border border-primary/20 dark:border-primary/40 border-b-[4px] shadow-sm active:border-b-[0px] active:translate-y-[4px] transition-all duration-200"
                     >
                       <span className="group-hover:text-primary transition-colors">{link.name}</span>
                       {language === 'ar' ? (
-                        <ArrowLeft className="w-5 h-5 text-green-600 opacity-50 group-hover:opacity-100 group-hover:-translate-x-1 transition-all" />
+                        <ArrowLeft className="w-5 h-5 text-primary opacity-50 group-hover:opacity-100 group-hover:-translate-x-1 transition-all" />
                       ) : (
-                        <ArrowRight className="w-5 h-5 text-green-600 opacity-50 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+                        <ArrowRight className="w-5 h-5 text-primary opacity-50 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
                       )}
                     </Link>
                   );

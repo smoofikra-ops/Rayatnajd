@@ -185,10 +185,9 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className={`text-6xl md:text-[80px] lg:text-[100px] leading-tight md:leading-[116px] font-bold mb-4 md:mb-10 tracking-tight py-2 md:py-4 text-white drop-shadow-md`}
-          style={{ filter: theme === "dark" ? "drop-shadow(0 4px 6px rgba(0,0,0,0.8))" : "drop-shadow(0 2px 4px rgba(0,0,0,0.1))" }}
+          className={`text-6xl md:text-[80px] lg:text-[100px] leading-tight md:leading-[116px] font-bold mb-4 md:mb-10 tracking-tight py-2 md:py-4`}
         >
-          <span className="text-transparent bg-clip-text bg-gradient-to-l from-green-300 via-emerald-400 to-accent-gold animate-gradient-wave pb-2 md:pb-4 inline-block">
+          <span className="text-carved pb-2 md:pb-4 inline-block font-black">
             {t("رايات نجد", "Rayat Najd")}
           </span> <br className="hidden md:block" />
           <span className={`text-xl sm:text-2xl md:text-4xl leading-snug mt-2 md:mt-4 max-w-[90vw] block whitespace-normal md:whitespace-nowrap py-2 text-transparent bg-clip-text bg-gradient-to-r from-white via-[#bbf7d0] to-white animate-gradient-wave font-medium drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]`}>

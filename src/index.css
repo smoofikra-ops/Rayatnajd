@@ -225,3 +225,14 @@
   position: relative;
   z-index: 2;
 }
+
+@layer utilities {
+  .text-carved {
+    color: rgba(0,0,0,0.4);
+    text-shadow: -1px -1px 1px rgba(0,0,0,0.6), 1px 1px 1px rgba(255,255,255,0.8);
+  }
+  .dark .text-carved {
+    color: rgba(0,0,0,0.6);
+    text-shadow: -1px -1px 1px rgba(0,0,0,0.9), 1px 1px 1px rgba(255,255,255,0.2);
+  }
+}
