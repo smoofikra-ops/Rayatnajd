@@ -54,11 +54,11 @@ export default function TopBanner() {
           </div>
           
           <div className="shrink-0 flex items-center gap-2 md:gap-4 ltr:border-l ltr:border-white/20 rtl:border-r rtl:border-white/20 rtl:pr-2 rtl:md:pr-4 ltr:pl-2 ltr:md:pl-4 z-10">
-            <a href="tel:+966553308786" className="flex items-center gap-1.5 hover:text-white/80 transition-colors bg-white/10 hover:bg-white/20 px-2 py-1 md:px-3 md:py-1.5 rounded-full text-xs md:text-sm font-medium">
+            <a href="tel:0557555716" className="flex items-center gap-1.5 hover:text-white/80 transition-colors bg-white/10 hover:bg-white/20 px-2 py-1 md:px-3 md:py-1.5 rounded-full text-xs md:text-sm font-medium">
               <Phone className="w-3.5 h-3.5 md:w-4 md:h-4" />
-              <span className="hidden sm:inline" dir="ltr">+966 55 330 8786</span>
+              <span className="hidden sm:inline" dir="ltr">0557555716</span>
             </a>
-            <a href="https://wa.me/966553308786" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 hover:text-white/80 transition-colors bg-green-500/80 hover:bg-green-500 px-2 py-1 md:px-3 md:py-1.5 rounded-full text-xs md:text-sm font-medium">
+            <a href="https://wa.me/966557555716" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 hover:text-white/80 transition-colors bg-green-500/80 hover:bg-green-500 px-2 py-1 md:px-3 md:py-1.5 rounded-full text-xs md:text-sm font-medium">
               <MessageSquare className="w-3.5 h-3.5 md:w-4 md:h-4" />
               <span className="hidden sm:inline">{t("واتساب", "WhatsApp")}</span>
             </a>

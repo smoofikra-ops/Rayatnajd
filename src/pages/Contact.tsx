@@ -75,7 +75,7 @@ export default function Contact() {
                       </div>
                       <div>
                         <h3 className="text-sm font-semibold text-gray-500 mb-1">{t("رقم الهاتف", "Phone Number")}</h3>
-                        <p className="text-gray-900 font-medium" dir="ltr">+966 55 330 8786</p>
+                        <p className="text-gray-900 font-medium" dir="ltr">0557555716</p>
                       </div>
                     </div>
 

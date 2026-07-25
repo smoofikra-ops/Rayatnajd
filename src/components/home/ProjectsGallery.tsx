@@ -104,11 +104,6 @@ export default function ProjectsGallery() {
                       </div>
                     )}
                   </div>
-                  <div className="p-4 bg-white text-center border-t border-gray-100 relative z-10 transition-colors group-hover/card:bg-gray-50 group-hover/card:text-primary">
-                    <h3 className="font-bold text-lg text-gray-800 group-hover/card:text-primary transition-colors">
-                      {language === "ar" ? project.nameAr : project.nameEn}
-                    </h3>
-                  </div>
                 </div>
               </div>
             ))}

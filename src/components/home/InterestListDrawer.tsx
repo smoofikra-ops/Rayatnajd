@@ -54,7 +54,7 @@ export default function InterestListDrawer() {
     message += `الرجاء تزويدي بالمعلومات المناسبة أو عرض السعر إن أمكن.`;
 
     const encodedMessage = encodeURIComponent(message);
-    window.open(`https://wa.me/966553308786?text=${encodedMessage}`, "_blank");
+    window.open(`https://wa.me/966557555716?text=${encodedMessage}`, "_blank");
     setIsInterestListOpen(false);
   };
 

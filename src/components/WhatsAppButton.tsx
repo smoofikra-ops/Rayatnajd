@@ -4,7 +4,7 @@ import { useSettings } from "../contexts/SettingsContext";
 
 export default function WhatsAppButton() {
   const { t } = useSettings();
-  const whatsappNumber = "966553308786";
+  const whatsappNumber = "966557555716";
   const defaultMessage = encodeURIComponent(
     t(
       "مرحباً فريق رايات نجد، أود الاستفسار عن خدماتكم.",

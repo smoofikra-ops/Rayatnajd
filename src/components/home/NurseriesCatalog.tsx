@@ -177,7 +177,7 @@ export default function NurseriesCatalog() {
   };
 
   const handleInquire = () => {
-    window.open("https://wa.me/966553308786?text=" + encodeURIComponent(
+    window.open("https://wa.me/966557555716?text=" + encodeURIComponent(
       `مرحباً رايات نجد، أرغب في الاستفسار عن قسم: ${selectedCategory?.nameAr}`
     ), "_blank");
   };

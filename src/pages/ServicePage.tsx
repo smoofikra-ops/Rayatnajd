@@ -47,7 +47,7 @@ export default function ServicePage() {
     const text = language === 'ar' 
       ? `مرحباً رايات نجد، أرغب في الاستفسار عن قسم: ${data.titleAr}`
       : `Hello Rayat Najd, I would like to inquire about: ${data.titleEn}`;
-    window.open(`https://wa.me/966553308786?text=${encodeURIComponent(text)}`, "_blank");
+    window.open(`https://wa.me/966557555716?text=${encodeURIComponent(text)}`, "_blank");
   };
 
   return (
