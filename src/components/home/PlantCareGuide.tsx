@@ -50,7 +50,7 @@ export default function PlantCareGuide() {
   ];
 
   return (
-    <section className="py-16 md:py-20 bg-white dark:bg-bg-primary relative">
+    <section className="py-8 md:py-20 bg-white dark:bg-bg-primary relative">
       <div className="container mx-auto px-6">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <motion.div

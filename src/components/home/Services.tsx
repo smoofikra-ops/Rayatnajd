@@ -150,7 +150,7 @@ export default function Services() {
   ];
 
   return (
-    <section id="services" className="py-16 md:py-20 bg-bg-primary relative">
+    <section id="services" className="py-8 md:py-20 bg-bg-primary relative">
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="text-center mb-16 max-w-3xl mx-auto">
            <motion.div

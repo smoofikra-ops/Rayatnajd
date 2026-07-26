@@ -51,7 +51,7 @@ export default function ProjectsGallery() {
   const closeLightbox = () => setSelectedItemIndex(null);
 
   return (
-    <section id="projects" className="py-16 md:py-20 bg-gray-50 relative overflow-hidden">
+    <section id="projects" className="py-8 md:py-20 bg-gray-50 relative overflow-hidden">
       <div className="container mx-auto px-6 max-w-7xl relative z-10 mb-16">
         <div className="text-center max-w-3xl mx-auto">
           <motion.h2

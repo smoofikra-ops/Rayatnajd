@@ -7,7 +7,7 @@ export default function SmartToolsTeaser() {
   const { t, language } = useSettings();
 
   return (
-    <section className="py-16 md:py-20 bg-gradient-to-b from-bg-secondary to-bg-primary relative overflow-hidden border-y border-text-main/5">
+    <section className="py-8 md:py-20 bg-gradient-to-b from-bg-secondary to-bg-primary relative overflow-hidden border-y border-text-main/5">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-3xl h-64 bg-primary/10 blur-[100px] rounded-full pointer-events-none"></div>
       
       <div className="container mx-auto px-6 max-w-5xl relative z-10 text-center">

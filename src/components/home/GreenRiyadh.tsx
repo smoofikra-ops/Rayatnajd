@@ -17,7 +17,7 @@ export default function GreenRiyadh() {
   ];
 
   return (
-    <section className="py-16 md:py-20 bg-white dark:bg-bg-primary relative overflow-hidden">
+    <section className="py-8 md:py-20 bg-white dark:bg-bg-primary relative overflow-hidden">
       <div className="absolute -left-[20%] top-1/2 w-1/2 h-full bg-secondary/10 blur-[150px] pointer-events-none rounded-full translate-y-[-50%]"></div>
       
       <div className="container mx-auto px-6 max-w-7xl relative z-10">

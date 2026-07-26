@@ -78,7 +78,7 @@ export default function SuccessPartners() {
   }, [language]);
 
   return (
-    <section className="py-16 md:py-24 bg-white relative overflow-hidden">
+    <section className="py-8 md:py-24 bg-white relative overflow-hidden">
       <div className="container mx-auto px-6 max-w-7xl relative z-10">
         <div className="text-center mb-10">
           <motion.div

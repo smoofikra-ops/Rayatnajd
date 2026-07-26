@@ -35,7 +35,7 @@ export default function Vision2030() {
   ];
 
   return (
-    <section className="py-16 md:py-20 bg-bg-primary relative overflow-hidden">
+    <section className="py-8 md:py-20 bg-bg-primary relative overflow-hidden">
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <motion.div

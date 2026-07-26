@@ -57,7 +57,7 @@ export default function TargetSectors() {
   const { t, language } = useSettings();
 
   return (
-    <section id="sectors" className="py-16 md:py-20 bg-white dark:bg-bg-primary relative overflow-hidden">
+    <section id="sectors" className="py-8 md:py-20 bg-white dark:bg-bg-primary relative overflow-hidden">
       <div className="absolute inset-0 bg-primary/5 pattern-dots pointer-events-none"></div>
       
       <div className="container mx-auto px-6 max-w-7xl text-center relative z-10">
