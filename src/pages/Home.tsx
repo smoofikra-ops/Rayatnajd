@@ -11,6 +11,7 @@ import ImpactSection from "../components/home/ImpactSection";
 import ImageGallery from "../components/home/ImageGallery";
 import FAQ from "../components/home/FAQ";
 import ContactForm from "../components/home/ContactForm";
+import LocationsMap from "../components/home/LocationsMap";
 import SuccessPartners from "../components/home/SuccessPartners";
 import { ScrollReveal } from "../components/ui/ScrollReveal";
 import { useEffect } from "react";
@@ -37,6 +38,7 @@ export default function Home() {
       <ScrollReveal><SmartToolsTeaser /></ScrollReveal>
       <ScrollReveal><FAQ /></ScrollReveal>
       <ScrollReveal><ContactForm /></ScrollReveal>
+      <ScrollReveal><LocationsMap /></ScrollReveal>
     </div>
   );
 }
