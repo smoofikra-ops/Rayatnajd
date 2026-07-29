@@ -37,7 +37,7 @@ export default function ImpactSection() {
   ];
 
   return (
-    <section className="py-8 md:py-20 bg-bg-primary relative border-y border-text-main/5">
+    <section className="py-10 md:py-12 bg-bg-primary relative border-y border-text-main/5">
       <div className="absolute inset-0 opacity-5 bg-[url('https://images.unsplash.com/photo-1466692476877-3ea661123f75?auto=format&fit=crop&q=80&w=2000')] bg-cover bg-center mix-blend-overlay"></div>
       
       <div className="container mx-auto px-6 max-w-7xl relative z-10">

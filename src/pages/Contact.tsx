@@ -1,9 +1,10 @@
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { useSettings } from "../contexts/SettingsContext";
 import { Phone, Mail, MapPin, Clock, Send, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 import React, { useState } from "react";
 import { toast } from "sonner";
 import { ScrollReveal } from "../components/ui/ScrollReveal";
+import SEO from "../components/SEO";
 
 export default function Contact() {
   const { t, language } = useSettings();
@@ -28,6 +29,8 @@ export default function Contact() {
   };
 
   return (
+    <>
+      <SEO title={t("تواصل معنا | رايات نجد", "Contact Us | Rayat Najd") as string} description={t("تواصل مع فريق رايات نجد للتشجير للحصول على استشارات زراعية.", "Contact the Rayat Najd landscaping team.") as string} />
     <div className="flex flex-col min-h-screen pt-24 bg-gray-50">
       {/* Hero Section */}
       <section className="py-16 md:py-24 bg-primary relative overflow-hidden">
@@ -54,6 +57,7 @@ export default function Contact() {
             )}
           </motion.p>
         </div>
+
       </section>
 
       {/* Main Content */}
@@ -73,46 +77,59 @@ export default function Contact() {
                       <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary shrink-0">
                         <Phone className="w-6 h-6" />
                       </div>
+
                       <div>
                         <h3 className="text-sm font-semibold text-gray-500 mb-1">{t("رقم الهاتف", "Phone Number")}</h3>
                         <p className="text-gray-900 font-medium" dir="ltr">0557555716</p>
                       </div>
+
                     </div>
+
 
                     <div className="flex items-start gap-4">
                       <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary shrink-0">
                         <Mail className="w-6 h-6" />
                       </div>
+
                       <div>
                         <h3 className="text-sm font-semibold text-gray-500 mb-1">{t("البريد الإلكتروني", "Email Address")}</h3>
                         <p className="text-gray-900 font-medium">info@rayatnajd.com</p>
                       </div>
+
                     </div>
+
 
                     <div className="flex items-start gap-4">
                       <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary shrink-0">
                         <MapPin className="w-6 h-6" />
                       </div>
+
                       <div>
                         <h3 className="text-sm font-semibold text-gray-500 mb-1">{t("العنوان", "Address")}</h3>
                         <p className="text-gray-900 font-medium leading-relaxed">
                           {t("الرياض، المملكة العربية السعودية", "Riyadh, Saudi Arabia")}
                         </p>
                       </div>
+
                     </div>
+
 
                     <div className="flex items-start gap-4">
                       <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary shrink-0">
                         <Clock className="w-6 h-6" />
                       </div>
+
                       <div>
                         <h3 className="text-sm font-semibold text-gray-500 mb-1">{t("ساعات العمل", "Working Hours")}</h3>
                         <p className="text-gray-900 font-medium leading-relaxed">
                           {t("الأحد - الخميس: 8:00 ص - 5:00 م", "Sun - Thu: 8:00 AM - 5:00 PM")}
                         </p>
                       </div>
+
                     </div>
+
                   </div>
+
 
                   {/* Social Media */}
                   <div className="mt-12 pt-8 border-t border-gray-100">
@@ -131,10 +148,14 @@ export default function Contact() {
                         <Facebook className="w-5 h-5" />
                       </a>
                     </div>
+
                   </div>
+
                 </div>
+
               </ScrollReveal>
             </div>
+
 
             {/* Contact Form */}
             <div className="lg:col-span-2">
@@ -157,6 +178,7 @@ export default function Contact() {
                           placeholder={language === 'ar' ? "محمد عبدالله" : "Mohammed Abdullah"}
                         />
                       </div>
+
                       <div className="space-y-2">
                         <label htmlFor="email" className="text-sm font-medium text-gray-700">
                           {t("البريد الإلكتروني", "Email Address")} <span className="text-red-500">*</span>
@@ -169,7 +191,9 @@ export default function Contact() {
                           placeholder="example@email.com"
                         />
                       </div>
+
                     </div>
+
 
                     <div className="grid md:grid-cols-2 gap-6">
                       <div className="space-y-2">
@@ -183,6 +207,7 @@ export default function Contact() {
                           placeholder="05x xxx xxxx"
                         />
                       </div>
+
                       <div className="space-y-2">
                         <label htmlFor="subject" className="text-sm font-medium text-gray-700">
                           {t("الموضوع", "Subject")} <span className="text-red-500">*</span>
@@ -195,7 +220,9 @@ export default function Contact() {
                           placeholder={language === 'ar' ? "كيف يمكننا مساعدتك؟" : "How can we help you?"}
                         />
                       </div>
+
                     </div>
+
 
                     <div className="space-y-2">
                       <label htmlFor="message" className="text-sm font-medium text-gray-700">
@@ -210,6 +237,7 @@ export default function Contact() {
                       ></textarea>
                     </div>
 
+
                     <button
                       type="submit"
                       disabled={isSubmitting}
@@ -221,15 +249,20 @@ export default function Contact() {
                         <>
                           <Send className="w-5 h-5" />
                           <span>{t("إرسال الرسالة", "Send Message")}</span>
+                          <span>{t("إرسال الرسالة", "Send Message")}</span>
                         </>
                       )}
                     </button>
                   </form>
                 </div>
+
               </ScrollReveal>
             </div>
+
           </div>
+
         </div>
+
       </section>
 
       {/* Map Section */}
@@ -246,5 +279,7 @@ export default function Contact() {
         ></iframe>
       </section>
     </div>
+
+    </>
   );
 }

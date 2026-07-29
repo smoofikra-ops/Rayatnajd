@@ -17,7 +17,7 @@ export default function GreenRiyadh() {
   ];
 
   return (
-    <section className="py-8 md:py-20 bg-white dark:bg-bg-primary relative overflow-hidden">
+    <section className="py-10 md:py-12 bg-white dark:bg-bg-primary relative overflow-hidden">
       <div className="absolute -left-[20%] top-1/2 w-1/2 h-full bg-secondary/10 blur-[150px] pointer-events-none rounded-full translate-y-[-50%]"></div>
       
       <div className="container mx-auto px-6 max-w-7xl relative z-10">
@@ -61,7 +61,7 @@ export default function GreenRiyadh() {
             {/* Split Image Animation Container to represent transformation */}
             <div className="w-full h-full relative rounded-2xl overflow-hidden group cursor-ew-resize">
                <CloudinaryImage 
-                 src={"https://res.cloudinary.com/erfajaoa/image/upload/v1783648047/6c6592cf-fb96-4ee4-9892-d491f8c713de.png"} 
+                 src={"https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783648047/6c6592cf-fb96-4ee4-9892-d491f8c713de.png"} 
                  alt="Green Riyadh" 
                  width={1200}
                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"

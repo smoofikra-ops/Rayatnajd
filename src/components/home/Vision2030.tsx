@@ -12,30 +12,30 @@ export default function Vision2030() {
        title: t("رؤية 2030", "Vision 2030"),
        desc: t("بناء مجتمع حيوي وبيئة عامرة ومستدامة.", "Building a vibrant society and a prosperous, sustainable environment."),
        icon: <Eye className="w-6 h-6 text-accent-gold" />,
-       bgImage: "https://res.cloudinary.com/erfajaoa/image/upload/v1783649441/%D8%B4%D8%B9%D8%A7%D8%B1-%D8%B1%D9%88%D9%94%D9%8A%D8%A9-%D8%A7%D9%84%D9%85%D9%85%D9%84%D9%83%D8%A9-2030-_-Saudi-vision-2030-Logo-300x169_tnagkw.png"
+       bgImage: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783649441/%D8%B4%D8%B9%D8%A7%D8%B1-%D8%B1%D9%88%D9%94%D9%8A%D8%A9-%D8%A7%D9%84%D9%85%D9%85%D9%84%D9%83%D8%A9-2030-_-Saudi-vision-2030-Logo-300x169_tnagkw.png"
     },
     {
       title: t("مبادرة السعودية الخضراء", "Saudi Green Initiative"),
       desc: t("زراعة مليارات الأشجار واستعادة الأراضي المهدرة.", "Planting billions of trees and restoring degraded land."),
       icon: <Leaf className="w-6 h-6 text-accent-gold" />,
-      bgImage: "https://res.cloudinary.com/erfajaoa/image/upload/v1783649012/20085149-1a2b-4aab-98d8-096b1c9478a5.png"
+      bgImage: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783649012/20085149-1a2b-4aab-98d8-096b1c9478a5.png"
    },
    {
       title: t("برنامج جودة الحياة", "Quality of Life Program"),
       desc: t("تحسين المشهد الحضري وتطوير المرافق الصديقة للبيئة.", "Improving urban landscape and developing eco-friendly facilities."),
       icon: <Sun className="w-6 h-6 text-accent-gold" />,
-      bgImage: "https://res.cloudinary.com/erfajaoa/image/upload/v1783720711/a6ae8ee6-0cd8-42f1-80ff-e1c7f0e1726e.png"
+      bgImage: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783720711/a6ae8ee6-0cd8-42f1-80ff-e1c7f0e1726e.png"
    },
    {
       title: t("الاستدامة البيئية", "Environmental Sustainability"),
       desc: t("ترشيد استهلاك المياه والاعتماد على نباتات البيئة المحلية.", "Rationalizing water consumption and relying on local native plants."),
       icon: <Droplet className="w-6 h-6 text-accent-gold" />,
-      bgImage: "https://res.cloudinary.com/erfajaoa/image/upload/v1783720922/7f912e3e-c6ac-492b-ab1d-f42eaf895116.png"
+      bgImage: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783720922/7f912e3e-c6ac-492b-ab1d-f42eaf895116.png"
    }
   ];
 
   return (
-    <section className="py-8 md:py-20 bg-bg-primary relative overflow-hidden">
+    <section className="py-10 md:py-12 bg-bg-primary relative overflow-hidden">
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <motion.div
@@ -45,7 +45,7 @@ export default function Vision2030() {
             className="inline-flex flex-col items-center justify-center mb-6"
           >
             <img 
-              src="https://res.cloudinary.com/erfajaoa/image/upload/v1783649441/%D8%B4%D8%B9%D8%A7%D8%B1-%D8%B1%D9%88%D9%94%D9%8A%D8%A9-%D8%A7%D9%84%D9%85%D9%85%D9%84%D9%83%D8%A9-2030-_-Saudi-vision-2030-Logo-300x169_tnagkw.png" 
+              src="https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783649441/%D8%B4%D8%B9%D8%A7%D8%B1-%D8%B1%D9%88%D9%94%D9%8A%D8%A9-%D8%A7%D9%84%D9%85%D9%85%D9%84%D9%83%D8%A9-2030-_-Saudi-vision-2030-Logo-300x169_tnagkw.png" 
               alt="Vision 2030" 
               className="h-24 md:h-28 object-contain mb-4" 
             />

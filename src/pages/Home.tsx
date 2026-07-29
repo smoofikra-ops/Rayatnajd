@@ -18,12 +18,14 @@ import { useEffect } from "react";
 import { toast } from "sonner";
 import { useSettings } from "../contexts/SettingsContext";
 import { Calendar, Sprout } from "lucide-react";
+import SEO from "../components/SEO";
 
 export default function Home() {
   const { t } = useSettings();
 
   return (
     <div className="flex flex-col divide-y divide-text-main/10">
+      <SEO />
       <Hero />
       <ScrollReveal><SuccessPartners /></ScrollReveal>
       <ScrollReveal><TargetSectors /></ScrollReveal>

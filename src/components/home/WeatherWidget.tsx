@@ -82,7 +82,7 @@ export default function WeatherWidget() {
   }, [selectedRegion]);
 
   return (
-    <section className="py-8 md:py-20 bg-white dark:bg-bg-primary relative">
+    <section className="py-10 md:py-12 bg-white dark:bg-bg-primary relative">
       <div className="container mx-auto px-6 max-w-5xl">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <motion.div

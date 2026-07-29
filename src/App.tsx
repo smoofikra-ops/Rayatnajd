@@ -4,27 +4,36 @@
  */
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from 'react-helmet-async';
+import { lazy, Suspense } from 'react';
 import Layout from "./components/Layout";
-import Home from "./pages/Home";
-import ServicePage from "./pages/ServicePage";
-import CatalogViewer from "./pages/CatalogViewer";
-import ToolsCenter from "./pages/ToolsCenter";
-import AiDesignerTool from "./pages/tools/AiDesignerTool";
-import TreeSelectionTool from "./pages/tools/TreeSelectionTool";
-import PlantSuggestionTool from "./pages/tools/PlantSuggestionTool";
-import CostCalculatorTool from "./pages/tools/CostCalculatorTool";
-import ProjectUploadTool from "./pages/tools/ProjectUploadTool";
-import AiSiteAnalysisTool from "./pages/tools/AiSiteAnalysisTool";
 import FloatingHomeButton from "./components/FloatingHomeButton";
 import GoogleAnalytics from "./components/GoogleAnalytics";
-import BlogList from "./pages/BlogList";
-import BlogPost from "./pages/BlogPost";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import Terms from "./pages/policies/Terms";
-import Privacy from "./pages/policies/Privacy";
-import Warranty from "./pages/policies/Warranty";
-import ReturnPolicy from "./pages/policies/ReturnPolicy";
+
+const Home = lazy(() => import("./pages/Home"));
+const ServicePage = lazy(() => import("./pages/ServicePage"));
+const CatalogViewer = lazy(() => import("./pages/CatalogViewer"));
+const ToolsCenter = lazy(() => import("./pages/ToolsCenter"));
+const AiDesignerTool = lazy(() => import("./pages/tools/AiDesignerTool"));
+const TreeSelectionTool = lazy(() => import("./pages/tools/TreeSelectionTool"));
+const PlantSuggestionTool = lazy(() => import("./pages/tools/PlantSuggestionTool"));
+const CostCalculatorTool = lazy(() => import("./pages/tools/CostCalculatorTool"));
+const ProjectUploadTool = lazy(() => import("./pages/tools/ProjectUploadTool"));
+const AiSiteAnalysisTool = lazy(() => import("./pages/tools/AiSiteAnalysisTool"));
+const BlogList = lazy(() => import("./pages/BlogList"));
+const BlogPost = lazy(() => import("./pages/BlogPost"));
+const About = lazy(() => import("./pages/About"));
+const Contact = lazy(() => import("./pages/Contact"));
+const Terms = lazy(() => import("./pages/policies/Terms"));
+const Privacy = lazy(() => import("./pages/policies/Privacy"));
+const Warranty = lazy(() => import("./pages/policies/Warranty"));
+const ReturnPolicy = lazy(() => import("./pages/policies/ReturnPolicy"));
+
+// A simple loading fallback
+const PageLoader = () => (
+  <div className="flex justify-center items-center h-screen bg-bg-secondary">
+    <div className="w-12 h-12 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
+  </div>
+);
 
 export default function App() {
   return (
@@ -32,30 +41,32 @@ export default function App() {
       <BrowserRouter>
         <GoogleAnalytics />
         <FloatingHomeButton />
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<Home />} />
-            <Route path="about" element={<About />} />
-            <Route path="contact" element={<Contact />} />
-            <Route path="service/:id" element={<ServicePage />} />
-            <Route path="tools" element={<ToolsCenter />} />
-            <Route path="blog" element={<BlogList />} />
-            <Route path="blog/:slug" element={<BlogPost />} />
-            <Route path="terms" element={<Terms />} />
-            <Route path="privacy" element={<Privacy />} />
-            <Route path="warranty" element={<Warranty />} />
-            <Route path="return-policy" element={<ReturnPolicy />} />
-          </Route>
-          
-          <Route path="/tools/ai-designer" element={<AiDesignerTool />} />
-          <Route path="/tools/tree-selection" element={<TreeSelectionTool />} />
-          <Route path="/tools/plant-suggestion" element={<PlantSuggestionTool />} />
-          <Route path="/tools/cost-calculator" element={<CostCalculatorTool />} />
-          <Route path="/tools/project-upload" element={<ProjectUploadTool />} />
-          <Route path="/tools/ai-site-analysis" element={<AiSiteAnalysisTool />} />
-          
-          <Route path="/catalog" element={<CatalogViewer />} />
-        </Routes>
+        <Suspense fallback={<PageLoader />}>
+          <Routes>
+            <Route path="/" element={<Layout />}>
+              <Route index element={<Home />} />
+              <Route path="about" element={<About />} />
+              <Route path="contact" element={<Contact />} />
+              <Route path="service/:id" element={<ServicePage />} />
+              <Route path="tools" element={<ToolsCenter />} />
+              <Route path="blog" element={<BlogList />} />
+              <Route path="blog/:slug" element={<BlogPost />} />
+              <Route path="terms" element={<Terms />} />
+              <Route path="privacy" element={<Privacy />} />
+              <Route path="warranty" element={<Warranty />} />
+              <Route path="return-policy" element={<ReturnPolicy />} />
+            </Route>
+            
+            <Route path="/tools/ai-designer" element={<AiDesignerTool />} />
+            <Route path="/tools/tree-selection" element={<TreeSelectionTool />} />
+            <Route path="/tools/plant-suggestion" element={<PlantSuggestionTool />} />
+            <Route path="/tools/cost-calculator" element={<CostCalculatorTool />} />
+            <Route path="/tools/project-upload" element={<ProjectUploadTool />} />
+            <Route path="/tools/ai-site-analysis" element={<AiSiteAnalysisTool />} />
+            
+            <Route path="/catalog" element={<CatalogViewer />} />
+          </Routes>
+        </Suspense>
       </BrowserRouter>
     </HelmetProvider>
   );

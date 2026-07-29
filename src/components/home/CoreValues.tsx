@@ -15,7 +15,7 @@ export default function CoreValues() {
   ];
 
   return (
-    <section className="py-8 md:py-20 bg-white dark:bg-bg-primary relative border-t border-text-main/5 overflow-hidden">
+    <section className="py-10 md:py-12 bg-white dark:bg-bg-primary relative border-t border-text-main/5 overflow-hidden">
       <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -mr-40 -mt-40 pointer-events-none"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent-gold/5 rounded-full blur-3xl -ml-40 -mb-40 pointer-events-none"></div>
       <div className="container mx-auto px-6 max-w-7xl relative z-10">

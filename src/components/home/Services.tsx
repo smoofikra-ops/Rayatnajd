@@ -12,7 +12,7 @@ export default function Services() {
       id: "palms",
       title: t("النخيل", "Palms"),
       desc: t("تشكيلة واسعة من النخيل العربي للزينة والمشاريع.", "A wide variety of Arabian palms for decoration and projects."),
-      img: "https://res.cloudinary.com/erfajaoa/image/upload/v1783374935/WhatsApp_Image_2026-07-04_at_11.57.01_PM_4_zeepcf.jpg",
+      img: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783374935/WhatsApp_Image_2026-07-04_at_11.57.01_PM_4_zeepcf.jpg",
       items: [
         { text: t("النخيل العربي", "Arabian Palm"), icon: "🌴" },
         { text: t("نخيل واشنطونيا", "Washingtonia Palm"), icon: "🌴" },
@@ -29,7 +29,7 @@ export default function Services() {
       id: "trees",
       title: t("الأشجار", "Trees"),
       desc: t("أشجار متنوعة للطرق والحدائق والمشاريع الكبرى.", "Various trees for roads, gardens, and major projects."),
-      img: "https://res.cloudinary.com/erfajaoa/image/upload/v1783534251/WhatsApp_Image_2026-07-08_at_9.08.12_PM_xtzfpb.jpg",
+      img: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783534251/WhatsApp_Image_2026-07-08_at_9.08.12_PM_xtzfpb.jpg",
       items: [
         { text: t("أشجار الظل", "Shade Trees"), icon: "🌳" },
         { text: t("أشجار الزينة", "Ornamental Trees"), icon: "🌸" },
@@ -45,7 +45,7 @@ export default function Services() {
       id: "plants",
       title: t("النباتات والشجيرات", "Plants & Shrubs"),
       desc: t("مجموعة متنوعة من النباتات الداخلية والخارجية لتجميل المساحات.", "A diverse collection of indoor and outdoor plants to beautify spaces."),
-      img: "https://res.cloudinary.com/erfajaoa/image/upload/v1783537108/WhatsApp_Image_2026-07-08_at_9.55.36_PM_2_df11ju.jpg",
+      img: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783537108/WhatsApp_Image_2026-07-08_at_9.55.36_PM_2_df11ju.jpg",
       items: [
         { text: t("النباتات الداخلية", "Indoor Plants"), icon: "🪴" },
         { text: t("الشجيرات المزهرة", "Flowering Shrubs"), icon: "🌺" },
@@ -61,7 +61,7 @@ export default function Services() {
       id: "projects",
       title: t("مشاريع التشجير", "Afforestation Projects"),
       desc: t("تنفيذ وإدارة مشاريع التشجير الكبرى بأعلى المعايير.", "Execution and management of major afforestation projects to the highest standards."),
-      img: "https://res.cloudinary.com/erfajaoa/image/upload/v1783274476/WhatsApp_Image_2026-07-03_at_6.59.16_PM_10_zaajil.jpg",
+      img: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783274476/WhatsApp_Image_2026-07-03_at_6.59.16_PM_10_zaajil.jpg",
       items: [
         { text: t("المشاريع الحكومية", "Government Projects"), icon: "🏢" },
         { text: t("المشاريع التجارية", "Commercial Projects"), icon: "🏬" },
@@ -76,7 +76,7 @@ export default function Services() {
       id: "urban",
       title: t("تطوير المشهد الحضري", "Urban Landscape Development"),
       desc: t("تصميم وتطوير المساحات الخضراء في المدن.", "Designing and developing green spaces in cities."),
-      img: "https://res.cloudinary.com/erfajaoa/image/upload/v1783635891/8aa0c2f2-5996-4907-a0e2-f24a332326e2.png",
+      img: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783635891/8aa0c2f2-5996-4907-a0e2-f24a332326e2.png",
       items: [
         { text: t("تصميم الحدائق العامة", "Public Park Design"), icon: "🏞️" },
         { text: t("تجميل الميادين", "Square Beautification"), icon: "⛲" },
@@ -91,7 +91,7 @@ export default function Services() {
       id: "relocation",
       title: t("نقل الأشجار", "Tree Relocation"),
       desc: t("خدمات نقل الأشجار العملاقة بأمان واحترافية.", "Safe and professional relocation services for giant trees."),
-      img: "https://res.cloudinary.com/erfajaoa/image/upload/v1783627796/f1fcc336-17f7-4b63-aebf-63766f607b25.png",
+      img: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783627796/f1fcc336-17f7-4b63-aebf-63766f607b25.png",
       items: [
         { text: t("نقل الأشجار المعمرة", "Relocating Perennial Trees"), icon: "🌳" },
         { text: t("معدات ثقيلة متخصصة", "Specialized Heavy Equipment"), icon: "🚜" },
@@ -106,7 +106,7 @@ export default function Services() {
       id: "irrigation",
       title: t("حلول الري الذكية", "Smart Irrigation"),
       desc: t("أنظمة ري حديثة وفعالة لترشيد استهلاك المياه.", "Modern and efficient irrigation systems to rationalize water consumption."),
-      img: "https://res.cloudinary.com/erfajaoa/image/upload/v1783630273/%D8%B1%D8%A7%D9%8A%D8%AA_%D9%86%D8%AC%D8%AF_%D8%A7%D9%84%D8%B1%D9%8A_uqv6fm.png",
+      img: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783630273/%D8%B1%D8%A7%D9%8A%D8%AA_%D9%86%D8%AC%D8%AF_%D8%A7%D9%84%D8%B1%D9%8A_uqv6fm.png",
       items: [
         { text: t("شبكات الري بالتنقيط", "Drip Irrigation Networks"), icon: "💧" },
         { text: t("أنظمة التحكم الآلي", "Automated Control Systems"), icon: "⚙️" },
@@ -121,7 +121,7 @@ export default function Services() {
       id: "maintenance",
       title: t("الصيانة الزراعية", "Agricultural Maintenance"),
       desc: t("برامج صيانة متكاملة للحفاظ على صحة وجمال النباتات.", "Comprehensive maintenance programs to preserve the health and beauty of plants."),
-      img: "https://res.cloudinary.com/erfajaoa/image/upload/v1783630483/%D8%A7%D9%84%D8%B5%D9%8A%D8%A7%D9%86%D8%A9_%D8%A7%D9%84%D8%B2%D8%B1%D8%A7%D8%B9%D9%8A%D8%A9_jndcyz.png",
+      img: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783630483/%D8%A7%D9%84%D8%B5%D9%8A%D8%A7%D9%86%D8%A9_%D8%A7%D9%84%D8%B2%D8%B1%D8%A7%D8%B9%D9%8A%D8%A9_jndcyz.png",
       items: [
         { text: t("التقليم والتشذيب", "Pruning and Trimming"), icon: "✂️" },
         { text: t("مكافحة الآفات", "Pest Control"), icon: "🐛" },
@@ -136,7 +136,7 @@ export default function Services() {
       id: "sustainability",
       title: t("مبادرات الاستدامة", "Sustainability Initiatives"),
       desc: t("حلول بيئية مبتكرة لدعم رؤية المملكة 2030.", "Innovative environmental solutions to support Saudi Vision 2030."),
-      img: "https://res.cloudinary.com/erfajaoa/image/upload/v1783635704/2636738d-f094-40b2-ba90-a11490e446fe.png",
+      img: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783635704/2636738d-f094-40b2-ba90-a11490e446fe.png",
       items: [
         { text: t("مكافحة التصحر", "Combating Desertification"), icon: "🏜️" },
         { text: t("تقليل الانبعاثات الكربونية", "Reducing Carbon Emissions"), icon: "📉" },
@@ -150,7 +150,7 @@ export default function Services() {
   ];
 
   return (
-    <section id="services" className="py-8 md:py-20 bg-bg-primary relative">
+    <section id="services" className="py-10 md:py-12 bg-bg-primary relative">
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="text-center mb-16 max-w-3xl mx-auto">
            <motion.div

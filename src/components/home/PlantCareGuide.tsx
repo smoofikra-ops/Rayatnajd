@@ -10,7 +10,7 @@ export default function PlantCareGuide() {
   const careGuides = [
     {
       name: t("شجرة السمر", "Acacia tortilis"),
-      img: "https://res.cloudinary.com/erfajaoa/image/upload/v1783640670/efef7ddd-fbfa-4141-8b22-bba84237b69d.png",
+      img: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783640670/efef7ddd-fbfa-4141-8b22-bba84237b69d.png",
       description: t(
         "شجرة محلية تتحمل الجفاف والحرارة الشديدة، ممتازة للظل في البيئات الصحراوية.",
         "A native tree that withstands drought and extreme heat, excellent for shade in desert environments."
@@ -23,7 +23,7 @@ export default function PlantCareGuide() {
     },
     {
       name: t("شجرة السدر", "Ziziphus spina-christi"),
-      img: "https://res.cloudinary.com/erfajaoa/image/upload/v1783640436/3f94c320-a8ad-4f6e-bfe1-a3a86b792d3c.png",
+      img: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783640436/3f94c320-a8ad-4f6e-bfe1-a3a86b792d3c.png",
       description: t(
         "شجرة دائمة الخضرة، ذات أهمية بيئية وتاريخية كبيرة، تنتج ثمار النبق.",
         "An evergreen tree with significant environmental and historical importance, produces jujube fruits."
@@ -36,7 +36,7 @@ export default function PlantCareGuide() {
     },
     {
       name: t("شجرة الطلح", "Acacia gerrardii"),
-      img: "https://res.cloudinary.com/erfajaoa/image/upload/v1783640250/df3e251a-140d-4770-9777-1f5b4747110e.png",
+      img: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783640250/df3e251a-140d-4770-9777-1f5b4747110e.png",
       description: t(
         "من أهم أشجار البيئة السعودية، تثبت النيتروجين في التربة وتوفر ظلاً واسعاً.",
         "One of the most important trees in the Saudi environment, fixes nitrogen in the soil and provides wide shade."
@@ -50,7 +50,7 @@ export default function PlantCareGuide() {
   ];
 
   return (
-    <section className="py-8 md:py-20 bg-white dark:bg-bg-primary relative">
+    <section className="py-10 md:py-12 bg-white dark:bg-bg-primary relative">
       <div className="container mx-auto px-6">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <motion.div

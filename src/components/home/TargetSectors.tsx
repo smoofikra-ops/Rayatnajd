@@ -9,7 +9,7 @@ const SECTORS = [
     icon: Building2,
     desc: "حلول متكاملة لتشجير المشاريع السكنية والتجارية والمخططات العمرانية، بما يحقق أعلى معايير الجودة والاستدامة.",
     descEn: "Integrated afforestation solutions for residential and commercial projects and urban plans, achieving the highest standards of quality and sustainability.",
-    img: "https://res.cloudinary.com/erfajaoa/image/upload/v1783626924/%D9%85%D8%B7%D9%88%D8%B1_%D8%B9%D9%82%D8%A7%D8%B1%D9%8A_a6ihnn.png"
+    img: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783626924/%D9%85%D8%B7%D9%88%D8%B1_%D8%B9%D9%82%D8%A7%D8%B1%D9%8A_a6ihnn.png"
   },
   {
     title: "شركات التنسيق",
@@ -17,7 +17,7 @@ const SECTORS = [
     icon: Paintbrush,
     desc: "شريك موثوق لتوريد النخيل والأشجار والشجيرات وتنفيذ أعمال اللاندسكيب للمشاريع المختلفة.",
     descEn: "A reliable partner for supplying palms, trees, shrubs, and executing landscaping works for various projects.",
-    img: "https://res.cloudinary.com/erfajaoa/image/upload/v1783274487/WhatsApp_Image_2026-07-03_at_6.59.15_PM_8_tpujld.jpg"
+    img: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783274487/WhatsApp_Image_2026-07-03_at_6.59.15_PM_8_tpujld.jpg"
   },
   {
     title: "شركات المقاولات",
@@ -25,7 +25,7 @@ const SECTORS = [
     icon: HardHat,
     desc: "نقدم حلول التشجير وتطوير المشهد الحضري للمشاريع الإنشائية، مع قدرة عالية على تنفيذ المشاريع الكبيرة وفق أعلى المعايير.",
     descEn: "We provide afforestation and urban landscape development solutions for construction projects, with high capability to execute large projects.",
-    img: "https://res.cloudinary.com/erfajaoa/image/upload/v1783638790/f9b24911-ce32-4631-af66-39ec267826df.png"
+    img: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783638790/f9b24911-ce32-4631-af66-39ec267826df.png"
   },
   {
     title: "الجهات الحكومية",
@@ -33,7 +33,7 @@ const SECTORS = [
     icon: Landmark,
     desc: "شراكات مستدامة لتحقيق رؤية المملكة في زيادة الغطاء النباتي والمشاريع البيئية.",
     descEn: "Sustainable partnerships to achieve the Kingdom's vision of increasing vegetation and environmental projects.",
-    img: "https://res.cloudinary.com/erfajaoa/image/upload/v1783636613/da5f03dc-aa34-46b5-b1aa-d7e92e9802f4.png"
+    img: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783636613/da5f03dc-aa34-46b5-b1aa-d7e92e9802f4.png"
   },
   {
     title: "الفنادق والمنتجعات",
@@ -41,7 +41,7 @@ const SECTORS = [
     icon: Hotel,
     desc: "تصميم وتنفيذ بيئات خضراء جذابة ترتقي بتجربة الضيوف في قطاع الضيافة.",
     descEn: "Designing and implementing attractive green environments that elevate the guest experience in hospitality.",
-    img: "https://res.cloudinary.com/erfajaoa/image/upload/v1783637476/9da1989a-767b-4e78-b64f-64976944067b.png"
+    img: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783637476/9da1989a-767b-4e78-b64f-64976944067b.png"
   },
   {
     title: "المشاتل التجارية",
@@ -49,7 +49,7 @@ const SECTORS = [
     icon: Warehouse,
     desc: "توفير أفضل الأصناف والنباتات لدعم سلاسل الإمداد الزراعية والتجارية.",
     descEn: "Providing the best varieties and plants to support agricultural and commercial supply chains.",
-    img: "https://res.cloudinary.com/erfajaoa/image/upload/v1783637249/73ecbc51-9c72-4f23-9b5c-5e252e7b636d.png"
+    img: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783637249/73ecbc51-9c72-4f23-9b5c-5e252e7b636d.png"
   }
 ];
 
@@ -57,7 +57,7 @@ export default function TargetSectors() {
   const { t, language } = useSettings();
 
   return (
-    <section id="sectors" className="py-8 md:py-20 bg-white dark:bg-bg-primary relative overflow-hidden">
+    <section id="sectors" className="py-10 md:py-12 bg-white dark:bg-bg-primary relative overflow-hidden">
       <div className="absolute inset-0 bg-primary/5 pattern-dots pointer-events-none"></div>
       
       <div className="container mx-auto px-6 max-w-7xl text-center relative z-10">

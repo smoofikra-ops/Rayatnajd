@@ -21,10 +21,10 @@ export const servicesData: Record<string, any> = {
       { nameAr: "زراعة النخيل", nameEn: "Palm Planting", icon: "🌱", descAr: "طرق علمية لزراعة ناجحة.", descEn: "Scientific methods for successful planting." }
     ],
     gallery: [
-      { url: "https://res.cloudinary.com/erfajaoa/image/upload/v1783374898/WhatsApp_Image_2026-07-04_at_11.52.05_PM_delyfy.jpg", nameAr: "نخل واشنطن", nameEn: "Washingtonia Palm" },
-      { url: "https://res.cloudinary.com/erfajaoa/image/upload/v1783374916/WhatsApp_Image_2026-07-04_at_11.52.12_PM_1_adrfjq.jpg", nameAr: "نخل ملكي", nameEn: "Royal Palm" },
-      { url: "https://res.cloudinary.com/erfajaoa/image/upload/v1783374926/WhatsApp_Image_2026-07-04_at_11.56.59_PM_nivos5.jpg", nameAr: "نخل سيكس", nameEn: "Cycas Palm" },
-      { url: "https://res.cloudinary.com/erfajaoa/image/upload/v1783374936/WhatsApp_Image_2026-07-04_at_11.57.01_PM_5_d0f0fu.jpg", nameAr: "نخل واشنطن", nameEn: "Washingtonia Palm" }
+      { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783374898/WhatsApp_Image_2026-07-04_at_11.52.05_PM_delyfy.jpg", nameAr: "نخل واشنطن", nameEn: "Washingtonia Palm" },
+      { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783374916/WhatsApp_Image_2026-07-04_at_11.52.12_PM_1_adrfjq.jpg", nameAr: "نخل ملكي", nameEn: "Royal Palm" },
+      { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783374926/WhatsApp_Image_2026-07-04_at_11.56.59_PM_nivos5.jpg", nameAr: "نخل سيكس", nameEn: "Cycas Palm" },
+      { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783374936/WhatsApp_Image_2026-07-04_at_11.57.01_PM_5_d0f0fu.jpg", nameAr: "نخل واشنطن", nameEn: "Washingtonia Palm" }
     ],
     projects: [
       { nameAr: "مشروع تشجير طريق الملك فهد", nameEn: "King Fahd Road Afforestation", img: mediaData.projects?.[0]?.url || "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca" },

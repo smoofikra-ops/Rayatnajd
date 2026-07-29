@@ -29,7 +29,7 @@ export const BLOG_POSTS: BlogPost[] = [
       <h2>تواصل معنا</h2>
       <p>يمكنكم استكشاف <a href="/#services" class="text-primary underline">خدماتنا</a> المتنوعة في هذا المجال، أو التعرف على <a href="/#projects" class="text-primary underline">مشاريعنا</a> السابقة التي تعكس التزامنا بالجودة والاستدامة.</p>
     `,
-    image: "https://res.cloudinary.com/erfajaoa/image/upload/v1783274473/WhatsApp_Image_2026-07-03_at_6.59.15_PM_1_mqafij.jpg",
+    image: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783274473/WhatsApp_Image_2026-07-03_at_6.59.15_PM_1_mqafij.jpg",
     date: "2024-05-10",
     author: "فريق الهندسة الزراعية",
     category: "الزراعة",
@@ -51,7 +51,7 @@ export const BLOG_POSTS: BlogPost[] = [
       
       <p>اطلع على <a href="/#sectors" class="text-primary underline">القطاعات التي نخدمها</a> لتتعرف على كيف نخصص مشاريعنا لتناسب احتياجات كل قطاع، وكيف تتكامل مع <a href="/#about" class="text-primary underline">رؤيتنا</a> في رايات نجد.</p>
     `,
-    image: "https://res.cloudinary.com/erfajaoa/image/upload/v1783274476/WhatsApp_Image_2026-07-03_at_6.59.15_PM_2_ljvh2f.jpg",
+    image: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783274476/WhatsApp_Image_2026-07-03_at_6.59.15_PM_2_ljvh2f.jpg",
     date: "2024-05-15",
     author: "خبراء التشجير",
     category: "التشجير",
@@ -71,7 +71,7 @@ export const BLOG_POSTS: BlogPost[] = [
       <h2>حلول رايات نجد</h2>
       <p>من خلال <a href="/#services" class="text-primary underline">خدماتنا</a>، نقدم تصميمات هندسية نباتية تقلل من التلوث البصري، وتخلق مساحات متناغمة تعزز من راحة الزوار.</p>
     `,
-    image: "https://res.cloudinary.com/erfajaoa/image/upload/v1783274485/WhatsApp_Image_2026-07-03_at_6.59.15_PM_5_vd3uup.jpg",
+    image: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783274485/WhatsApp_Image_2026-07-03_at_6.59.15_PM_5_vd3uup.jpg",
     date: "2024-06-02",
     author: "قسم التصميم العمراني",
     category: "المشهد الحضري",
@@ -91,7 +91,7 @@ export const BLOG_POSTS: BlogPost[] = [
       <h2>تقليل البصمة الكربونية</h2>
       <p>بزراعة الأشجار المحلية المناسبة لبيئة المملكة، نساعد المؤسسات على تقليل بصمتها الكربونية. شاهد <a href="/#projects" class="text-primary underline">مشاريعنا السابقة</a> التي حققت أهداف الاستدامة بامتياز.</p>
     `,
-    image: "https://res.cloudinary.com/erfajaoa/image/upload/v1783274472/WhatsApp_Image_2026-07-03_at_6.59.15_PM_6_tiqsaa.jpg",
+    image: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783274472/WhatsApp_Image_2026-07-03_at_6.59.15_PM_6_tiqsaa.jpg",
     date: "2024-06-18",
     author: "مستشارو البيئة",
     category: "الاستدامة",
@@ -111,7 +111,7 @@ export const BLOG_POSTS: BlogPost[] = [
       <h2>دورنا في تحقيق النمو</h2>
       <p>نعمل في <strong>رايات نجد</strong> على تصميم وتنفيذ حلول ذكية تناسب <a href="/#sectors" class="text-primary underline">مختلف القطاعات</a>، لضمان أعلى عائد استثماري، متوافقين مع معايير جودة الحياة.</p>
     `,
-    image: "https://res.cloudinary.com/erfajaoa/image/upload/v1783274484/WhatsApp_Image_2026-07-03_at_6.59.15_PM_ysrnor.jpg",
+    image: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783274484/WhatsApp_Image_2026-07-03_at_6.59.15_PM_ysrnor.jpg",
     date: "2024-07-05",
     author: "محلل اقتصادي",
     category: "النمو",
@@ -131,7 +131,7 @@ export const BLOG_POSTS: BlogPost[] = [
       <h2>الوصول للمستهدفات</h2>
       <p>من خلال <a href="/#services" class="text-primary underline">الخدمات التي نقدمها</a>، نسعى لنكون الشريك الاستراتيجي الأول للجهات الحكومية في تنفيذ مبادرات التشجير الضخمة وتحقيق التوازن البيئي.</p>
     `,
-    image: "https://res.cloudinary.com/erfajaoa/image/upload/v1783274486/WhatsApp_Image_2026-07-03_at_6.59.16_PM_13_orvhre.jpg",
+    image: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783274486/WhatsApp_Image_2026-07-03_at_6.59.16_PM_13_orvhre.jpg",
     date: "2024-07-22",
     author: "إدارة التخطيط الاستراتيجي",
     category: "رؤية 2030",
@@ -151,7 +151,7 @@ export const BLOG_POSTS: BlogPost[] = [
       <h2>دور الشركات المتخصصة</h2>
       <p>تتضافر جهودنا في دعم هذا المشروع الوطني من خلال توفير شتلات عالية الجودة ومطابقة للمواصفات. تعرف أكثر على إسهاماتنا في <a href="/#projects" class="text-primary underline">مشاريعنا</a>.</p>
     `,
-    image: "https://res.cloudinary.com/erfajaoa/image/upload/v1783274487/WhatsApp_Image_2026-07-03_at_6.59.16_PM_1_gfnath.jpg",
+    image: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783274487/WhatsApp_Image_2026-07-03_at_6.59.16_PM_1_gfnath.jpg",
     date: "2024-08-10",
     author: "قسم المشاريع الكبرى",
     category: "الرياض الخضراء",
@@ -171,7 +171,7 @@ export const BLOG_POSTS: BlogPost[] = [
       <h2>التنفيذ والمتابعة</h2>
       <p>نحن في رايات نجد نقدم الدعم الشامل بدءاً من التخطيط وحتى الصيانة الدورية. نقدم خدماتنا بتميز لـ <a href="/#sectors" class="text-primary underline">كافة القطاعات الكبرى</a> بما يضمن نمواً مستداماً للمزروعات.</p>
     `,
-    image: "https://res.cloudinary.com/erfajaoa/image/upload/v1783274476/WhatsApp_Image_2026-07-03_at_6.59.16_PM_22_uc6x3b.jpg",
+    image: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783274476/WhatsApp_Image_2026-07-03_at_6.59.16_PM_22_uc6x3b.jpg",
     date: "2024-08-25",
     author: "إدارة المشاريع",
     category: "مشاريع التشجير",
@@ -191,7 +191,7 @@ export const BLOG_POSTS: BlogPost[] = [
       <h2>حلول الملاعب</h2>
       <p>نقوم في شركتنا بتوفير حلول العشب والمساحات الخضراء المحيطة بالمنشآت لتوفير بيئة نظيفة ومريحة. ندعوكم لاستكشاف <a href="/#services" class="text-primary underline">باقة خدماتنا</a> المصممة خصيصاً لهذه القطاعات.</p>
     `,
-    image: "https://res.cloudinary.com/erfajaoa/image/upload/v1783274484/WhatsApp_Image_2026-07-03_at_6.59.16_PM_24_jwozvi.jpg",
+    image: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783274484/WhatsApp_Image_2026-07-03_at_6.59.16_PM_24_jwozvi.jpg",
     date: "2024-09-03",
     author: "فريق الابتكار",
     category: "الرياضة الخضراء",
@@ -211,7 +211,7 @@ export const BLOG_POSTS: BlogPost[] = [
       <h2>الشريك الاستراتيجي</h2>
       <p>بصفتنا شريكاً استراتيجياً في مشاريع التشجير، نملك <a href="/#about" class="text-primary underline">الخبرات</a> والمشاتل الضخمة التي تمكننا من دعم هذه المبادرات بنجاح لضمان مستقبل أخضر مستدام.</p>
     `,
-    image: "https://res.cloudinary.com/erfajaoa/image/upload/v1783274477/WhatsApp_Image_2026-07-03_at_6.59.16_PM_2_f6bqkh.jpg",
+    image: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783274477/WhatsApp_Image_2026-07-03_at_6.59.16_PM_2_f6bqkh.jpg",
     date: "2024-09-12",
     author: "فريق الشراكات الاستراتيجية",
     category: "زراعة مليون شجرة",

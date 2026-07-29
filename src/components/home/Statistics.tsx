@@ -34,7 +34,7 @@ export default function Statistics() {
   ];
 
   return (
-    <section className="py-8 md:py-20 bg-white dark:bg-bg-primary relative border-y border-text-main/5">
+    <section className="py-10 md:py-12 bg-white dark:bg-bg-primary relative border-y border-text-main/5">
       <div className="container mx-auto px-6 max-w-7xl relative z-10">
         <div className="text-center mb-16">
           <motion.h2

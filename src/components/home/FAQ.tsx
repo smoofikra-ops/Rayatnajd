@@ -27,7 +27,7 @@ export default function FAQ() {
   ];
 
   return (
-    <section className="py-8 md:py-20 bg-bg-primary relative" id="faq">
+    <section className="py-10 md:py-12 bg-bg-primary relative" id="faq">
       <div className="container mx-auto px-6 max-w-4xl">
         <div className="text-center mb-16">
           <motion.h2

@@ -6,9 +6,9 @@ export default function LocationsMap() {
   const { t } = useSettings();
 
   return (
-    <section className="py-8 md:py-20 bg-white dark:bg-bg-primary relative overflow-hidden" id="locations">
+    <section className="py-10 md:py-12 bg-white dark:bg-bg-primary relative overflow-hidden" id="locations">
       <div className="container mx-auto px-4 md:px-6 max-w-7xl">
-        <div className="text-center max-w-3xl mx-auto mb-8 md:mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-6 md:mb-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

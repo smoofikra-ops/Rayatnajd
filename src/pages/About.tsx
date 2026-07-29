@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import { motion } from 'motion/react';
-import { Helmet } from 'react-helmet-async';
 import { useNavigate, Link } from 'react-router-dom';
 import { useSettings } from '../contexts/SettingsContext';
 import {
@@ -8,6 +7,7 @@ import {
   TreePine, Users, Award, Target, TrendingUp, HeartHandshake, Eye, Shield, Map, Lightbulb, Leaf
 } from 'lucide-react';
 import AnimatedCounter from '../components/AnimatedCounter';
+import SEO from '../components/SEO';
 
 export default function About() {
   const { t, language } = useSettings();
@@ -76,10 +76,8 @@ export default function About() {
 
   return (
     <div className="bg-white min-h-screen font-sans text-gray-800 flex flex-col" dir={isRtl ? 'rtl' : 'ltr'}>
-      <Helmet>
-        <title>{t("من نحن | رايات نجد للتشجير والاستدامة البيئية", "About Us | Rayat Najd")}</title>
-        <meta name="description" content={t("تعرف على رايات نجد، مؤسسة سعودية متخصصة في التشجير والمقاولات الزراعية ونقل الأشجار والاستدامة البيئية منذ 2010.", "Learn about Rayat Najd, a Saudi establishment specialized in afforestation, agricultural contracting, tree relocation, and environmental sustainability since 2010.")} />
-      </Helmet>
+      <SEO title={t("من نحن | رايات نجد للتشجير والاستدامة البيئية", "About Us | Rayat Najd") as string} description={t("تعرف على رايات نجد، مؤسسة سعودية متخصصة في التشجير والمقاولات الزراعية ونقل الأشجار والاستدامة البيئية منذ 2010.", "Learn about Rayat Najd, a Saudi establishment specialized in afforestation, agricultural contracting, tree relocation, and environmental sustainability since 2010.") as string} />
+      
 
       {/* Inner Navigation Bar */}
       <div className="sticky top-[60px] md:top-[72px] z-40 bg-white/90 backdrop-blur-md border-b border-gray-100 shadow-sm py-3 px-4 flex items-center justify-between">
@@ -112,7 +110,7 @@ export default function About() {
         <section className="relative min-h-[80vh] md:min-h-[90vh] flex flex-col items-center justify-center pt-10 pb-20 px-4 overflow-hidden">
           <div className="absolute inset-0 z-0">
             <img 
-              src="https://res.cloudinary.com/erfajaoa/image/upload/v1783961159/nursery_hero_v3o4lk.jpg" 
+              src="https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783961159/nursery_hero_v3o4lk.jpg" 
               alt="Rayat Najd Farms" 
               className="w-full h-full object-cover object-center"
             />
@@ -311,10 +309,10 @@ export default function About() {
             </div>
             
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
-              <img src="https://res.cloudinary.com/erfajaoa/image/upload/v1783961159/nursery_hero_v3o4lk.jpg" alt="Nursery" className="w-full h-48 md:h-64 object-cover rounded-2xl shadow-sm hover:shadow-md transition-shadow" />
-              <img src="https://res.cloudinary.com/erfajaoa/image/upload/v1783896502/z4b0s2mlyy7b4wngc92n.jpg" alt="Trees" className="w-full h-48 md:h-64 object-cover rounded-2xl shadow-sm hover:shadow-md transition-shadow" />
-              <img src="https://res.cloudinary.com/erfajaoa/image/upload/v1783896499/v5nmtx1kicf4qmd0yq1f.jpg" alt="Plants" className="w-full h-48 md:h-64 object-cover rounded-2xl shadow-sm hover:shadow-md transition-shadow" />
-              <img src="https://res.cloudinary.com/erfajaoa/image/upload/v1783896489/bhmh6tihh2m5gyl10mku.jpg" alt="Palms" className="w-full h-48 md:h-64 object-cover rounded-2xl shadow-sm hover:shadow-md transition-shadow" />
+              <img src="https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783961159/nursery_hero_v3o4lk.jpg" alt="Nursery" className="w-full h-48 md:h-64 object-cover rounded-2xl shadow-sm hover:shadow-md transition-shadow" />
+              <img src="https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783896502/z4b0s2mlyy7b4wngc92n.jpg" alt="Trees" className="w-full h-48 md:h-64 object-cover rounded-2xl shadow-sm hover:shadow-md transition-shadow" />
+              <img src="https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783896499/v5nmtx1kicf4qmd0yq1f.jpg" alt="Plants" className="w-full h-48 md:h-64 object-cover rounded-2xl shadow-sm hover:shadow-md transition-shadow" />
+              <img src="https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783896489/bhmh6tihh2m5gyl10mku.jpg" alt="Palms" className="w-full h-48 md:h-64 object-cover rounded-2xl shadow-sm hover:shadow-md transition-shadow" />
             </div>
 
             <div className="text-center">
@@ -411,9 +409,9 @@ export default function About() {
             <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">{t("من مشاريعنا", "Our Projects")}</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
               {[
-                { name: t("مشروع تشجير طويق", "Tuwaiq Afforestation"), type: t("حكومي", "Government"), city: t("الرياض", "Riyadh"), img: "https://res.cloudinary.com/erfajaoa/image/upload/v1783896499/v5nmtx1kicf4qmd0yq1f.jpg", service: t("توريد وتنفيذ", "Supply & Execute") },
-                { name: t("منتجع العمارية", "Al Ammariya Resort"), type: t("خاص", "Private"), city: t("الرياض", "Riyadh"), img: "https://res.cloudinary.com/erfajaoa/image/upload/v1783896502/z4b0s2mlyy7b4wngc92n.jpg", service: t("تنسيق وزراعة", "Landscaping & Planting") },
-                { name: t("حي الملك عبدالله", "King Abdullah District"), type: t("تطوير", "Development"), city: t("الخرج", "Al-Kharj"), img: "https://res.cloudinary.com/erfajaoa/image/upload/v1783896489/bhmh6tihh2m5gyl10mku.jpg", service: t("صيانة زراعية", "Agricultural Maint.") }
+                { name: t("مشروع تشجير طويق", "Tuwaiq Afforestation"), type: t("حكومي", "Government"), city: t("الرياض", "Riyadh"), img: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783896499/v5nmtx1kicf4qmd0yq1f.jpg", service: t("توريد وتنفيذ", "Supply & Execute") },
+                { name: t("منتجع العمارية", "Al Ammariya Resort"), type: t("خاص", "Private"), city: t("الرياض", "Riyadh"), img: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783896502/z4b0s2mlyy7b4wngc92n.jpg", service: t("تنسيق وزراعة", "Landscaping & Planting") },
+                { name: t("حي الملك عبدالله", "King Abdullah District"), type: t("تطوير", "Development"), city: t("الخرج", "Al-Kharj"), img: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783896489/bhmh6tihh2m5gyl10mku.jpg", service: t("صيانة زراعية", "Agricultural Maint.") }
               ].map((p, i) => (
                 <div key={i} className="bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all group">
                   <div className="h-48 overflow-hidden relative">

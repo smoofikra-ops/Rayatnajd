@@ -3,7 +3,7 @@ export const getCloudinaryUrl = (url: string, width?: number) => {
   if (!url.includes('res.cloudinary.com')) return url; // Return as is if not cloudinary
 
   // Example implementation to inject transformations if it is a cloudinary URL
-  // A standard cloudinary URL looks like: https://res.cloudinary.com/<cloud_name>/image/upload/v1234567890/folder/image.jpg
+  // A standard cloudinary URL looks like: https://res.cloudinary.com/<cloud_name>/image/upload/f_auto,q_auto/v1234567890/folder/image.jpg
   // We can insert /upload/f_auto,q_auto,w_xxx/ after /upload/ if it doesn't already have transformations
   const uploadIndex = url.indexOf('/upload/');
   if (uploadIndex !== -1 && !url.includes('f_auto')) {
@@ -143,37 +143,37 @@ export const mediaData = {
     }
   ],
   gallery: [
-    { url: "https://res.cloudinary.com/erfajaoa/image/upload/v1783274473/WhatsApp_Image_2026-07-03_at_6.59.15_PM_1_mqafij.jpg", category: "projects" },
-    { url: "https://res.cloudinary.com/erfajaoa/image/upload/v1783274476/WhatsApp_Image_2026-07-03_at_6.59.15_PM_2_ljvh2f.jpg", category: "projects" },
-    { url: "https://res.cloudinary.com/erfajaoa/image/upload/v1783274485/WhatsApp_Image_2026-07-03_at_6.59.15_PM_5_vd3uup.jpg", category: "projects" },
-    { url: "https://res.cloudinary.com/erfajaoa/image/upload/v1783274472/WhatsApp_Image_2026-07-03_at_6.59.15_PM_6_tiqsaa.jpg", category: "projects" },
-    { url: "https://res.cloudinary.com/erfajaoa/image/upload/v1783274484/WhatsApp_Image_2026-07-03_at_6.59.15_PM_ysrnor.jpg", category: "projects" },
-    { url: "https://res.cloudinary.com/erfajaoa/image/upload/v1783274486/WhatsApp_Image_2026-07-03_at_6.59.16_PM_13_orvhre.jpg", category: "projects" },
-    { url: "https://res.cloudinary.com/erfajaoa/image/upload/v1783274487/WhatsApp_Image_2026-07-03_at_6.59.16_PM_1_gfnath.jpg", category: "projects" },
-    { url: "https://res.cloudinary.com/erfajaoa/image/upload/v1783274476/WhatsApp_Image_2026-07-03_at_6.59.16_PM_22_uc6x3b.jpg", category: "projects" },
-    { url: "https://res.cloudinary.com/erfajaoa/image/upload/v1783274484/WhatsApp_Image_2026-07-03_at_6.59.16_PM_24_jwozvi.jpg", category: "projects" },
-    { url: "https://res.cloudinary.com/erfajaoa/image/upload/v1783274477/WhatsApp_Image_2026-07-03_at_6.59.16_PM_2_f6bqkh.jpg", category: "projects" },
-    { url: "https://res.cloudinary.com/erfajaoa/image/upload/v1783274478/WhatsApp_Image_2026-07-03_at_6.59.16_PM_3_sd1ywi.jpg", category: "projects" },
-    { url: "https://res.cloudinary.com/erfajaoa/image/upload/v1783274486/WhatsApp_Image_2026-07-03_at_6.59.16_PM_4_czzxuu.jpg", category: "projects" },
-    { url: "https://res.cloudinary.com/erfajaoa/image/upload/v1783274472/WhatsApp_Image_2026-07-03_at_6.59.16_PM_5_hdqktb.jpg", category: "projects" },
-    { url: "https://res.cloudinary.com/erfajaoa/image/upload/v1783274484/WhatsApp_Image_2026-07-03_at_6.59.16_PM_6_tyqgrc.jpg", category: "projects" },
-    { url: "https://res.cloudinary.com/erfajaoa/image/upload/v1783274482/WhatsApp_Image_2026-07-03_at_6.59.16_PM_fk9qke.jpg", category: "projects" },
-    { url: "https://res.cloudinary.com/erfajaoa/image/upload/v1783274472/WhatsApp_Image_2026-07-03_at_7.02.09_PM_jfbnqc.jpg", category: "projects" },
-    { url: "https://res.cloudinary.com/erfajaoa/image/upload/v1783274475/WhatsApp_Image_2026-07-03_at_7.02.11_PM_23_qgs2da.jpg", category: "projects" },
-    { url: "https://res.cloudinary.com/erfajaoa/image/upload/v1783274481/WhatsApp_Image_2026-07-03_at_7.02.11_PM_24_remfcl.jpg", category: "projects" },
-    { url: "https://res.cloudinary.com/erfajaoa/image/upload/v1783374899/WhatsApp_Image_2026-07-04_at_11.52.06_PM_1_hjhdjs.jpg", category: "nurseries" },
-    { url: "https://res.cloudinary.com/erfajaoa/image/upload/v1783374899/WhatsApp_Image_2026-07-04_at_11.52.06_PM_2_esfzcu.jpg", category: "nurseries" },
-    { url: "https://res.cloudinary.com/erfajaoa/image/upload/v1783374905/WhatsApp_Image_2026-07-04_at_11.52.07_PM_5_qoi00h.jpg", category: "nurseries" },
-    { url: "https://res.cloudinary.com/erfajaoa/image/upload/v1783374906/WhatsApp_Image_2026-07-04_at_11.52.07_PM_nuqgxw.jpg", category: "nurseries" },
-    { url: "https://res.cloudinary.com/erfajaoa/image/upload/v1783374909/WhatsApp_Image_2026-07-04_at_11.52.08_PM_2_mlkari.jpg", category: "nurseries" },
-    { url: "https://res.cloudinary.com/erfajaoa/image/upload/v1783374911/WhatsApp_Image_2026-07-04_at_11.52.08_PM_cia8is.jpg", category: "nurseries" },
-    { url: "https://res.cloudinary.com/erfajaoa/image/upload/v1783374916/WhatsApp_Image_2026-07-04_at_11.52.12_PM_1_adrfjq.jpg", category: "nurseries" },
-    { url: "https://res.cloudinary.com/erfajaoa/image/upload/v1783374917/WhatsApp_Image_2026-07-04_at_11.52.12_PM_kybu8a.jpg", category: "nurseries" },
-    { url: "https://res.cloudinary.com/erfajaoa/image/upload/v1783374923/WhatsApp_Image_2026-07-04_at_11.56.59_PM_4_rmlfci.jpg", category: "trees" },
-    { url: "https://res.cloudinary.com/erfajaoa/image/upload/v1783374925/WhatsApp_Image_2026-07-04_at_11.56.59_PM_7_dizmsn.jpg", category: "trees" },
-    { url: "https://res.cloudinary.com/erfajaoa/image/upload/v1783374927/WhatsApp_Image_2026-07-04_at_11.57.00_PM_1_bujl3k.jpg", category: "trees" },
-    { url: "https://res.cloudinary.com/erfajaoa/image/upload/v1783374930/WhatsApp_Image_2026-07-04_at_11.57.00_PM_4_gs3sjz.jpg", category: "trees" },
-    { url: "https://res.cloudinary.com/erfajaoa/image/upload/v1783374932/WhatsApp_Image_2026-07-04_at_11.57.00_PM_l4wx3h.jpg", category: "trees" },
-    { url: "https://res.cloudinary.com/erfajaoa/image/upload/v1783374952/WhatsApp_Image_2026-07-04_at_11.57.04_PM_gl59wv.jpg", category: "trees" }
+    { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783274473/WhatsApp_Image_2026-07-03_at_6.59.15_PM_1_mqafij.jpg", category: "projects" },
+    { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783274476/WhatsApp_Image_2026-07-03_at_6.59.15_PM_2_ljvh2f.jpg", category: "projects" },
+    { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783274485/WhatsApp_Image_2026-07-03_at_6.59.15_PM_5_vd3uup.jpg", category: "projects" },
+    { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783274472/WhatsApp_Image_2026-07-03_at_6.59.15_PM_6_tiqsaa.jpg", category: "projects" },
+    { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783274484/WhatsApp_Image_2026-07-03_at_6.59.15_PM_ysrnor.jpg", category: "projects" },
+    { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783274486/WhatsApp_Image_2026-07-03_at_6.59.16_PM_13_orvhre.jpg", category: "projects" },
+    { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783274487/WhatsApp_Image_2026-07-03_at_6.59.16_PM_1_gfnath.jpg", category: "projects" },
+    { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783274476/WhatsApp_Image_2026-07-03_at_6.59.16_PM_22_uc6x3b.jpg", category: "projects" },
+    { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783274484/WhatsApp_Image_2026-07-03_at_6.59.16_PM_24_jwozvi.jpg", category: "projects" },
+    { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783274477/WhatsApp_Image_2026-07-03_at_6.59.16_PM_2_f6bqkh.jpg", category: "projects" },
+    { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783274478/WhatsApp_Image_2026-07-03_at_6.59.16_PM_3_sd1ywi.jpg", category: "projects" },
+    { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783274486/WhatsApp_Image_2026-07-03_at_6.59.16_PM_4_czzxuu.jpg", category: "projects" },
+    { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783274472/WhatsApp_Image_2026-07-03_at_6.59.16_PM_5_hdqktb.jpg", category: "projects" },
+    { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783274484/WhatsApp_Image_2026-07-03_at_6.59.16_PM_6_tyqgrc.jpg", category: "projects" },
+    { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783274482/WhatsApp_Image_2026-07-03_at_6.59.16_PM_fk9qke.jpg", category: "projects" },
+    { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783274472/WhatsApp_Image_2026-07-03_at_7.02.09_PM_jfbnqc.jpg", category: "projects" },
+    { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783274475/WhatsApp_Image_2026-07-03_at_7.02.11_PM_23_qgs2da.jpg", category: "projects" },
+    { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783274481/WhatsApp_Image_2026-07-03_at_7.02.11_PM_24_remfcl.jpg", category: "projects" },
+    { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783374899/WhatsApp_Image_2026-07-04_at_11.52.06_PM_1_hjhdjs.jpg", category: "nurseries" },
+    { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783374899/WhatsApp_Image_2026-07-04_at_11.52.06_PM_2_esfzcu.jpg", category: "nurseries" },
+    { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783374905/WhatsApp_Image_2026-07-04_at_11.52.07_PM_5_qoi00h.jpg", category: "nurseries" },
+    { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783374906/WhatsApp_Image_2026-07-04_at_11.52.07_PM_nuqgxw.jpg", category: "nurseries" },
+    { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783374909/WhatsApp_Image_2026-07-04_at_11.52.08_PM_2_mlkari.jpg", category: "nurseries" },
+    { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783374911/WhatsApp_Image_2026-07-04_at_11.52.08_PM_cia8is.jpg", category: "nurseries" },
+    { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783374916/WhatsApp_Image_2026-07-04_at_11.52.12_PM_1_adrfjq.jpg", category: "nurseries" },
+    { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783374917/WhatsApp_Image_2026-07-04_at_11.52.12_PM_kybu8a.jpg", category: "nurseries" },
+    { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783374923/WhatsApp_Image_2026-07-04_at_11.56.59_PM_4_rmlfci.jpg", category: "trees" },
+    { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783374925/WhatsApp_Image_2026-07-04_at_11.56.59_PM_7_dizmsn.jpg", category: "trees" },
+    { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783374927/WhatsApp_Image_2026-07-04_at_11.57.00_PM_1_bujl3k.jpg", category: "trees" },
+    { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783374930/WhatsApp_Image_2026-07-04_at_11.57.00_PM_4_gs3sjz.jpg", category: "trees" },
+    { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783374932/WhatsApp_Image_2026-07-04_at_11.57.00_PM_l4wx3h.jpg", category: "trees" },
+    { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783374952/WhatsApp_Image_2026-07-04_at_11.57.04_PM_gl59wv.jpg", category: "trees" }
   ]
 };

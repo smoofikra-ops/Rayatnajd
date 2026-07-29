@@ -60,7 +60,7 @@ export default function ServicePage() {
           className="absolute inset-0 w-full h-full"
         >
           <CloudinaryImage 
-            src="https://res.cloudinary.com/erfajaoa/image/upload/v1783374944/WhatsApp_Image_2026-07-04_at_11.57.02_PM_pfl01h.jpg" 
+            src="https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783374944/WhatsApp_Image_2026-07-04_at_11.57.02_PM_pfl01h.jpg" 
             alt={language === 'ar' ? data.titleAr : data.titleEn} 
             width={1920}
             className="w-full h-full object-cover"
