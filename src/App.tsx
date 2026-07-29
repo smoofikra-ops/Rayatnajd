@@ -21,6 +21,10 @@ import BlogList from "./pages/BlogList";
 import BlogPost from "./pages/BlogPost";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import Terms from "./pages/policies/Terms";
+import Privacy from "./pages/policies/Privacy";
+import Warranty from "./pages/policies/Warranty";
+import ReturnPolicy from "./pages/policies/ReturnPolicy";
 
 export default function App() {
   return (
@@ -37,6 +41,10 @@ export default function App() {
             <Route path="tools" element={<ToolsCenter />} />
             <Route path="blog" element={<BlogList />} />
             <Route path="blog/:slug" element={<BlogPost />} />
+            <Route path="terms" element={<Terms />} />
+            <Route path="privacy" element={<Privacy />} />
+            <Route path="warranty" element={<Warranty />} />
+            <Route path="return-policy" element={<ReturnPolicy />} />
           </Route>
           
           <Route path="/tools/ai-designer" element={<AiDesignerTool />} />

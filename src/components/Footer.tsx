@@ -61,7 +61,7 @@ export default function Footer() {
       ></div>
 
       <div className="container mx-auto px-6 max-w-7xl relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:gap-12 mb-12 md:mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 md:gap-12 mb-12 md:mb-16">
           <div className="space-y-6 mb-8 md:mb-0 text-center md:text-right md:ltr:text-left">
             <Link to="/" className="flex items-center justify-center md:justify-start gap-2">
               <div className="relative w-12 h-12 rounded-full shadow-lg overflow-hidden border-2 border-primary/20 bg-white flex items-center justify-center">
@@ -147,6 +147,15 @@ export default function Footer() {
             </ul>
           </FooterAccordion>
 
+          <FooterAccordion title={t("السياسات", "Policies") as string}>
+            <ul className="space-y-4">
+              <li><Link to="/terms" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white transition-colors text-sm mercury-effect inline-block px-3 py-1 -mx-3 rounded-lg">{t("الشروط والأحكام", "Terms & Conditions")}</Link></li>
+              <li><Link to="/privacy" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white transition-colors text-sm mercury-effect inline-block px-3 py-1 -mx-3 rounded-lg">{t("سياسة الخصوصية", "Privacy Policy")}</Link></li>
+              <li><Link to="/warranty" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white transition-colors text-sm mercury-effect inline-block px-3 py-1 -mx-3 rounded-lg">{t("سياسة الضمان", "Warranty Policy")}</Link></li>
+              <li><Link to="/return-policy" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white transition-colors text-sm mercury-effect inline-block px-3 py-1 -mx-3 rounded-lg">{t("سياسة الاسترجاع", "Return Policy")}</Link></li>
+            </ul>
+          </FooterAccordion>
+
           <FooterAccordion title={t("تحدث مع خبير", "Talk to an Expert") as string}>
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-white/80 text-sm">
@@ -180,11 +189,11 @@ export default function Footer() {
         </div>
 
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="flex flex-col items-start gap-1">
+          <div className="flex flex-col items-start gap-2">
             <p className="text-white/80 text-sm">
               &copy; {new Date().getFullYear()} {t("رايات نجد للتشجير. جميع الحقوق محفوظة.", "Rayat Najd. All rights reserved.")}
             </p>
-            <p className="text-white/80 text-xs flex items-center gap-1">
+            <p className="text-white/80 text-xs flex items-center gap-1 mt-1">
                {t("تصميم بواسطة", "Designed by")} <a href="https://www.nmolabs.com/" target="_blank" rel="noopener noreferrer" className="text-accent-gold hover:underline">نمو لابز (Numo Labs)</a>
             </p>
           </div>
