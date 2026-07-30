@@ -71,10 +71,6 @@ export default function Vision2030() {
             )}
           </motion.p>
         </div>
-
-        <div className="w-[100vw] relative left-1/2 -translate-x-1/2">
-          <VisionCarousel pillars={pillars} />
-        </div>
       </div>
     </section>
   );

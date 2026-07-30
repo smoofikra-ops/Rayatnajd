@@ -98,10 +98,10 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full premium-card border border-text-main/20 mb-6 md:mb-10 bg-white/10 backdrop-blur-md"
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full premium-card border border-text-main/20 mb-6 md:mb-10 bg-[#274227] backdrop-blur-md"
         >
           <Leaf className="w-4 h-4 text-accent-gold" />
-          <span className="text-sm font-medium text-white">{t("تأسست 2010", "Established 2010")}</span>
+          <span className="text-sm font-medium text-green-400">{t("تأسست 2010", "Established 2010")}</span>
         </motion.div>
 
         <motion.h1
