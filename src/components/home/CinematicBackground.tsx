@@ -142,11 +142,11 @@ export default function CinematicBackground() {
           key={`prev-${prevKey}`}
           src={prevUrl}
           alt=""
-          className={`absolute inset-0 w-full h-full object-cover origin-center transition-all will-change-transform will-change-opacity`}
+          className={`absolute inset-0 w-full h-full object-cover origin-center transition-all will-change-transform will-change-opacity animate-ken-burns`}
           style={{
             opacity: isTransitioning ? 0 : 0,
-            transform: `scale(${isTransitioning ? 1.05 : 1.08})`,
-            transition: `opacity ${transitionDuration} ${transitionEasing}, transform ${transitionDuration} ${transitionEasing}, filter ${transitionDuration} ${transitionEasing}`,
+            
+            transition: `opacity ${transitionDuration} ${transitionEasing}, filter ${transitionDuration} ${transitionEasing}`,
             filter: isTransitioning ? 'blur(0px)' : 'blur(0px)'
           }}
           decoding="async"
@@ -160,11 +160,11 @@ export default function CinematicBackground() {
           src={activeUrl}
           alt=""
           fetchPriority={activeKey === 'hero' ? 'high' : 'low'}
-          className={`absolute inset-0 w-full h-full object-cover origin-center transition-all will-change-transform will-change-opacity`}
+          className={`absolute inset-0 w-full h-full object-cover origin-center transition-all will-change-transform will-change-opacity animate-ken-burns`}
           style={{
             opacity: isTransitioning ? 0 : 1,
-            transform: `scale(${isTransitioning ? 1.03 : 1.08})`,
-            transition: `opacity ${transitionDuration} ${transitionEasing}, transform ${transitionDuration} ${transitionEasing}, filter ${transitionDuration} ${transitionEasing}`,
+            
+            transition: `opacity ${transitionDuration} ${transitionEasing}, filter ${transitionDuration} ${transitionEasing}`,
             filter: isTransitioning ? 'blur(4px)' : 'blur(0px)'
           }}
           decoding="async"

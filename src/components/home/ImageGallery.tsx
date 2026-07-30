@@ -134,7 +134,7 @@ export default function ImageGallery() {
                  <button
                     key={cat.id}
                     onClick={() => setActiveCategory(cat.id)}
-                    className={`whitespace-nowrap shrink-0 px-6 py-2 rounded-full font-medium transition-all duration-300 ${activeCategory === cat.id ? 'bg-primary text-white shadow-lg shadow-primary/20' : 'bg-white text-text-main hover:bg-bg-secondary border border-text-main/10'}`}
+                    className={`whitespace-nowrap shrink-0 px-6 py-2 rounded-full font-medium transition-all duration-300 ${activeCategory === cat.id ? 'bg-primary text-white shadow-lg shadow-primary/20' : 'bg-card-background text-text-main hover:bg-bg-secondary border border-card-border'}`}
                  >
                      {language === 'ar' ? cat.nameAr : cat.nameEn}
                  </button>

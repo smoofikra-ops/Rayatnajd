@@ -105,7 +105,7 @@ export default function SuccessPartners() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-lg text-white/70 max-w-2xl mx-auto"
+            className="text-lg text-[#a9d3b7] dark:text-white/70 max-w-2xl mx-auto"
           >
             {t(
               "نعتز بشراكاتنا الاستراتيجية مع نخبة من الجهات الحكومية والخاصة لتحقيق مستهدفات الرؤية.",

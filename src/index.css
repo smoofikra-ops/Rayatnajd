@@ -292,12 +292,17 @@
   }
 }
 @keyframes ken-burns {
-  0% { transform: scale(1.05) translate(0, 0); }
-  50% { transform: scale(1.15) translate(-1%, -1%); }
-  100% { transform: scale(1.05) translate(0, 0); }
+  0% { transform: scale(1.03) translate3d(0, 0, 0); }
+  50% { transform: scale(1.08) translate3d(-1.5%, -1%, 0); }
+  100% { transform: scale(1.03) translate3d(0, 0, 0); }
 }
 @layer utilities {
   .animate-ken-burns {
-    animation: ken-burns 30s ease-in-out infinite alternate;
+    animation: ken-burns 22s ease-in-out infinite alternate;
+  }
+  @media (max-width: 768px) {
+    .animate-ken-burns {
+      animation-duration: 26s;
+    }
   }
 }

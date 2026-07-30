@@ -76,7 +76,7 @@ export default function Navbar() {
                 <a
                   key={link.name as string}
                   href={link.path}
-                  className="group relative flex items-center gap-1 xl:gap-1.5 px-2 xl:px-3 py-1.5 bg-white dark:bg-slate-800 rounded-xl border border-primary/20 dark:border-primary/40 border-b-[3px] shadow-sm hover:border-b-[1px] hover:translate-y-[2px] hover:shadow-md transition-all duration-200 shrink-0"
+                  className="group relative flex items-center gap-1 xl:gap-1.5 px-2 xl:px-3 py-1.5 bg-card-background rounded-xl border border-primary/30 border-b-[3px] shadow-sm hover:border-b-[1px] hover:translate-y-[2px] hover:shadow-md transition-all duration-200 shrink-0"
                 >
                   {language === 'ar' ? (
                     <ArrowLeft className="w-3.5 h-3.5 xl:w-4 xl:h-4 text-primary opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:-translate-x-1" />
@@ -92,7 +92,7 @@ export default function Navbar() {
                 <Link
                   key={link.name as string}
                   to={link.path}
-                  className="group relative flex items-center gap-1 xl:gap-1.5 px-2 xl:px-3 py-1.5 bg-white dark:bg-slate-800 rounded-xl border border-primary/20 dark:border-primary/40 border-b-[3px] shadow-sm hover:border-b-[1px] hover:translate-y-[2px] hover:shadow-md transition-all duration-200 shrink-0"
+                  className="group relative flex items-center gap-1 xl:gap-1.5 px-2 xl:px-3 py-1.5 bg-card-background rounded-xl border border-primary/30 border-b-[3px] shadow-sm hover:border-b-[1px] hover:translate-y-[2px] hover:shadow-md transition-all duration-200 shrink-0"
                 >
                   {language === 'ar' ? (
                     <ArrowLeft className="w-3.5 h-3.5 xl:w-4 xl:h-4 text-primary opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:-translate-x-1" />
@@ -180,7 +180,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -10, scale: 0.98 }}
             transition={{ type: "spring", bounce: 0, duration: 0.4 }}
-            className="lg:hidden absolute top-[calc(100%+0.5rem)] left-4 right-4 bg-white/70 dark:bg-[#0f172a]/70 backdrop-blur-2xl rounded-3xl shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] dark:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.5)] border border-black/5 dark:border-white/10 overflow-hidden"
+            className="lg:hidden absolute top-[calc(100%+0.5rem)] left-4 right-4 bg-bg-secondary/95 backdrop-blur-2xl rounded-3xl shadow-xl border border-card-border overflow-hidden"
           >
             <nav className="flex flex-col p-4 bg-primary/5">
               <div className="flex flex-col gap-3">
@@ -191,7 +191,7 @@ export default function Navbar() {
                       key={link.name as string}
                       href={link.path}
                       onClick={() => setIsMobileMenuOpen(false)}
-                      className="group mercury-effect px-5 py-3 flex items-center justify-between text-base font-medium text-text-main bg-white dark:bg-slate-800 rounded-xl border border-primary/20 dark:border-primary/40 border-b-[4px] shadow-sm active:border-b-[0px] active:translate-y-[4px] transition-all duration-200"
+                      className="group mercury-effect px-5 py-3 flex items-center justify-between text-base font-medium text-text-main bg-card-background rounded-xl border border-primary/30 border-b-[4px] shadow-sm active:border-b-[0px] active:translate-y-[4px] transition-all duration-200"
                     >
                       <span className="group-hover:text-primary transition-colors">{link.name}</span>
                       {language === 'ar' ? (
@@ -205,7 +205,7 @@ export default function Navbar() {
                       key={link.name as string}
                       to={link.path}
                       onClick={() => setIsMobileMenuOpen(false)}
-                      className="group mercury-effect px-5 py-3 flex items-center justify-between text-base font-medium text-text-main bg-white dark:bg-slate-800 rounded-xl border border-primary/20 dark:border-primary/40 border-b-[4px] shadow-sm active:border-b-[0px] active:translate-y-[4px] transition-all duration-200"
+                      className="group mercury-effect px-5 py-3 flex items-center justify-between text-base font-medium text-text-main bg-card-background rounded-xl border border-primary/30 border-b-[4px] shadow-sm active:border-b-[0px] active:translate-y-[4px] transition-all duration-200"
                     >
                       <span className="group-hover:text-primary transition-colors">{link.name}</span>
                       {language === 'ar' ? (
@@ -218,10 +218,10 @@ export default function Navbar() {
                 })}
               </div>
               
-              <div className="mt-4 bg-black/5 dark:bg-white/5 rounded-2xl overflow-hidden">
+              <div className="mt-4 bg-bg-secondary rounded-2xl overflow-hidden">
                 <button 
                   onClick={() => {toggleLanguage(); setIsMobileMenuOpen(false);}}
-                  className="w-full px-5 py-4 text-left flex items-center justify-between hover:bg-black/5 dark:hover:bg-white/10 active:bg-black/10 dark:active:bg-white/20 transition-colors text-base font-medium text-text-main"
+                  className="w-full px-5 py-4 text-left flex items-center justify-between hover:bg-border active:bg-primary/20 transition-colors text-base font-medium text-text-main"
                 >
                   <div className="flex items-center gap-3">
                     <Globe className="w-5 h-5 opacity-60" />
