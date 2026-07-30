@@ -1,5 +1,6 @@
+
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Sun, Moon, Globe, ArrowLeft, ArrowRight, ClipboardList } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { cn } from "../lib/utils";
@@ -7,6 +8,8 @@ import { useSettings } from "../contexts/SettingsContext";
 import { useInterestList } from "../contexts/InterestListContext";
 
 export default function Navbar() {
+  const location = useLocation();
+  const isHome = location.pathname === "/";
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { t, theme, setTheme, language, setLanguage } = useSettings();
@@ -37,7 +40,7 @@ export default function Navbar() {
   return (
     <header
       className={cn(
-        "sticky top-0 z-50 w-full transition-all duration-300 border-b",
+        cn("w-full transition-all duration-300 border-b", isHome && !isScrolled ? "dark" : ""),
         isScrolled 
           ? "bg-bg-primary/90 backdrop-blur-lg py-3 shadow-lg border-text-main/10" 
           : "bg-transparent py-5 border-transparent"

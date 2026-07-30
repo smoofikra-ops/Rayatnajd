@@ -107,12 +107,12 @@ export default function VisionCarousel({ pillars }: { pillars: any[] }) {
                 <div className="absolute top-0 right-0 w-24 h-24 md:w-32 md:h-32 bg-accent-gold/5 rounded-bl-full -z-10 group-hover:bg-accent-gold/10 transition-colors"></div>
               )}
               
-              <div className="relative z-10 w-12 h-12 md:w-16 md:h-16 bg-bg-primary rounded-2xl flex items-center justify-center mb-5 md:mb-6 shadow-inner border border-text-main/5">
+              <div className="relative z-10 w-12 h-12 md:w-16 md:h-16 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center mb-5 md:mb-6 shadow-inner border border-text-main/5">
                 <div className="scale-75 md:scale-100">{pillar.icon}</div>
               </div>
               
-              <h3 className="relative z-10 text-lg md:text-xl font-bold text-text-main mb-2 md:mb-3">{pillar.title}</h3>
-              <p className="relative z-10 text-text-muted text-sm leading-relaxed">{pillar.desc}</p>
+              <h3 className="relative z-10 text-lg md:text-xl font-bold text-white mb-2 md:mb-3">{pillar.title}</h3>
+              <p className="relative z-10 text-white/70 text-sm leading-relaxed">{pillar.desc}</p>
             </div>
           </div>
         ))}

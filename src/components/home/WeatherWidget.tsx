@@ -108,7 +108,7 @@ export default function WeatherWidget() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-lg text-text-main/70 leading-relaxed"
+            className="text-lg text-text-muted leading-relaxed"
           >
             {t(
               "نستخدم الذكاء الاصطناعي مع بيانات الطقس الحية لتقديم أفضل النصائح لزراعة الأشجار المحلية في منطقتك.",
@@ -129,7 +129,7 @@ export default function WeatherWidget() {
           <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="space-y-6 md:space-y-8">
               <div>
-                <label className="block text-sm font-bold text-text-main/70 mb-3 uppercase tracking-wider">
+                <label className="block text-sm font-bold text-text-muted mb-3 uppercase tracking-wider">
                   {t("اختر المنطقة", "Select Region")}
                 </label>
                 <div className="relative">

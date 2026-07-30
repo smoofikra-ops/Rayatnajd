@@ -35,7 +35,7 @@ export default function Vision2030() {
   ];
 
   return (
-    <section className="py-10 md:py-12 bg-bg-primary relative overflow-hidden">
+    <section className="py-10 md:py-12 relative overflow-hidden">
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <motion.div
@@ -54,7 +54,7 @@ export default function Vision2030() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-5xl font-bold text-gradient-identity mb-6 leading-relaxed py-2 md:leading-relaxed"
+            className="text-3xl md:text-5xl font-bold text-white drop-shadow-md mb-6 leading-relaxed py-2 md:leading-relaxed"
           >
             {t("نلهم المستقبل برؤية", "Inspiring the future with Vision")} <span className="text-gradient-gold leading-relaxed">2030</span>
           </motion.h2>
@@ -63,7 +63,7 @@ export default function Vision2030() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-lg text-text-muted"
+            className="text-lg text-white drop-shadow-sm"
           >
             {t(
               "رسالتنا تتناغم بوضوح مع الطموحات الوطنية الكبرى، لنكون الأداة التنفيذية والموثوقة لخلق مستقبل بيئي مستدام للأجيال القادمة.",

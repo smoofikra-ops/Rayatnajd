@@ -51,14 +51,14 @@ export default function ProjectsGallery() {
   const closeLightbox = () => setSelectedItemIndex(null);
 
   return (
-    <section id="projects" className="py-10 md:py-12 bg-gray-50 relative overflow-hidden">
+    <section id="projects" className="py-10 md:py-12 relative overflow-hidden">
       <div className="container mx-auto px-6 max-w-7xl relative z-10 mb-16">
         <div className="text-center max-w-3xl mx-auto">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-5xl font-bold text-gradient-identity mb-6 leading-relaxed py-2"
+            className="text-3xl md:text-5xl font-bold text-white drop-shadow-md mb-6 leading-relaxed py-2"
           >
             {t("مشاريعنا", "Our Projects")}
           </motion.h2>
@@ -67,7 +67,7 @@ export default function ProjectsGallery() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-lg text-text-muted mb-8"
+            className="text-lg text-white drop-shadow-sm mb-8"
           >
             {t(
               "نستعرض لكم أبرز مشاريعنا التي قمنا بتنفيذها.",
@@ -86,7 +86,7 @@ export default function ProjectsGallery() {
                 className="flex-[0_0_80%] sm:flex-[0_0_50%] md:flex-[0_0_33.33%] lg:flex-[0_0_25%] min-w-0 pl-4 rtl:pl-0 rtl:pr-4 cursor-pointer"
                 onClick={() => openLightbox(index)}
               >
-                <div className="relative group/card rounded-2xl overflow-hidden shadow-md bg-white aspect-[4/3] flex flex-col transition-all duration-300 hover:shadow-xl">
+                <div className="relative group/card rounded-2xl overflow-hidden shadow-md bg-white/10 backdrop-blur-md border border-white/20 aspect-[4/3] flex flex-col transition-all duration-300 hover:shadow-xl">
                   <div className="relative flex-grow overflow-hidden">
                     <CloudinaryImage
                       src={project.type === "video" ? (project.thumbnailUrl || "") : project.url}

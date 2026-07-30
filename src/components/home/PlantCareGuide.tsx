@@ -95,8 +95,8 @@ export default function PlantCareGuide() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex items-end p-2 md:p-6">
                   <div className="flex flex-col gap-1 md:gap-2">
-                    <h3 className="text-[10px] md:text-2xl font-bold text-white leading-tight md:leading-normal">{guide.name}</h3>
-                    <span className="hidden md:block text-white/80 text-sm font-medium">{t("اضغط للتفاصيل", "Click for details")}</span>
+                    <h3 className="text-[10px] md:text-2xl font-bold text-text-main leading-tight md:leading-normal">{guide.name}</h3>
+                    <span className="hidden md:block text-text-main/80 text-sm font-medium">{t("اضغط للتفاصيل", "Click for details")}</span>
                   </div>
                 </div>
               </div>
@@ -123,7 +123,7 @@ export default function PlantCareGuide() {
             >
               <button
                 onClick={() => setSelectedGuide(null)}
-                className={`absolute top-4 ${language === 'ar' ? 'left-4' : 'right-4'} w-10 h-10 bg-black/20 hover:bg-black/40 backdrop-blur-md rounded-full flex items-center justify-center text-white z-20 transition-colors`}
+                className={`absolute top-4 ${language === 'ar' ? 'left-4' : 'right-4'} w-10 h-10 bg-black/20 hover:bg-black/40 backdrop-blur-md rounded-full flex items-center justify-center text-text-main z-20 transition-colors`}
               >
                 <X className="w-5 h-5" />
               </button>

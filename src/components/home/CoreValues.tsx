@@ -15,7 +15,7 @@ export default function CoreValues() {
   ];
 
   return (
-    <section className="py-10 md:py-12 bg-white dark:bg-bg-primary relative border-t border-text-main/5 overflow-hidden">
+    <section className="py-10 md:py-12  relative border-t border-text-main/5 overflow-hidden">
       <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -mr-40 -mt-40 pointer-events-none"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent-gold/5 rounded-full blur-3xl -ml-40 -mb-40 pointer-events-none"></div>
       <div className="container mx-auto px-6 max-w-7xl relative z-10">
@@ -24,7 +24,7 @@ export default function CoreValues() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-5xl font-bold text-gradient-identity mb-6 leading-relaxed py-2 md:leading-relaxed"
+            className="text-3xl md:text-5xl font-bold text-white drop-shadow-md mb-6 leading-relaxed py-2 md:leading-relaxed"
           >
             {t("قيمنا", "Our")} <span className="text-gradient-green">{t("الأساسية", "Core Values")}</span>
           </motion.h2>
@@ -33,7 +33,7 @@ export default function CoreValues() {
              whileInView={{ opacity: 1, y: 0 }}
              viewport={{ once: true }}
              transition={{ delay: 0.1 }}
-            className="text-lg text-text-muted"
+            className="text-lg text-white drop-shadow-sm"
           >
             {t(
               "المبادئ التي تقود عملنا ونصنع بها الفارق البيئي من أجل وطن أخضر ومستدام.",
@@ -53,23 +53,23 @@ export default function CoreValues() {
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.05, duration: 0.5 }}
                   whileHover={{ y: -10, rotateX: 5, rotateY: -5 }}
-                  className="bg-white rounded-2xl md:rounded-3xl p-3 md:p-8 flex flex-col items-center md:items-start justify-start shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)] hover:shadow-[15px_15px_40px_-10px_rgba(20,184,166,0.2),-10px_-10px_30px_-10px_rgba(255,255,255,0.8)] border border-primary/5 transition-all duration-300 cursor-pointer group text-center md:text-start"
+                  className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl md:rounded-3xl p-3 md:p-8 flex flex-col items-center md:items-start justify-start shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)] hover:shadow-[15px_15px_40px_-10px_rgba(20,184,166,0.2),-10px_-10px_30px_-10px_rgba(255,255,255,0.8)] border border-primary/5 transition-all duration-300 cursor-pointer group text-center md:text-start"
                   style={{ transformStyle: "preserve-3d" }}
                 >
                    <div 
-                     className="w-8 h-8 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-bg-secondary flex items-center justify-center mb-2 md:mb-6 group-hover:bg-primary group-hover:text-white transition-all duration-500 text-primary group-hover:shadow-lg group-hover:shadow-primary/30"
+                     className="w-8 h-8 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-white/20 flex items-center justify-center mb-2 md:mb-6 group-hover:bg-primary group-hover:text-white transition-all duration-500 text-primary group-hover:shadow-lg group-hover:shadow-primary/30"
                      style={{ transform: "translateZ(30px)" }}
                    >
                      <Icon className="w-4 h-4 md:w-7 md:h-7" strokeWidth={2} />
                    </div>
                    <h3 
-                     className={`${v.text} font-bold text-text-main mb-1 md:mb-3 group-hover:text-primary transition-colors duration-300`}
+                     className={`${v.text} font-bold text-white drop-shadow-md mb-1 md:mb-3 group-hover:text-primary transition-colors duration-300`}
                      style={{ transform: "translateZ(20px)" }}
                    >
                      {v.title}
                    </h3>
                    <p 
-                     className="text-text-muted text-[10px] md:text-base leading-tight md:leading-relaxed"
+                     className="text-white drop-shadow-sm text-[10px] md:text-base leading-tight md:leading-relaxed"
                      style={{ transform: "translateZ(10px)" }}
                    >
                      {v.desc}

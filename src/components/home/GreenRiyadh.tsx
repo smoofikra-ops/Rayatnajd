@@ -17,7 +17,7 @@ export default function GreenRiyadh() {
   ];
 
   return (
-    <section className="py-10 md:py-12 bg-white dark:bg-bg-primary relative overflow-hidden">
+    <section className="py-10 md:py-12  relative overflow-hidden">
       <div className="absolute -left-[20%] top-1/2 w-1/2 h-full bg-secondary/10 blur-[150px] pointer-events-none rounded-full translate-y-[-50%]"></div>
       
       <div className="container mx-auto px-6 max-w-7xl relative z-10">
@@ -29,10 +29,10 @@ export default function GreenRiyadh() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-[21px] md:text-3xl lg:text-4xl font-bold text-gradient-identity mb-6 py-2 text-center md:text-start md:whitespace-nowrap">
+              <h2 className="text-[21px] md:text-3xl lg:text-4xl font-bold text-white drop-shadow-md mb-6 py-2 text-center md:text-start md:whitespace-nowrap">
                 {t("شريك في بناء", "Partner in Building")} <span className="text-gradient-green">{t("الرياض الخضراء", "Green Riyadh")}</span>
               </h2>
-              <p className="text-base md:text-lg text-text-muted mb-8 leading-relaxed">
+              <p className="text-base md:text-lg text-white drop-shadow-sm mb-8 leading-relaxed">
                 {t(
                   "تسهم رايات نجد في دعم مستهدفات الرياض الخضراء ورؤية المملكة 2030 من خلال تحويل المساحات إلى واحات خضراء مستدامة تنبض بالحياة، وتعزز من جودة الحياة الحضرية.",
                   "Rayat Najd contributes to supporting the goals of Green Riyadh and the Kingdom's Vision 2030 by transforming spaces into sustainable, vibrant green oases, and enhancing the quality of urban life."
@@ -50,7 +50,7 @@ export default function GreenRiyadh() {
                     className="flex items-center gap-2"
                   >
                     <CheckCircle2 className="text-primary-light w-4 h-4 md:w-5 md:h-5 shrink-0" />
-                    <span className="text-text-muted font-medium text-xs md:text-base leading-tight md:leading-normal">{point}</span>
+                    <span className="text-white drop-shadow-sm font-medium text-xs md:text-base leading-tight md:leading-normal">{point}</span>
                   </motion.div>
                 ))}
               </div>
@@ -69,10 +69,10 @@ export default function GreenRiyadh() {
                <div className="absolute inset-0 bg-gradient-to-t from-bg-primary/80 via-transparent to-transparent"></div>
                <div className="absolute bottom-8 right-8 left-8 flex justify-between items-end">
                   <div className="rtl:text-right ltr:text-left">
-                    <h3 className="text-2xl font-bold text-text-main mb-2">
+                    <h3 className="text-2xl font-bold text-white drop-shadow-md mb-2">
                       {t("تحول حضري مستدام", "Sustainable Urban Transformation")}
                     </h3>
-                    <p className="text-text-main/80 text-sm max-w-sm">
+                    <p className="text-white drop-shadow-md/80 text-sm max-w-sm">
                       {t("نصنع الفارق في كل تفصيل أخضر نزرعه في العاصمة.", "We make a difference in every green detail we plant in the capital.")}
                     </p>
                   </div>

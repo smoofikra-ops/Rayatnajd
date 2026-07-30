@@ -13,6 +13,7 @@ import FAQ from "../components/home/FAQ";
 import ContactForm from "../components/home/ContactForm";
 import LocationsMap from "../components/home/LocationsMap";
 import SuccessPartners from "../components/home/SuccessPartners";
+import CinematicBackground from "../components/home/CinematicBackground";
 import { ScrollReveal } from "../components/ui/ScrollReveal";
 import { useEffect } from "react";
 import { toast } from "sonner";
@@ -24,23 +25,71 @@ export default function Home() {
   const { t } = useSettings();
 
   return (
-    <div className="flex flex-col divide-y divide-text-main/10">
-      <SEO />
-      <Hero />
-      <ScrollReveal><SuccessPartners /></ScrollReveal>
-      <ScrollReveal><TargetSectors /></ScrollReveal>
-      <ScrollReveal><Services /></ScrollReveal>
-      <ScrollReveal><ProjectsGallery /></ScrollReveal>
-      <ScrollReveal><NurseriesCatalog /></ScrollReveal>
-      <ScrollReveal><Vision2030 /></ScrollReveal>
-      <ScrollReveal><GreenRiyadh /></ScrollReveal>
-      <ScrollReveal><ImpactSection /></ScrollReveal>
-      <ScrollReveal><CoreValues /></ScrollReveal>
-      <ScrollReveal><ImageGallery /></ScrollReveal>
-      <ScrollReveal><SmartToolsTeaser /></ScrollReveal>
-      <ScrollReveal><FAQ /></ScrollReveal>
-      <ScrollReveal><ContactForm /></ScrollReveal>
-      <ScrollReveal><LocationsMap /></ScrollReveal>
-    </div>
+    <>
+      <CinematicBackground />
+      <div className="flex flex-col relative z-10 divide-y divide-white/10 dark">
+        <SEO />
+        
+        <div data-background-key="hero" className="min-h-[85vh]">
+          <Hero />
+        </div>
+        
+        <div data-background-key="hero" className="bg-bg-primary/95 backdrop-blur-md">
+          <ScrollReveal><SuccessPartners /></ScrollReveal>
+        </div>
+        
+        <div data-background-key="about" className="min-h-[70vh]">
+          <ScrollReveal><TargetSectors /></ScrollReveal>
+        </div>
+        
+        <div data-background-key="services" className="min-h-[70vh]">
+          <ScrollReveal><Services /></ScrollReveal>
+        </div>
+        
+        <div data-background-key="palm-projects" className="min-h-[70vh]">
+          <ScrollReveal><ProjectsGallery /></ScrollReveal>
+        </div>
+        
+        <div data-background-key="palms" className="min-h-[70vh]">
+          <ScrollReveal><NurseriesCatalog /></ScrollReveal>
+        </div>
+        
+        <div data-background-key="sustainability" className="min-h-[70vh]">
+          <ScrollReveal><Vision2030 /></ScrollReveal>
+        </div>
+        
+        <div data-background-key="trees" className="min-h-[70vh]">
+          <ScrollReveal><GreenRiyadh /></ScrollReveal>
+        </div>
+        
+        <div data-background-key="projects" className="min-h-[70vh]">
+          <ScrollReveal><ImpactSection /></ScrollReveal>
+        </div>
+        
+        <div data-background-key="about" className="min-h-[70vh]">
+          <ScrollReveal><CoreValues /></ScrollReveal>
+        </div>
+        
+        <div data-background-key="hero" className="bg-bg-primary/90 backdrop-blur-md py-6">
+          <ScrollReveal><ImageGallery /></ScrollReveal>
+        </div>
+        
+        <div data-background-key="hero" className="bg-bg-primary/90 backdrop-blur-md py-6">
+          <ScrollReveal><SmartToolsTeaser /></ScrollReveal>
+        </div>
+        
+        <div data-background-key="hero" className="bg-bg-primary/90 backdrop-blur-md py-6">
+          <ScrollReveal><FAQ /></ScrollReveal>
+        </div>
+        
+        <div data-background-key="hero" className="bg-bg-primary/90 backdrop-blur-md py-6">
+          <ScrollReveal><ContactForm /></ScrollReveal>
+        </div>
+        
+        <div data-background-key="hero" className="bg-bg-primary/90 backdrop-blur-md py-6">
+          <ScrollReveal><LocationsMap /></ScrollReveal>
+        </div>
+      </div>
+    </>
   );
 }

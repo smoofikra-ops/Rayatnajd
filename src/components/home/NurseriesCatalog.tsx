@@ -183,7 +183,7 @@ export default function NurseriesCatalog() {
   };
 
   return (
-    <section id="nurseries" className="py-10 md:py-12 bg-white dark:bg-bg-primary border-t border-text-main/5 relative">
+    <section id="nurseries" className="py-10 md:py-12  border-t border-text-main/5 relative">
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
            <motion.div
@@ -192,10 +192,10 @@ export default function NurseriesCatalog() {
              viewport={{ once: true }}
              className="max-w-3xl"
            >
-             <h2 className="text-3xl md:text-5xl font-bold text-gradient-identity mb-6 leading-relaxed py-2 md:leading-relaxed">
+             <h2 className="text-3xl md:text-5xl font-bold text-white drop-shadow-md mb-6 leading-relaxed py-2 md:leading-relaxed">
                 {t("المشاتل", "Nurseries")} <span className="text-gradient-green">{t("والأشجار", "and Trees")}</span>
              </h2>
-             <p className="text-lg text-text-muted leading-relaxed rtl:text-right ltr:text-left">
+             <p className="text-lg text-white drop-shadow-sm leading-relaxed rtl:text-right ltr:text-left">
                 {t(
                   "نمتلك مخزوناً ضخماً من النخيل، الأشجار، الشجيرات، النباتات المحلية، أشجار الظل، أشجار الزينة، والأشجار المناسبة للمشاريع الحكومية والخاصة. اختر ما يناسب مشروعك وأضفه إلى قائمة اهتمامك.",
                   "We have a massive inventory of palms, trees, shrubs, local plants, shade trees, ornamental trees, and trees suitable for government and private projects. Choose what suits your project and add it to your interest list."
@@ -212,25 +212,25 @@ export default function NurseriesCatalog() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className={`bg-bg-primary border border-text-main/5 rounded-xl md:rounded-2xl p-2 md:p-4 hover:border-primary/30 transition-all duration-300 shadow-sm hover:shadow-xl group flex flex-col cursor-pointer ${index === categories.length - 1 ? "col-span-2 md:col-span-1" : ""}`}
+              className={`bg-white/10 backdrop-blur-md border-white/20 border border-text-main/5 rounded-xl md:rounded-2xl p-2 md:p-4 hover:border-primary/30 transition-all duration-300 shadow-sm hover:shadow-xl group flex flex-col cursor-pointer ${index === categories.length - 1 ? "col-span-2 md:col-span-1" : ""}`}
               onClick={() => setSelectedCategory(category)}
             >
               <div className="flex items-center gap-2 mb-2 md:mb-4">
                 <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0">
                   <Trees className="w-4 h-4 md:w-5 md:h-5" />
                 </div>
-                <h3 className="text-[11px] md:text-sm font-bold text-text-main leading-tight">{language === 'ar' ? category.nameAr : category.nameEn}</h3>
+                <h3 className="text-[11px] md:text-sm font-bold text-white drop-shadow-md leading-tight">{language === 'ar' ? category.nameAr : category.nameEn}</h3>
               </div>
               
-              <p className="hidden md:block text-text-muted mb-4 leading-relaxed flex-grow text-xs line-clamp-3">
+              <p className="hidden md:block text-white drop-shadow-sm mb-4 leading-relaxed flex-grow text-xs line-clamp-3">
                 {language === 'ar' ? category.descAr : category.descEn}
               </p>
               
               <div className="hidden md:block mb-4">
-                <h4 className="text-xs font-bold text-text-main mb-2">{t("أمثلة:", "Examples:")}</h4>
+                <h4 className="text-xs font-bold text-white drop-shadow-md mb-2">{t("أمثلة:", "Examples:")}</h4>
                 <div className="flex flex-wrap gap-1.5">
                   {(language === 'ar' ? category.examplesAr : category.examplesEn).map((ex: string, i: number) => (
-                    <span key={i} className="text-[10px] px-2 py-1 bg-bg-secondary rounded-full text-text-muted border border-text-main/5 line-clamp-1 max-w-[80px]">
+                    <span key={i} className="text-[10px] px-2 py-1 bg-black/30 rounded-full text-white drop-shadow-sm border border-text-main/5 line-clamp-1 max-w-[80px]">
                       {ex}
                     </span>
                   ))}
@@ -239,7 +239,7 @@ export default function NurseriesCatalog() {
 
               <div className="flex flex-row items-center gap-1.5 md:gap-2 mt-auto pt-2 md:pt-3 border-t border-text-main/5">
                 <button 
-                  className="flex-grow py-1.5 md:py-2 px-1 bg-bg-secondary hover:bg-primary hover:text-white text-text-main rounded-md md:rounded-lg text-[9px] md:text-[11px] font-bold transition-colors flex items-center justify-center gap-1"
+                  className="flex-grow py-1.5 md:py-2 px-1 bg-white hover:bg-primary text-primary hover:text-white drop-shadow-md rounded-md md:rounded-lg text-[9px] md:text-[11px] font-bold transition-colors flex items-center justify-center gap-1"
                 >
                   <Info className="w-3 h-3 md:w-3.5 md:h-3.5" />
                   <span>{t("استعرض", "Browse")}</span>
@@ -272,9 +272,9 @@ export default function NurseriesCatalog() {
               animate={{ scale: 1, opacity: 1, y: 0 }}
               exit={{ scale: 0.95, opacity: 0, y: 20 }}
               onClick={(e) => e.stopPropagation()}
-              className="bg-bg-primary border border-text-main/10 rounded-3xl overflow-hidden max-w-4xl w-full max-h-[90vh] flex flex-col md:flex-row shadow-2xl"
+              className="bg-white/10 backdrop-blur-md border-white/20 border border-text-main/10 rounded-3xl overflow-hidden max-w-4xl w-full max-h-[90vh] flex flex-col md:flex-row shadow-2xl"
             >
-              <div className="md:w-2/5 h-64 md:h-auto relative bg-bg-secondary">
+              <div className="md:w-2/5 h-64 md:h-auto relative bg-white/10">
                 <CloudinaryImage src={selectedCategory.img} alt={selectedCategory.nameAr} width={800} lazy={false} className="w-full h-full object-cover" />
                 <button 
                   onClick={() => setSelectedCategory(null)}
@@ -286,13 +286,13 @@ export default function NurseriesCatalog() {
               <div className="md:w-3/5 p-8 overflow-y-auto max-h-[90vh] flex flex-col">
                 <div className="flex justify-between items-start mb-6">
                   <div>
-                    <h3 className="text-3xl font-black text-text-main mb-2">
+                    <h3 className="text-3xl font-black text-white drop-shadow-md mb-2">
                       {language === 'ar' ? selectedCategory.nameAr : selectedCategory.nameEn}
                     </h3>
                   </div>
                   <button 
                     onClick={() => setSelectedCategory(null)}
-                    className="hidden md:flex bg-bg-secondary text-text-muted p-2 rounded-full hover:bg-text-main/10 transition-colors"
+                    className="hidden md:flex bg-white/10 text-white drop-shadow-sm p-2 rounded-full hover:bg-text-main/10 transition-colors"
                   >
                     <X className="w-5 h-5" />
                   </button>
@@ -300,23 +300,23 @@ export default function NurseriesCatalog() {
                 
                 <div className="space-y-6 flex-grow">
                   <div>
-                    <h4 className="text-text-main font-bold mb-2 flex items-center gap-2">
+                    <h4 className="text-white drop-shadow-md font-bold mb-2 flex items-center gap-2">
                       <Info className="w-4 h-4 text-primary" />
                       {t("الوصف", "Description")}
                     </h4>
-                    <p className="text-text-muted text-sm leading-relaxed">
+                    <p className="text-white drop-shadow-sm text-sm leading-relaxed">
                       {language === 'ar' ? selectedCategory.descAr : selectedCategory.descEn}
                     </p>
                   </div>
 
                   <div>
-                    <h4 className="text-text-main font-bold mb-3 flex items-center gap-2">
+                    <h4 className="text-white drop-shadow-md font-bold mb-3 flex items-center gap-2">
                       <Leaf className="w-4 h-4 text-primary" />
                       {t("أمثلة من الأنواع المتوفرة", "Examples of Available Types")}
                     </h4>
                     <ul className="space-y-2">
                       {(language === 'ar' ? selectedCategory.examplesAr : selectedCategory.examplesEn).map((ex: string, i: number) => (
-                        <li key={i} className="flex items-center gap-2 text-text-muted text-sm">
+                        <li key={i} className="flex items-center gap-2 text-white drop-shadow-sm text-sm">
                           <CheckCircle2 className="w-4 h-4 text-primary/60" />
                           {ex}
                         </li>
@@ -326,13 +326,13 @@ export default function NurseriesCatalog() {
                   
                   {selectedCategory.gallery && selectedCategory.gallery.length > 0 && (
                   <div>
-                    <h4 className="text-text-main font-bold mb-3 flex items-center gap-2">
+                    <h4 className="text-white drop-shadow-md font-bold mb-3 flex items-center gap-2">
                       <Trees className="w-4 h-4 text-primary" />
                       {t("معرض الصور", "Photo Gallery")}
                     </h4>
                     <div className="grid grid-cols-2 gap-3 mb-6">
                       {selectedCategory.gallery.map((img: any, idx: number) => (
-                        <div key={idx} className="relative group rounded-xl overflow-hidden h-32 bg-bg-secondary border border-text-main/10 shadow-sm">
+                        <div key={idx} className="relative group rounded-xl overflow-hidden h-32 bg-white/10 border border-text-main/10 shadow-sm">
                           <CloudinaryImage src={img.url} alt={language === 'ar' ? img.nameAr : img.nameEn} width={400} lazy={true} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center p-2 text-center">
                             <span className="text-white text-xs font-bold w-full truncate px-1">
@@ -346,7 +346,7 @@ export default function NurseriesCatalog() {
                 )}
                 
                 <div>
-                     <h4 className="text-text-main font-bold mb-3 flex items-center gap-2">
+                     <h4 className="text-white drop-shadow-md font-bold mb-3 flex items-center gap-2">
                       <TreePine className="w-4 h-4 text-primary" />
                       
 
@@ -360,7 +360,7 @@ export default function NurseriesCatalog() {
                          t("القصور", "Palaces"),
                          t("المنتجعات", "Resorts")
                        ].map((proj: any, idx: number) => (
-                         <span key={idx} className="text-xs font-medium px-3 py-1.5 bg-bg-secondary border border-text-main/5 text-text-main rounded-lg">
+                         <span key={idx} className="text-xs font-medium px-3 py-1.5 bg-black/40 border border-white/10 text-white drop-shadow-md rounded-lg">
                            {proj}
                          </span>
                        ))}
@@ -381,7 +381,7 @@ export default function NurseriesCatalog() {
                   </button>
                   <button 
                     onClick={handleInquire}
-                    className="flex-1 py-4 bg-bg-secondary hover:bg-text-main/5 text-text-main rounded-xl font-bold transition-colors border border-text-main/10 flex items-center justify-center gap-2"
+                    className="flex-1 py-4 bg-white hover:bg-gray-100 text-primary rounded-xl font-bold transition-colors border border-text-main/10 flex items-center justify-center gap-2"
                   >
                     {t("استفسر عن هذا التصنيف", "Inquire about this category")}
                   </button>

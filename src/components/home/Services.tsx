@@ -150,7 +150,7 @@ export default function Services() {
   ];
 
   return (
-    <section id="services" className="py-10 md:py-12 bg-bg-primary relative">
+    <section id="services" className="py-10 md:py-12 relative">
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="text-center mb-16 max-w-3xl mx-auto">
            <motion.div
@@ -158,10 +158,10 @@ export default function Services() {
              whileInView={{ opacity: 1, y: 0 }}
              viewport={{ once: true }}
            >
-             <h2 className="text-3xl md:text-5xl font-bold text-gradient-identity mb-4 py-2">
+             <h2 className="text-3xl md:text-5xl font-bold text-white drop-shadow-md mb-4 py-2">
                 {t("حلولنا المتكاملة", "Integrated Solutions")}
              </h2>
-             <p className="text-lg md:text-xl text-text-muted">
+             <p className="text-lg md:text-xl text-white drop-shadow-sm">
                 {t(
                   "حلول متكاملة بمعايير عالمية لتشجير واستدامة",
                   "Integrated solutions with global standards for afforestation and sustainability"

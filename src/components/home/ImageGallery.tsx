@@ -36,7 +36,7 @@ const GalleryItem = ({ img, idx, openLightbox }: { img: any, idx: number, openLi
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-125"
         />
         <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-[2px]">
-          <div className="bg-white/20 p-4 rounded-full text-white backdrop-blur-md transform transition-transform duration-300 group-hover:scale-110">
+          <div className="bg-white/20 p-4 rounded-full text-text-main backdrop-blur-md transform transition-transform duration-300 group-hover:scale-110">
             <ZoomIn className="w-8 h-8" />
           </div>
         </div>
@@ -97,7 +97,7 @@ export default function ImageGallery() {
   };
 
   return (
-    <section className="py-10 md:py-12 bg-white dark:bg-bg-primary relative border-y border-text-main/5 overflow-hidden">
+    <section className="py-10 md:py-12  relative border-y border-text-main/5 overflow-hidden">
       <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -mr-40 -mt-40 pointer-events-none"></div>
       
       <div className="container mx-auto px-6 max-w-7xl relative z-10 mb-16">
@@ -134,7 +134,7 @@ export default function ImageGallery() {
                  <button
                     key={cat.id}
                     onClick={() => setActiveCategory(cat.id)}
-                    className={`whitespace-nowrap shrink-0 px-6 py-2 rounded-full font-medium transition-all duration-300 ${activeCategory === cat.id ? 'bg-primary text-white shadow-lg shadow-primary/20' : 'bg-white text-text-muted hover:bg-bg-primary border border-text-main/10'}`}
+                    className={`whitespace-nowrap shrink-0 px-6 py-2 rounded-full font-medium transition-all duration-300 ${activeCategory === cat.id ? 'bg-primary text-white shadow-lg shadow-primary/20' : 'bg-white text-text-main hover:bg-bg-secondary border border-text-main/10'}`}
                  >
                      {language === 'ar' ? cat.nameAr : cat.nameEn}
                  </button>
@@ -160,13 +160,13 @@ export default function ImageGallery() {
           
           <button 
              onClick={scrollPrev}
-             className="absolute top-1/2 -translate-y-1/2 rtl:right-2 ltr:left-2 md:rtl:-right-6 md:ltr:-left-6 w-12 h-12 rounded-full bg-white text-primary shadow-xl flex items-center justify-center z-10 hover:bg-primary-light hover:text-white transition-colors scale-90 md:scale-100 opacity-0 group-hover:opacity-100"
+             className="absolute top-1/2 -translate-y-1/2 rtl:right-2 ltr:left-2 md:rtl:-right-6 md:ltr:-left-6 w-12 h-12 rounded-full bg-white text-primary shadow-xl flex items-center justify-center z-10 hover:bg-primary-light hover:text-text-main transition-colors scale-90 md:scale-100 opacity-0 group-hover:opacity-100"
           >
              <ChevronRight className="w-6 h-6 rtl:rotate-0 ltr:rotate-180" />
           </button>
           <button 
              onClick={scrollNext}
-             className="absolute top-1/2 -translate-y-1/2 rtl:left-2 ltr:right-2 md:rtl:-left-6 md:ltr:-right-6 w-12 h-12 rounded-full bg-white text-primary shadow-xl flex items-center justify-center z-10 hover:bg-primary-light hover:text-white transition-colors scale-90 md:scale-100 opacity-0 group-hover:opacity-100"
+             className="absolute top-1/2 -translate-y-1/2 rtl:left-2 ltr:right-2 md:rtl:-left-6 md:ltr:-right-6 w-12 h-12 rounded-full bg-white text-primary shadow-xl flex items-center justify-center z-10 hover:bg-primary-light hover:text-text-main transition-colors scale-90 md:scale-100 opacity-0 group-hover:opacity-100"
           >
              <ChevronLeft className="w-6 h-6 rtl:rotate-0 ltr:rotate-180" />
           </button>
@@ -183,7 +183,7 @@ export default function ImageGallery() {
             onClick={closeLightbox}
           >
             <button
-              className="absolute top-6 right-6 text-white bg-black/50 hover:bg-white/20 p-2 rounded-full transition-colors z-50"
+              className="absolute top-6 right-6 text-text-main bg-black/50 hover:bg-white/20 p-2 rounded-full transition-colors z-50"
               onClick={(e) => {
                 e.stopPropagation();
                 closeLightbox();
@@ -193,14 +193,14 @@ export default function ImageGallery() {
             </button>
             
             <button
-              className="absolute left-6 top-1/2 -translate-y-1/2 text-white bg-black/50 hover:bg-white/20 p-4 rounded-full transition-colors z-50"
+              className="absolute left-6 top-1/2 -translate-y-1/2 text-text-main bg-black/50 hover:bg-white/20 p-4 rounded-full transition-colors z-50"
               onClick={language === 'ar' ? showNextImage : showPrevImage}
             >
               <ChevronLeft className="w-8 h-8" />
             </button>
             
             <button
-              className="absolute right-6 top-1/2 -translate-y-1/2 text-white bg-black/50 hover:bg-white/20 p-4 rounded-full transition-colors z-50"
+              className="absolute right-6 top-1/2 -translate-y-1/2 text-text-main bg-black/50 hover:bg-white/20 p-4 rounded-full transition-colors z-50"
               onClick={language === 'ar' ? showPrevImage : showNextImage}
             >
               <ChevronRight className="w-8 h-8" />

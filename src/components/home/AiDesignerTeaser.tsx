@@ -29,7 +29,7 @@ export default function AiDesignerTeaser() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-4xl md:text-6xl font-black text-text-main mb-6 leading-relaxed py-2 md:leading-relaxed"
+          className="text-4xl md:text-6xl font-black text-white mb-6 leading-relaxed py-2 md:leading-relaxed"
         >
           {t("المصمم", "The")} <span className="text-gradient-gold leading-relaxed">{t("الذكي", "Smart")}</span> {t("للمناظر الطبيعية", "Landscape Designer")}
         </motion.h2>
@@ -39,7 +39,7 @@ export default function AiDesignerTeaser() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
-          className="text-xl md:text-2xl text-text-muted font-light mb-12 max-w-3xl"
+          className="text-xl md:text-2xl text-white/70 font-light mb-12 max-w-3xl"
         >
           {t(
             "مستشارك الافتراضي المتكامل. ارفع صورة موقعك وسيقوم الذكاء الاصطناعي بتوليد مقترحات التشجير وحساب الكميات وتقدير التكاليف بلمسة زر.",
@@ -56,14 +56,14 @@ export default function AiDesignerTeaser() {
         >
            <div className="relative w-1/2 sm:w-auto cursor-not-allowed">
              <span className="absolute -top-3 -right-2 bg-red-500/90 text-white text-[9px] sm:text-[10px] font-bold px-2 py-0.5 rounded-full z-10 shadow-sm">{t("قريباً", "Soon")}</span>
-             <button disabled className="w-full px-2 sm:px-8 py-3 sm:py-4 rounded-2xl sm:rounded-full bg-accent-gold/20 text-text-main/50 text-xs sm:text-lg font-bold transition-all flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2 pointer-events-none">
+             <button disabled className="w-full px-2 sm:px-8 py-3 sm:py-4 rounded-2xl sm:rounded-full bg-accent-gold/20 text-white/50 text-xs sm:text-lg font-bold transition-all flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2 pointer-events-none">
                <Scan className="w-4 h-4 sm:w-5 sm:h-5 opacity-50" />
                {t("المصمم الذكي", "Smart Designer")}
              </button>
            </div>
            <div className="relative w-1/2 sm:w-auto cursor-not-allowed">
              <span className="absolute -top-3 -right-2 bg-red-500/90 text-white text-[9px] sm:text-[10px] font-bold px-2 py-0.5 rounded-full z-10 shadow-sm">{t("قيد التطوير", "Under Dev")}</span>
-             <button disabled className="w-full px-2 sm:px-8 py-3 sm:py-4 rounded-2xl sm:rounded-full premium-card bg-bg-secondary/20 text-text-muted text-xs sm:text-lg font-semibold transition-all flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2 border-text-main/5 pointer-events-none">
+             <button disabled className="w-full px-2 sm:px-8 py-3 sm:py-4 rounded-2xl sm:rounded-full premium-card bg-bg-secondary/20 text-white/70 text-xs sm:text-lg font-semibold transition-all flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2 border-text-main/5 pointer-events-none">
                <LayoutDashboard className="w-4 h-4 sm:w-5 sm:h-5 opacity-50" />
                {t("حاسبة التكاليف", "Cost Calculator")}
              </button>
@@ -81,7 +81,7 @@ export default function AiDesignerTeaser() {
           <div className="absolute inset-0 bg-bg-primary/80 flex flex-col items-center justify-center">
              <div className="w-full max-w-4xl px-8 h-full flex flex-col items-center justify-center">
                 <div className="w-full h-2/3 border-2 border-dashed border-primary/50 flex items-center justify-center rounded-2xl mb-4 bg-primary/5">
-                   <p className="text-text-muted font-medium">{t("منطقة توليد التصور الذكي ستظهر هنا", "The intelligent visualization generation area will appear here")}</p>
+                   <p className="text-white/70 font-medium">{t("منطقة توليد التصور الذكي ستظهر هنا", "The intelligent visualization generation area will appear here")}</p>
                 </div>
                 <div className="flex gap-4 w-full justify-center opacity-50">
                    <div className="w-16 h-2 bg-text-main/10 rounded-full"></div>

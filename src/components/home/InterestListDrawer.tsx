@@ -67,14 +67,14 @@ export default function InterestListDrawer() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setIsInterestListOpen(false)}
-            className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50"
+            className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[100]"
           />
           <motion.div
             initial={{ x: language === 'ar' ? "100%" : "-100%" }}
             animate={{ x: 0 }}
             exit={{ x: language === 'ar' ? "100%" : "-100%" }}
             transition={{ type: "spring", damping: 25, stiffness: 200 }}
-            className={`fixed top-0 bottom-0 ${language === 'ar' ? 'right-0' : 'left-0'} w-full max-w-md bg-bg-primary z-50 shadow-2xl flex flex-col border-${language === 'ar' ? 'l' : 'r'} border-text-main/10`}
+            className={`fixed top-0 bottom-0 ${language === 'ar' ? 'right-0' : 'left-0'} w-full max-w-md bg-bg-primary z-[100] shadow-2xl flex flex-col border-${language === 'ar' ? 'l' : 'r'} border-text-main/10`}
           >
             <div className="flex items-center justify-between p-6 border-b border-text-main/10 bg-bg-secondary">
               <div className="flex items-center gap-3">
@@ -160,7 +160,7 @@ export default function InterestListDrawer() {
                 type="submit"
                 form="interest-form"
                 disabled={items.length === 0}
-                className="w-full py-4 bg-primary hover:bg-primary-light disabled:opacity-50 disabled:cursor-not-allowed text-white rounded-xl font-bold transition-colors flex items-center justify-center gap-2"
+                className="w-full py-4 bg-primary hover:bg-primary-light disabled:opacity-50 disabled:cursor-not-allowed text-text-main rounded-xl font-bold transition-colors flex items-center justify-center gap-2"
               >
                 <Send className="w-5 h-5 rtl:-scale-x-100" />
                 {t("أرسل عبر واتساب", "Send via WhatsApp")}

@@ -57,7 +57,7 @@ export default function TargetSectors() {
   const { t, language } = useSettings();
 
   return (
-    <section id="sectors" className="py-10 md:py-12 bg-white dark:bg-bg-primary relative overflow-hidden">
+    <section id="sectors" className="py-10 md:py-12  relative overflow-hidden">
       <div className="absolute inset-0 bg-primary/5 pattern-dots pointer-events-none"></div>
       
       <div className="container mx-auto px-6 max-w-7xl text-center relative z-10">
@@ -65,7 +65,7 @@ export default function TargetSectors() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-[29px] font-bold text-gradient-identity mb-6 leading-relaxed py-2 md:leading-relaxed"
+          className="text-[29px] font-bold text-white drop-shadow-md mb-6 leading-relaxed py-2 md:leading-relaxed"
         >
           {t("نفخر بخدمة نخبة من الجهات الحكومية والشركات الوطنية الرائدة", "We are proud to serve an elite group of government agencies and leading national companies")}
         </motion.h2>
@@ -75,7 +75,7 @@ export default function TargetSectors() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
-          className="text-lg text-text-muted mb-16 max-w-2xl mx-auto"
+          className="text-lg text-white drop-shadow-sm mb-16 max-w-2xl mx-auto"
         >
           {t(
             "شراكات استراتيجية لتقديم حلول بيئية مخصصة تلبي احتياجات مختلف القطاعات التنموية.",

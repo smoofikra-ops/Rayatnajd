@@ -11,8 +11,10 @@ import { Toaster } from "sonner";
 export default function Layout() {
   return (
     <div className="flex flex-col min-h-screen">
-      <TopBanner />
+        <div className="sticky top-0 z-50 flex flex-col w-full shadow-sm">
+        <TopBanner />
       <Navbar />
+      </div>
       <main className="flex-grow">
         <Outlet />
       </main>

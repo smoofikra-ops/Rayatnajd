@@ -78,7 +78,7 @@ export default function SuccessPartners() {
   }, [language]);
 
   return (
-    <section className="py-8 md:py-24 bg-white relative overflow-hidden">
+    <section className="py-8 md:py-24 relative overflow-hidden">
       <div className="container mx-auto px-6 max-w-7xl relative z-10">
         <div className="text-center mb-10">
           <motion.div
@@ -105,7 +105,7 @@ export default function SuccessPartners() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-lg text-text-muted max-w-2xl mx-auto"
+            className="text-lg text-white/70 max-w-2xl mx-auto"
           >
             {t(
               "نعتز بشراكاتنا الاستراتيجية مع نخبة من الجهات الحكومية والخاصة لتحقيق مستهدفات الرؤية.",
@@ -146,7 +146,7 @@ export default function SuccessPartners() {
                     {category.partners.map((partner, idx) => (
                       <div 
                         key={idx}
-                        className="relative bg-bg-primary/50 backdrop-blur-sm border border-text-main/10 rounded-2xl w-[200px] md:w-[240px] h-[160px] md:h-[200px] flex flex-col items-center justify-end p-4 transition-all duration-500 hover:scale-[1.15] hover:translate-y-2 hover:z-20 hover:bg-white group/card cursor-default shrink-0 overflow-hidden hover:shadow-[0_25px_50px_-12px_var(--shadow-color),0_10px_30px_-5px_var(--shadow-color)] hover:border-[color:var(--hover-color)]"
+                        className="relative bg-bg-primary/50 backdrop-blur-sm border border-text-main/10 rounded-2xl w-[200px] md:w-[240px] h-[160px] md:h-[200px] flex flex-col items-center justify-end p-4 transition-all duration-500 hover:scale-[1.15] hover:translate-y-2 hover:z-20 hover:bg-bg-primary group/card cursor-default shrink-0 overflow-hidden hover:shadow-[0_25px_50px_-12px_var(--shadow-color),0_10px_30px_-5px_var(--shadow-color)] hover:border-[color:var(--hover-color)]"
                         dir={language === 'ar' ? 'rtl' : 'ltr'}
                         style={{ '--hover-color': partner.color, '--shadow-color': `${partner.color}50` } as React.CSSProperties}
                       >

@@ -6,7 +6,7 @@ export default function LocationsMap() {
   const { t } = useSettings();
 
   return (
-    <section className="py-10 md:py-12 bg-white dark:bg-bg-primary relative overflow-hidden" id="locations">
+    <section className="py-10 md:py-12  relative overflow-hidden" id="locations">
       <div className="container mx-auto px-4 md:px-6 max-w-7xl">
         <div className="text-center max-w-3xl mx-auto mb-6 md:mb-10">
           <motion.div
@@ -35,7 +35,7 @@ export default function LocationsMap() {
             viewport={{ once: true }}
             className="flex flex-col bg-bg-secondary rounded-xl md:rounded-2xl overflow-hidden shadow-sm border border-text-main/10"
           >
-            <div className="p-3 md:p-6 border-b border-text-main/10 bg-white dark:bg-bg-primary">
+            <div className="p-3 md:p-6 border-b border-text-main/10 ">
               <h3 className="text-sm md:text-2xl font-bold text-text-main text-center">
                 {t("مشاتل الرياض", "Mashatel Al Riyadh")}
               </h3>
@@ -59,7 +59,7 @@ export default function LocationsMap() {
             transition={{ delay: 0.2 }}
             className="flex flex-col bg-bg-secondary rounded-xl md:rounded-2xl overflow-hidden shadow-sm border border-text-main/10"
           >
-            <div className="p-3 md:p-6 border-b border-text-main/10 bg-white dark:bg-bg-primary">
+            <div className="p-3 md:p-6 border-b border-text-main/10 ">
               <h3 className="text-sm md:text-2xl font-bold text-text-main text-center">
                 {t("مشاتل الخرج", "Mashatel Al Kharj")}
               </h3>

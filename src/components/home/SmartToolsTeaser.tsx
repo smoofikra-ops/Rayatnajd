@@ -17,7 +17,7 @@ export default function SmartToolsTeaser() {
           viewport={{ once: true }}
           className="flex flex-col items-center"
         >
-          <div className="w-16 h-16 bg-bg-primary rounded-full border border-primary/30 flex items-center justify-center mb-6 shadow-lg shadow-primary/20">
+          <div className="w-16 h-16 bg-white/10 backdrop-blur-md rounded-full border border-primary/30 flex items-center justify-center mb-6 shadow-lg shadow-primary/20">
             <Sparkles className="w-8 h-8 text-primary" />
           </div>
           

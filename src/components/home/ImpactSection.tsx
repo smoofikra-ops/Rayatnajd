@@ -37,7 +37,7 @@ export default function ImpactSection() {
   ];
 
   return (
-    <section className="py-10 md:py-12 bg-bg-primary relative border-y border-text-main/5">
+    <section className="py-10 md:py-12 relative border-y border-text-main/5">
       <div className="absolute inset-0 opacity-5 bg-[url('https://images.unsplash.com/photo-1466692476877-3ea661123f75?auto=format&fit=crop&q=80&w=2000')] bg-cover bg-center mix-blend-overlay"></div>
       
       <div className="container mx-auto px-6 max-w-7xl relative z-10">
@@ -46,7 +46,7 @@ export default function ImpactSection() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-5xl font-bold text-gradient-identity mb-6 leading-relaxed py-2 md:leading-relaxed"
+            className="text-3xl md:text-5xl font-bold text-white drop-shadow-md mb-6 leading-relaxed py-2 md:leading-relaxed"
           >
             {t("الأثر الذي", "The Impact We")} <span className="text-gradient-green">{t("نصنعه", "Create")}</span>
           </motion.h2>
@@ -55,7 +55,7 @@ export default function ImpactSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-lg text-text-muted"
+            className="text-lg text-white drop-shadow-sm"
           >
             {t(
               "نحن لا نزرع الأشجار فحسب، بل نبني نظماً بيئية متكاملة تضمن استدامة الموارد للأجيال القادمة.",
@@ -72,18 +72,18 @@ export default function ImpactSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1, duration: 0.6 }}
-                className="bg-bg-secondary/50 rounded-2xl md:rounded-3xl border border-primary/20 hover:bg-primary/5 transition-all overflow-hidden flex flex-col group shadow-sm hover:shadow-md"
+                className="bg-white/10 backdrop-blur-md rounded-2xl md:rounded-3xl border border-primary/20 hover:bg-primary/5 transition-all overflow-hidden flex flex-col group shadow-sm hover:shadow-md"
              >
                 <div className="w-full h-32 md:h-48 relative overflow-hidden shrink-0 border-b border-primary/10">
                   <img src={impact.image} alt={impact.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500"></div>
-                  <div className="absolute bottom-3 md:bottom-4 rtl:right-4 ltr:left-4 bg-bg-primary/90 p-2 md:p-3 rounded-xl border border-primary/20 text-primary shadow-sm backdrop-blur-sm z-10 group-hover:-translate-y-1 transition-transform duration-300">
+                  <div className="absolute bottom-3 md:bottom-4 rtl:right-4 ltr:left-4 bg-white/20 p-2 md:p-3 rounded-xl border border-primary/20 text-primary shadow-sm backdrop-blur-sm z-10 group-hover:-translate-y-1 transition-transform duration-300">
                     <div className="scale-75 md:scale-100">{impact.icon}</div>
                   </div>
                 </div>
                 <div className="p-4 md:p-8 pt-4 md:pt-6 text-center md:rtl:text-right md:ltr:text-left flex-grow">
-                  <h3 className="text-[13px] md:text-2xl font-bold text-text-main mb-2 md:mb-4 leading-tight group-hover:text-primary transition-colors">{impact.title}</h3>
-                  <p className="text-text-muted leading-relaxed font-light text-[10px] md:text-base hidden sm:block">{impact.desc}</p>
+                  <h3 className="text-[13px] md:text-2xl font-bold text-white drop-shadow-md mb-2 md:mb-4 leading-tight group-hover:text-primary transition-colors">{impact.title}</h3>
+                  <p className="text-white drop-shadow-sm leading-relaxed font-light text-[10px] md:text-base hidden sm:block">{impact.desc}</p>
                 </div>
              </motion.div>
            ))}
