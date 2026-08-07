@@ -22,7 +22,7 @@ export default function SmartToolsTeaser() {
           </div>
           
           <h2 className="text-3xl md:text-5xl font-bold text-text-main mb-6">
-            {t("اكتشف", "Discover")} <span className="text-gradient-green">{t("مركز الأدوات الذكية", "Smart Tools Center")}</span>
+            {t("اكتشف", "Discover")} <span className="text-gradient-green">{t("مركز المعرفة والذكاء", "Knowledge & Intelligence Center")}</span>
           </h2>
           
           <p className="text-lg md:text-xl text-text-muted max-w-2xl mx-auto mb-10">

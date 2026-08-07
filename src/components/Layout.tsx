@@ -6,14 +6,15 @@ import WhatsAppButton from "./WhatsAppButton";
 import BackToTop from "./BackToTop";
 import QuoteFormModal from "./QuoteFormModal";
 import InterestListDrawer from "./home/InterestListDrawer";
+import MobileBottomNav from "./MobileBottomNav";
 import { Toaster } from "sonner";
 
 export default function Layout() {
   return (
-    <div className="flex flex-col min-h-screen">
-        <div className="sticky top-0 z-50 flex flex-col w-full shadow-sm">
+    <div className="flex flex-col min-h-screen pb-16 lg:pb-0">
+      <div className="sticky top-0 z-50 flex flex-col w-full shadow-sm">
         <TopBanner />
-      <Navbar />
+        <Navbar />
       </div>
       <main className="flex-grow">
         <Outlet />
@@ -23,6 +24,7 @@ export default function Layout() {
       <BackToTop />
       <QuoteFormModal />
       <InterestListDrawer />
+      <MobileBottomNav />
       <Toaster position="bottom-left" toastOptions={{
         className: 'bg-white border-primary/20 text-text-main shadow-lg rounded-xl font-sans',
       }} />

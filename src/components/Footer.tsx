@@ -115,7 +115,7 @@ export default function Footer() {
               <li><Link to="/catalog" className="text-white/80 hover:text-white transition-colors text-sm mercury-effect inline-block px-3 py-1 -mx-3 rounded-lg">{t("الكتالوج", "Catalog")}</Link></li>
               <li>
                 <Link to="/tools" className="text-white/80 hover:text-white transition-colors text-sm mercury-effect inline-block px-3 py-1 -mx-3 rounded-lg">
-                  {t("مركز الأدوات الذكية", "Smart Tools")}
+                  {t("المعرفة والذكاء", "Knowledge & Intelligence")}
                 </Link>
               </li>
               <li>
