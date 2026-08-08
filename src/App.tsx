@@ -23,6 +23,11 @@ const BlogList = lazy(() => import("./pages/BlogList"));
 const BlogPost = lazy(() => import("./pages/BlogPost"));
 const About = lazy(() => import("./pages/About"));
 const Contact = lazy(() => import("./pages/Contact"));
+const KnowledgeHub = lazy(() => import("./pages/knowledge/KnowledgeHub"));
+const PillarPage = lazy(() => import("./pages/knowledge/PillarPage"));
+const ClusterPage = lazy(() => import("./pages/knowledge/ClusterPage"));
+const CategoryPage = lazy(() => import("./pages/knowledge/CategoryPage"));
+const ArticlePage = lazy(() => import("./pages/knowledge/ArticlePage"));
 const Terms = lazy(() => import("./pages/policies/Terms"));
 const Privacy = lazy(() => import("./pages/policies/Privacy"));
 const Warranty = lazy(() => import("./pages/policies/Warranty"));
@@ -49,6 +54,11 @@ export default function App() {
               <Route path="contact" element={<Contact />} />
               <Route path="service/:id" element={<ServicePage />} />
               <Route path="tools" element={<ToolsCenter />} />
+              <Route path="knowledge" element={<KnowledgeHub />} />
+              <Route path="knowledge/pillar/:slug" element={<PillarPage />} />
+              <Route path="knowledge/cluster/:slug" element={<ClusterPage />} />
+              <Route path="knowledge/category/:slug" element={<CategoryPage />} />
+              <Route path="knowledge/article/:slug" element={<ArticlePage />} />
               <Route path="blog" element={<BlogList />} />
               <Route path="blog/:slug" element={<BlogPost />} />
               <Route path="terms" element={<Terms />} />
