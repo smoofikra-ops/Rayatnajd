@@ -5,7 +5,7 @@ export const cinematicBackgrounds: Record<string, { publicId: string; overlay: s
   hero: {
     publicId: "WhatsApp_Image_2026-07-04_at_11.52.12_PM_kybu8a_r6r5td",
     overlay: "rgba(8, 34, 24, 0.50)",
-    videoUrl: "/hero-video.mp4"
+    videoUrl: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/02-website/hero/Desktop/national%20center%20cover%20dron-9__7__2026%D8%8C%204_24%20%D8%B5.mp4"
   },
   about: {
     publicId: "about-farm_dhu5w5",
