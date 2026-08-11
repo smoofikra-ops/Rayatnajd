@@ -69,7 +69,7 @@ export interface ClusterPage {
   descriptionEn: string;
   heroImage?: string;
   subcategories: string[];
-  articleSlots: string[];
+  articleSlots: { title: string; slug: string; type: string }[];
   relatedServicesIds: string[];
   relatedProjectsIds: string[];
   relatedCategoriesIds: string[];

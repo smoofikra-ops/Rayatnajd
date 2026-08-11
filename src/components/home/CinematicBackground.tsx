@@ -1,10 +1,11 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { getCinematicBackgroundUrl } from '../../utils/cloudinary';
 
-export const cinematicBackgrounds: Record<string, { publicId: string; overlay: string }> = {
+export const cinematicBackgrounds: Record<string, { publicId: string; overlay: string; videoUrl?: string }> = {
   hero: {
     publicId: "WhatsApp_Image_2026-07-04_at_11.52.12_PM_kybu8a_r6r5td",
-    overlay: "rgba(8, 34, 24, 0.50)"
+    overlay: "rgba(8, 34, 24, 0.50)",
+    videoUrl: "/hero-video.mp4"
   },
   about: {
     publicId: "about-farm_dhu5w5",
@@ -137,7 +138,24 @@ export default function CinematicBackground() {
       aria-hidden="true"
     >
       {/* Previous Image Layer (fades out) */}
-      {prevKey && prevUrl && (
+      {prevKey && (
+        prevBg?.videoUrl ? (
+        <video
+          key={`prev-video-${prevKey}`}
+          src={prevBg.videoUrl}
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster={prevUrl}
+          className={`absolute inset-0 w-full h-full object-cover origin-center transition-all will-change-transform will-change-opacity`}
+          style={{
+            opacity: isTransitioning ? 0 : 0,
+            transition: `opacity ${transitionDuration} ${transitionEasing}, filter ${transitionDuration} ${transitionEasing}`,
+            filter: isTransitioning ? 'blur(0px)' : 'blur(0px)'
+          }}
+        />
+      ) : prevUrl && (
         <img
           key={`prev-${prevKey}`}
           src={prevUrl}
@@ -145,16 +163,40 @@ export default function CinematicBackground() {
           className={`absolute inset-0 w-full h-full object-cover origin-center transition-all will-change-transform will-change-opacity animate-ken-burns`}
           style={{
             opacity: isTransitioning ? 0 : 0,
-            
             transition: `opacity ${transitionDuration} ${transitionEasing}, filter ${transitionDuration} ${transitionEasing}`,
             filter: isTransitioning ? 'blur(0px)' : 'blur(0px)'
           }}
           decoding="async"
         />
-      )}
+      ))}
 
       {/* Active Image Layer (fades in) */}
-      {activeUrl && (
+      {activeBg?.videoUrl ? (
+        <video
+          key={`active-video-${activeKey}`}
+          src={activeBg.videoUrl}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          poster={activeUrl}
+          disablePictureInPicture
+          ref={(el) => {
+            if (el) {
+              el.defaultMuted = true;
+              el.muted = true;
+              el.play().catch((e) => console.log("Video autoplay blocked:", e));
+            }
+          }}
+          className={`absolute inset-0 w-full h-full object-cover origin-center transition-all will-change-transform will-change-opacity`}
+          style={{
+            opacity: isTransitioning ? 0 : 1,
+            transition: `opacity ${transitionDuration} ${transitionEasing}, filter ${transitionDuration} ${transitionEasing}`,
+            filter: isTransitioning ? 'blur(4px)' : 'blur(0px)'
+          }}
+        />
+      ) : activeUrl && (
         <img
           key={`active-${activeKey}`}
           src={activeUrl}
