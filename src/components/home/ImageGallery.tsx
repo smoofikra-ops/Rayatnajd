@@ -96,6 +96,17 @@ export default function ImageGallery() {
       }
   };
 
+  useEffect(() => {
+    if (selectedImageIndex === null) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") closeLightbox();
+      else if (e.key === "ArrowRight") setSelectedImageIndex((i) => (i === null ? i : (i + (language === 'ar' ? -1 : 1) + images.length) % images.length));
+      else if (e.key === "ArrowLeft") setSelectedImageIndex((i) => (i === null ? i : (i + (language === 'ar' ? 1 : -1) + images.length) % images.length));
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [selectedImageIndex, images.length, language]);
+
   return (
     <section className="py-10 md:py-12  relative border-y border-text-main/5 overflow-hidden">
       <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -mr-40 -mt-40 pointer-events-none"></div>
