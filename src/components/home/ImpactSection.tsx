@@ -1,7 +1,6 @@
 import { motion } from "motion/react";
 import { TreeDeciduous, Wind, Binoculars } from "lucide-react";
 import { useSettings } from "../../contexts/SettingsContext";
-import impactImg1 from "../../assets/images/regenerated_image_1783950636798.png";
 
 export default function ImpactSection() {
   const { t } = useSettings();
@@ -14,7 +13,7 @@ export default function ImpactSection() {
         "From combating desertification to creating life. We stabilize the soil and repel sand encroachment to protect cities and roads from environmental erosion using sustainable methods."
       ),
       icon: <Wind />,
-      image: impactImg1
+      image: "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-46.webp"
     },
     {
       title: t("الأثر البيئي والمناخي", "Environmental and Climatic Impact"),
