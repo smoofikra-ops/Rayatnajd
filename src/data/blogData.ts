@@ -169,7 +169,7 @@ export const BLOG_POSTS: BlogPost[] = [
       <h2>دور الشركات المتخصصة</h2>
       <p>تتضافر جهودنا في دعم هذا المشروع الوطني من خلال توفير شتلات عالية الجودة ومطابقة للمواصفات. تعرف أكثر على إسهاماتنا في <a href="/#projects" class="text-primary underline">مشاريعنا</a>.</p>
     `,
-    image: "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-11.webp",
+    image: "https://cdn.rayatnajd.com/06-media-library/hero-selects/rayat-najd-hero-banner-nursery-01.webp",
     date: "2024-08-10",
     author: "قسم المشاريع الكبرى",
     category: "الرياض الخضراء",

@@ -210,7 +210,7 @@ export const servicesData: Record<string, any> = {
     titleEn: "Agricultural Maintenance",
     subtitleAr: "برامج صيانة متكاملة للحفاظ على صحة وجمال النباتات",
     subtitleEn: "Comprehensive maintenance programs to preserve the health and beauty of plants",
-    bannerImg: "https://cdn.rayatnajd.com/04-products/mixed-nursery-stock/rayat-najd-young-nursery-stock-66.webp",
+    bannerImg: "https://cdn.rayatnajd.com/02-website/backgrounds/rayat-najd-website-background-palms-arabic.webp",
     introAr: "نقدم برامج صيانة دورية تشمل التقليم والتسميد وفحص صحة النباتات لضمان استدامة مشاريعكم الخضراء.",
     introEn: "We provide regular maintenance programs including pruning, fertilization, and plant health checks to sustain your green projects.",
     importanceAr: "الصيانة الدورية تطيل عمر النباتات وتحافظ على المظهر الجمالي للمساحات الخضراء.",

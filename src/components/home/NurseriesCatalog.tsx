@@ -80,7 +80,7 @@ const categories = [
     descEn: "Aesthetic trees and plants that add visual value to entrances, gardens, resorts, and commercial facades.",
     examplesAr: ["التابوبيا", "البونسيانا", "الفلفل الرفيع", "أشجار مزهرة", "أشجار موسمية"],
     examplesEn: ["Tabebuia", "Poinciana", "Schinus", "Flowering trees", "Seasonal trees"],
-    img: "https://cdn.rayatnajd.com/04-products/mixed-nursery-stock/rayat-najd-young-nursery-stock-33.webp",
+    img: "https://cdn.rayatnajd.com/02-website/backgrounds/rayat-najd-website-background-trees.webp",
     gallery: [
       { url: "https://cdn.rayatnajd.com/04-products/mixed-nursery-stock/rayat-najd-young-nursery-stock-34.webp", nameAr: "نبتة زينة من مشتل رايات نجد 1", nameEn: "Ornamental plant from the Rayat Najd nursery 1" },
       { url: "https://cdn.rayatnajd.com/04-products/mixed-nursery-stock/rayat-najd-young-nursery-stock-35.webp", nameAr: "نبتة زينة من مشتل رايات نجد 2", nameEn: "Ornamental plant from the Rayat Najd nursery 2" },
@@ -152,7 +152,7 @@ const categories = [
     descEn: "Plant solutions for covering fences, walls, pathways, and open spaces.",
     examplesAr: ["النباتات المتسلقة", "مغطيات التربة", "النباتات الزاحفة", "نباتات الحدائق الخارجية"],
     examplesEn: ["Climbing plants", "Ground covers", "Creeping plants", "Outdoor garden plants"],
-    img: "https://cdn.rayatnajd.com/04-products/mixed-nursery-stock/rayat-najd-young-nursery-stock-19.webp",
+    img: "https://cdn.rayatnajd.com/02-website/backgrounds/rayat-najd-website-background-whatsapp-image-2026-07-03-at-6-59-16-pm-24-jwozvi.webp",
     gallery: [
       { url: "https://cdn.rayatnajd.com/04-products/mixed-nursery-stock/rayat-najd-young-nursery-stock-20.webp", nameAr: "نبتة من مشتل رايات نجد 1", nameEn: "Plant from the Rayat Najd nursery 1" },
       { url: "https://cdn.rayatnajd.com/04-products/mixed-nursery-stock/rayat-najd-young-nursery-stock-21.webp", nameAr: "نبتة من مشتل رايات نجد 2", nameEn: "Plant from the Rayat Najd nursery 2" },

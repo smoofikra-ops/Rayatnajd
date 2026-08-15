@@ -31,7 +31,7 @@ export default function ImpactSection() {
         "Developing green spaces that create exceptional destinations, elevate resort standards, and enhance the daily quality of life for residents."
       ),
       icon: <Binoculars />,
-      image: "https://cdn.rayatnajd.com/02-website/backgrounds/rayat-najd-website-background-trees.webp"
+      image: "https://cdn.rayatnajd.com/02-website/backgrounds/rayat-najd-website-background-palms.webp"
     }
   ];
 

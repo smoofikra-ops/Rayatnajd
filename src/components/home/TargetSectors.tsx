@@ -9,7 +9,7 @@ const SECTORS = [
     icon: Building2,
     desc: "حلول متكاملة لتشجير المشاريع السكنية والتجارية والمخططات العمرانية، بما يحقق أعلى معايير الجودة والاستدامة.",
     descEn: "Integrated afforestation solutions for residential and commercial projects and urban plans, achieving the highest standards of quality and sustainability.",
-    img: "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-59.webp"
+    img: "https://cdn.rayatnajd.com/02-website/backgrounds/rayat-najd-website-background-services.webp"
   },
   {
     title: "شركات التنسيق",
@@ -33,7 +33,7 @@ const SECTORS = [
     icon: Landmark,
     desc: "شراكات مستدامة لتحقيق رؤية المملكة في زيادة الغطاء النباتي والمشاريع البيئية.",
     descEn: "Sustainable partnerships to achieve the Kingdom's vision of increasing vegetation and environmental projects.",
-    img: "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-60.webp"
+    img: "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-36.webp"
   },
   {
     title: "الفنادق والمنتجعات",
@@ -41,7 +41,7 @@ const SECTORS = [
     icon: Hotel,
     desc: "تصميم وتنفيذ بيئات خضراء جذابة ترتقي بتجربة الضيوف في قطاع الضيافة.",
     descEn: "Designing and implementing attractive green environments that elevate the guest experience in hospitality.",
-    img: "https://cdn.rayatnajd.com/04-products/palm-trees/rayat-najd-palm-tree-nursery-18.webp"
+    img: "https://cdn.rayatnajd.com/02-website/backgrounds/rayat-najd-website-background-palms.webp"
   },
   {
     title: "المشاتل التجارية",

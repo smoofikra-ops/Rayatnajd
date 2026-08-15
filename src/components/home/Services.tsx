@@ -76,7 +76,7 @@ export default function Services() {
       id: "urban",
       title: t("تطوير المشهد الحضري", "Urban Landscape Development"),
       desc: t("تصميم وتطوير المساحات الخضراء في المدن.", "Designing and developing green spaces in cities."),
-      img: "https://cdn.rayatnajd.com/02-website/backgrounds/rayat-najd-website-background-services.webp",
+      img: "https://cdn.rayatnajd.com/02-website/backgrounds/rayat-najd-website-background-whatsapp-image-2026-07-03-at-6-59-15-pm-ysrnor.webp",
       items: [
         { text: t("تصميم الحدائق العامة", "Public Park Design"), icon: "🏞️" },
         { text: t("تجميل الميادين", "Square Beautification"), icon: "⛲" },
@@ -121,7 +121,7 @@ export default function Services() {
       id: "maintenance",
       title: t("الصيانة الزراعية", "Agricultural Maintenance"),
       desc: t("برامج صيانة متكاملة للحفاظ على صحة وجمال النباتات.", "Comprehensive maintenance programs to preserve the health and beauty of plants."),
-      img: "https://cdn.rayatnajd.com/04-products/mixed-nursery-stock/rayat-najd-young-nursery-stock-73.webp",
+      img: "https://cdn.rayatnajd.com/02-website/backgrounds/rayat-najd-website-background-palms-arabic.webp",
       items: [
         { text: t("التقليم والتشذيب", "Pruning and Trimming"), icon: "✂️" },
         { text: t("مكافحة الآفات", "Pest Control"), icon: "🐛" },

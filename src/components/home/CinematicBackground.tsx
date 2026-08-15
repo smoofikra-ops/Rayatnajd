@@ -15,7 +15,7 @@ export const cinematicBackgrounds: Record<string, { publicId: string; overlay: s
   services: {
     publicId: "services-afforestation_g3rzrf",
     overlay: "rgba(7, 38, 25, 0.52)",
-    imageUrl: "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-73.webp"
+    imageUrl: "https://cdn.rayatnajd.com/02-website/backgrounds/rayat-najd-website-background-services.webp"
   },
   palms: {
     publicId: "arabic_palm_lzuutu",
@@ -25,7 +25,7 @@ export const cinematicBackgrounds: Record<string, { publicId: string; overlay: s
   "palm-projects": {
     publicId: "palms-project_bgivil",
     overlay: "rgba(10, 31, 24, 0.54)",
-    imageUrl: "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-32.webp"
+    imageUrl: "https://cdn.rayatnajd.com/04-products/palm-trees/rayat-najd-palm-tree-nursery-38.webp"
   },
   trees: {
     publicId: "trees-project_ttapby",
