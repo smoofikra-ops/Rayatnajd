@@ -19,6 +19,7 @@ import {
   ExternalLink,
 } from "lucide-react";
 import { plantDatabase } from "../data/plantDatabase";
+import { getVerifiedImageForSku } from "../data/plantImageAssets";
 import { PRIMARY_CATEGORIES } from "../types/plant";
 import {
   getCommercialStatus,
@@ -82,6 +83,7 @@ function YesNoBadge({ value, labelAr }: { value: boolean | undefined; labelAr: s
 export default function PlantKnowledgeBaseDetail() {
   const { sku } = useParams<{ sku: string }>();
   const plant = useMemo(() => plantDatabase.find((p) => p.sku === sku), [sku]);
+  const verifiedImage = sku ? getVerifiedImageForSku(sku) : undefined;
 
   if (!plant) {
     return (
@@ -149,9 +151,20 @@ export default function PlantKnowledgeBaseDetail() {
                 <p className="text-xs text-text-muted mt-1">المرادفات العلمية: {synonyms.join("، ")}</p>
               )}
             </div>
-            <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-primary/15 via-secondary/10 to-accent-gold/10 flex items-center justify-center border border-card-border shrink-0">
-              <Leaf className="w-10 h-10 text-primary/40" strokeWidth={1.5} />
-            </div>
+            {verifiedImage ? (
+              <div className="w-24 h-24 rounded-2xl overflow-hidden border border-card-border shrink-0">
+                <img
+                  src={verifiedImage.url}
+                  alt={plant.seo.altTextEn}
+                  loading="lazy"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            ) : (
+              <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-primary/15 via-secondary/10 to-accent-gold/10 flex items-center justify-center border border-card-border shrink-0">
+                <Leaf className="w-10 h-10 text-primary/40" strokeWidth={1.5} />
+              </div>
+            )}
           </div>
           {plant.subCategoryAr && (
             <p className="text-xs text-text-muted mt-3">التصنيف الفرعي: {plant.subCategoryAr}</p>

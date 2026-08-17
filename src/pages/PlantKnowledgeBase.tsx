@@ -12,6 +12,7 @@ import {
   X,
 } from "lucide-react";
 import { plantDatabase } from "../data/plantDatabase";
+import { getVerifiedImageForSku } from "../data/plantImageAssets";
 import { PRIMARY_CATEGORIES, type PlantProduct, type PrimaryCategoryId, type ToleranceLevel, type WaterNeedLevel } from "../types/plant";
 import {
   getCommercialStatus,
@@ -138,12 +139,26 @@ function PlaceholderThumb({ categoryId }: { categoryId: PrimaryCategoryId }) {
 function PlantCard({ p }: { key?: string; p: PlantProduct }) {
   const status = getCommercialStatus(p.sku);
   const category = PRIMARY_CATEGORIES.find((c) => c.id === p.primaryCategory);
+  // Only SKUs that survived the visual Bunny-CDN audit's no-guessing rule get
+  // a real photo here; everything else keeps the PlaceholderThumb.
+  const verifiedImage = getVerifiedImageForSku(p.sku);
   return (
     <Link
       to={`/internal/plant-kb/${p.sku}`}
       className="group block rounded-2xl border border-card-border bg-card-background p-4 hover:shadow-lg hover:border-primary/40 transition-all"
     >
-      <PlaceholderThumb categoryId={p.primaryCategory} />
+      {verifiedImage ? (
+        <div className="w-full h-32 rounded-xl overflow-hidden border border-card-border">
+          <img
+            src={verifiedImage.url}
+            alt={p.seo.altTextEn}
+            loading="lazy"
+            className="w-full h-full object-cover"
+          />
+        </div>
+      ) : (
+        <PlaceholderThumb categoryId={p.primaryCategory} />
+      )}
       <div className="mt-3 flex items-start justify-between gap-2">
         <div className="min-w-0">
           <h3 className="font-bold text-card-heading truncate">{p.nameAr}</h3>
