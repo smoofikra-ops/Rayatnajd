@@ -61,7 +61,7 @@ export const palmSupplySaudiArabia: Article = {
   clusterId: "palm-trees",
   titleAr: "توريد النخيل في السعودية | الدليل الشامل لتوريد وزراعة ونقل النخيل للمشاريع",
   titleEn: "Palm Tree Supply in Saudi Arabia | Complete Guide for Projects",
-  heroImage: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1/clusters/palm-trees",
+  heroImage: "https://cdn.rayatnajd.com/04-products/palm-trees/rayat-najd-palm-tree-nursery-36.webp",
   authorId: "rayat-najd-editorial",
   publishedAt: "2024-05-15T08:00:00Z",
   readingTimeMinutes: 25,
@@ -299,7 +299,7 @@ export const palmSupplySaudiArabia: Article = {
             <li><strong>نظافة الموقع:</strong> لا يتساقط منه ثمار تفسد الأرصفة أو تجذب الحشرات، مما يجعله مثالياً لمواقف السيارات وممرات المشاة.</li>
           </ul>
           <CloudinaryImage 
-            src="https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1/clusters/washingtonia-street" 
+            src="https://cdn.rayatnajd.com/04-products/palm-trees/rayat-najd-palm-tree-nursery-37.webp" 
             alt="توريد وزراعة نخيل واشنطونيا في شوارع الرياض" 
             className="rounded-2xl w-full h-[400px] object-cover my-6"
             lazy={true}

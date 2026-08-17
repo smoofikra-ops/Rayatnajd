@@ -13,7 +13,7 @@ export default function SEO({
   description = "شركة رايات نجد للتشجير والاستدامة البيئية، رائدة في مشاريع التشجير والمشهد الحضري في المملكة العربية السعودية والرياض. نقدم حلولاً زراعية متكاملة ومستدامة.", 
   keywords = "رايات نجد, تشجير, زراعة, الرياض الخضراء, استدامة بيئية, السعودية, رؤية 2030, تصميم حدائق, تنسيق حدائق, لاندسكيب",
   canonicalUrl = "https://rayatnajd.com/",
-  ogImage = "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783298171/%D9%84%D9%82%D8%B7%D8%A9_%D8%A7%D9%84%D8%B4%D8%A7%D8%B4%D8%A9_2026-06-28_%D9%81%D9%8A_4.03.31_%D8%B5_mfq3dq.png"
+  ogImage = "https://cdn.rayatnajd.com/01-brand/logo/rayatnajd-logo.png"
 }: SEOProps) {
   return (
     <Helmet>

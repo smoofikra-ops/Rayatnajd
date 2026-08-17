@@ -61,7 +61,7 @@ export const washingtoniaSupplyRiyadh: Article = {
   clusterId: "palm-trees",
   titleAr: "توريد نخيل واشنطونيا بالرياض | أسعار، مقاسات، وضمان الزراعة",
   titleEn: "Washingtonia Palm Supply in Riyadh | Prices & Sizes",
-  heroImage: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1/clusters/washingtonia-street",
+  heroImage: "https://cdn.rayatnajd.com/04-products/palm-trees/rayat-najd-palm-tree-nursery-50.webp",
   authorId: "rayat-najd-editorial",
   publishedAt: "2024-05-25T08:00:00Z",
   readingTimeMinutes: 18,

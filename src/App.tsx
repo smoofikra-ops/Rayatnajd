@@ -28,6 +28,8 @@ const PillarPage = lazy(() => import("./pages/knowledge/PillarPage"));
 const ClusterPage = lazy(() => import("./pages/knowledge/ClusterPage"));
 const CategoryPage = lazy(() => import("./pages/knowledge/CategoryPage"));
 const ArticlePage = lazy(() => import("./pages/knowledge/ArticlePage"));
+const PlantKnowledgeBase = lazy(() => import("./pages/PlantKnowledgeBase"));
+const PlantKnowledgeBaseDetail = lazy(() => import("./pages/PlantKnowledgeBaseDetail"));
 const Terms = lazy(() => import("./pages/policies/Terms"));
 const Privacy = lazy(() => import("./pages/policies/Privacy"));
 const Warranty = lazy(() => import("./pages/policies/Warranty"));
@@ -75,6 +77,10 @@ export default function App() {
             <Route path="/tools/ai-site-analysis" element={<AiSiteAnalysisTool />} />
             
             <Route path="/catalog" element={<CatalogViewer />} />
+
+            {/* Internal-only preview — not linked from public nav, noindex, read-only */}
+            <Route path="/internal/plant-kb" element={<PlantKnowledgeBase />} />
+            <Route path="/internal/plant-kb/:sku" element={<PlantKnowledgeBaseDetail />} />
           </Routes>
         </Suspense>
       </BrowserRouter>

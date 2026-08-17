@@ -14,8 +14,8 @@ export default function SuccessPartners() {
       titleAr: "الجهات الحكومية",
       titleEn: "Government Agencies",
       partners: [
-        { nameAr: "وزارة البلديات والإسكان", nameEn: "Ministry of Municipalities and Housing", logo: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783900191/1_k6tszv.jpg", color: "#006253" },
-        { nameAr: "وزارة البيئة والمياه والزراعة", nameEn: "Ministry of Environment, Water & Agriculture", logo: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783900192/2_scdiio.jpg", color: "#2E8B57" },
+        { nameAr: "وزارة البلديات والإسكان", nameEn: "Ministry of Municipalities and Housing", logo: "https://cdn.rayatnajd.com/11-partners-clients/partners/Ministry%20of%20Municipalities%20and%20Housing%20logo.jpeg", color: "#006253" },
+        { nameAr: "وزارة البيئة والمياه والزراعة", nameEn: "Ministry of Environment, Water & Agriculture", logo: "https://cdn.rayatnajd.com/11-partners-clients/partners/Ministry%20of%20Environment%2C%20Water%20and%20Agriculture%20logo.jpeg", color: "#2E8B57" },
         { nameAr: "وزارة الدفاع", nameEn: "Ministry of Defense", logo: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783900194/3_kc5r8o.jpg", color: "#8B7355" },
         { nameAr: "الهيئة الملكية لمدينة الرياض", nameEn: "Royal Commission for Riyadh City", logo: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783900197/4_bgoo8s.jpg", color: "#927b4b" },
       ]
@@ -32,22 +32,22 @@ export default function SuccessPartners() {
       titleEn: "Major National Projects",
       partners: [
         { nameAr: "روشن", nameEn: "ROSHN", logo: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783900201/6_rsmhm7.jpg", color: "#006b7a" },
-        { nameAr: "نيوم", nameEn: "NEOM", logo: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783900203/7_t9qa3q.jpg", color: "#b9975b" },
-        { nameAr: "البحر الأحمر الدولية", nameEn: "Red Sea Global", logo: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783900205/8_qyh39d.jpg", color: "#007a99" },
+        { nameAr: "نيوم", nameEn: "NEOM", logo: "https://cdn.rayatnajd.com/11-partners-clients/partners/neom%20logo.jpeg", color: "#b9975b" },
+        { nameAr: "البحر الأحمر الدولية", nameEn: "Red Sea Global", logo: "https://cdn.rayatnajd.com/11-partners-clients/partners/red%20sea%20global%20logo%20.jpeg", color: "#007a99" },
       ]
     },
     {
       titleAr: "الشركات الوطنية",
       titleEn: "National Companies",
       partners: [
-        { nameAr: "نادك", nameEn: "NADEC", logo: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783900208/9_ncs6pd.jpg", color: "#007843" },
+        { nameAr: "نادك", nameEn: "NADEC", logo: "https://cdn.rayatnajd.com/11-partners-clients/partners/nadec%20logo.jpeg", color: "#007843" },
       ]
     },
     {
       titleAr: "القطاع الصحي",
       titleEn: "Health Sector",
       partners: [
-        { nameAr: "مدينة الملك فهد الطبية", nameEn: "King Fahd Medical City", logo: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783900212/11_qx1atq.jpg", color: "#00684A" }
+        { nameAr: "مدينة الملك فهد الطبية", nameEn: "King Fahd Medical City", logo: "https://cdn.rayatnajd.com/11-partners-clients/partners/king%20fahad%20medical%20city%20logo.jpeg", color: "#00684A" }
       ]
     }
   ];
