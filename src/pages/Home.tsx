@@ -34,16 +34,16 @@ export default function Home() {
           <Hero />
         </div>
         
-        <div data-background-key="hero" className="bg-bg-primary/95 backdrop-blur-md">
-          <ScrollReveal><SuccessPartners /></ScrollReveal>
-        </div>
-        
         <div data-background-key="about" className="min-h-[70vh]">
           <ScrollReveal><TargetSectors /></ScrollReveal>
         </div>
         
         <div data-background-key="services" className="min-h-[70vh]">
           <ScrollReveal><Services /></ScrollReveal>
+        </div>
+        
+        <div data-background-key="hero" className="bg-bg-primary/95 backdrop-blur-md">
+          <ScrollReveal><SuccessPartners /></ScrollReveal>
         </div>
         
         <div data-background-key="palm-projects" className="min-h-[70vh]">
