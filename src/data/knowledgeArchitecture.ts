@@ -29,7 +29,7 @@ export const firstPillar: PillarPage = {
   titleEn: "Afforestation in Saudi Arabia",
   descriptionAr: "الدليل الشامل للتشجير وزيادة الغطاء النباتي في المملكة العربية السعودية ضمن رؤية 2030.",
   descriptionEn: "The comprehensive guide to afforestation and increasing vegetation cover in Saudi Arabia under Vision 2030.",
-  heroImage: "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-13.webp",
+  heroImage: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1/projects/ksa-afforestation",
   sections: [
     { id: "intro", titleAr: "مقدمة", titleEn: "Introduction" },
     { id: "vision-2030", titleAr: "رؤية 2030 والتشجير", titleEn: "Vision 2030 and Afforestation" },

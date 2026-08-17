@@ -61,7 +61,7 @@ export default function GreenRiyadh() {
             {/* Split Image Animation Container to represent transformation */}
             <div className="w-full h-full relative rounded-2xl overflow-hidden group cursor-ew-resize">
                <CloudinaryImage 
-                 src={"https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-61.webp"} 
+                 src={"https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783648047/6c6592cf-fb96-4ee4-9892-d491f8c713de.png"} 
                  alt="Green Riyadh" 
                  width={1200}
                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"

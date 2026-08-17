@@ -44,10 +44,10 @@ export default function Vision2030() {
             viewport={{ once: true }}
             className="inline-flex flex-col items-center justify-center mb-6"
           >
-            <img
-              src="https://cdn.rayatnajd.com/12-shared-assets/government-partner-logos/rayat-najd-partner-logo-06.png"
-              alt="Vision 2030"
-              className="h-24 md:h-28 object-contain mb-4"
+            <img 
+              src="https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783649441/%D8%B4%D8%B9%D8%A7%D8%B1-%D8%B1%D9%88%D9%94%D9%8A%D8%A9-%D8%A7%D9%84%D9%85%D9%85%D9%84%D9%83%D8%A9-2030-_-Saudi-vision-2030-Logo-300x169_tnagkw.png" 
+              alt="Vision 2030" 
+              className="h-24 md:h-28 object-contain mb-4" 
             />
           </motion.div>
           <motion.h2 

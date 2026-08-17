@@ -2,6 +2,7 @@ export const getCloudinaryUrl = (url: string, width?: number) => {
   if (!url) return '';
   if (!url.includes('res.cloudinary.com')) return url; // Return as is if not cloudinary
 
+  // Example implementation to inject transformations if it is a cloudinary URL
   // A standard cloudinary URL looks like: https://res.cloudinary.com/<cloud_name>/image/upload/f_auto,q_auto/v1234567890/folder/image.jpg
   // We can insert /upload/f_auto,q_auto,w_xxx/ after /upload/ if it doesn't already have transformations
   const uploadIndex = url.indexOf('/upload/');
@@ -12,92 +13,87 @@ export const getCloudinaryUrl = (url: string, width?: number) => {
   return url;
 };
 
-// All imagery below is served from the verified Bunny CDN (https://cdn.rayatnajd.com).
-// Source: assets-manifest.json / assets-index.csv (Rayat Najd digital asset library).
 export const mediaData = {
   brand: {
-    // No finished, transparent-background Rayat Najd logo exists in the verified asset
-    // library yet (only 2 AI-generated logo-concept sketches, which are excluded from use).
-    // Left as a placeholder pending real logo artwork.
-    logo: "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?w=200&h=100&fit=crop&auto=format",
+    logo: "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?w=200&h=100&fit=crop&auto=format", // REPLACE WITH CLOUDINARY URL
   },
   hero: [
     {
       title: "Hero Green Riyadh",
-      url: "https://cdn.rayatnajd.com/02-website/backgrounds/rayat-najd-website-background-projects.webp",
-      alt: "مشروع تشجير وتنسيق مساحات خضراء تابع لرايات نجد",
+      url: "https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&q=80&w=2560", // REPLACE WITH CLOUDINARY URL
+      alt: "مشروع تشجير حضري مستدام في الرياض",
       type: "image"
     },
     {
       title: "Hero Sustainability",
-      url: "https://cdn.rayatnajd.com/02-website/backgrounds/rayat-najd-website-background-sustainability.webp",
-      alt: "مشروع تشجير صحراوي لمكافحة التصحر ودعم الاستدامة البيئية",
+      url: "https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&q=80&w=2560", // REPLACE WITH CLOUDINARY URL
+      alt: "نحو مستقبل أخضر ومستدام",
       type: "image"
     }
   ],
   services: [
     {
       id: "afforestation",
-      url: "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-65.webp",
-      alt: "أعمال تشجير وزراعة في مشروع مكافحة التصحر بأم شلفح",
+      url: "https://images.unsplash.com/photo-1595166316223-93d183060fc1?auto=format&fit=crop&q=80&w=800", // REPLACE WITH CLOUDINARY URL
+      alt: "التشجير والمقاولات الزراعية",
       type: "image"
     },
     {
       id: "urban-landscape",
-      url: "https://cdn.rayatnajd.com/02-website/backgrounds/rayat-najd-website-background-projects.webp",
-      alt: "تنسيق مساحة خضراء ومسارات ضمن أحد مشاريع رايات نجد",
+      url: "https://images.unsplash.com/photo-1528183429752-a97d0bf99b5a?auto=format&fit=crop&q=80&w=800", // REPLACE WITH CLOUDINARY URL
+      alt: "تطوير المشهد الحضري",
       type: "image"
     },
     {
       id: "giant-trees",
-      url: "https://cdn.rayatnajd.com/05-services/mature-tree-relocation/rayat-najd-mature-tree-relocation-01.webp",
-      alt: "معدات ثقيلة متخصصة أثناء نقل شجرة معمرة",
+      url: "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?auto=format&fit=crop&q=80&w=800", // REPLACE WITH CLOUDINARY URL
+      alt: "نقل الأشجار العملاقة",
       type: "image"
     },
     {
       id: "maintenance",
-      url: "https://cdn.rayatnajd.com/04-products/mixed-nursery-stock/rayat-najd-young-nursery-stock-65.webp",
-      alt: "عناية ومتابعة صحة النباتات في مشتل رايات نجد",
+      url: "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&q=80&w=800", // REPLACE WITH CLOUDINARY URL
+      alt: "الصيانة الزراعية",
       type: "image"
     },
     {
       id: "irrigation",
-      url: "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-66.webp",
-      alt: "شبكة ري بالتنقيط لدعم غرسة صغيرة في مشروع تشجير صحراوي",
+      url: "https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&q=80&w=800", // REPLACE WITH CLOUDINARY URL
+      alt: "شبكات الري الذكية",
       type: "image"
     },
     {
       id: "supplying",
-      url: "https://cdn.rayatnajd.com/04-products/palm-trees/rayat-najd-palm-tree-nursery-01.webp",
-      alt: "نخيل جاهز للتوريد في مشتل رايات نجد",
+      url: "https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&q=80&w=800", // REPLACE WITH CLOUDINARY URL
+      alt: "توريد النخيل والأشجار",
       type: "image"
     }
   ],
   projects: [
     {
       id: "project-1",
-      url: "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-67.webp",
-      alt: "غرسة تشجير مروية بالتنقيط في مشروع أم شلفح الصحراوي",
+      url: "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?auto=format&fit=crop&q=80&w=800", // REPLACE WITH CLOUDINARY URL
+      alt: "مشروع تشجير طريق الملك فهد",
       type: "image"
     },
     {
       id: "project-2",
-      url: "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-68.webp",
-      alt: "صف من الغراس الصحراوية مع خطوط الري في مشروع أم شلفح",
+      url: "https://images.unsplash.com/photo-1524486361537-8ad15938e1a3?auto=format&fit=crop&q=80&w=800", // REPLACE WITH CLOUDINARY URL
+      alt: "حديقة الملك سلمان",
       type: "image"
     },
     {
       id: "project-3",
-      url: "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-69.webp",
-      alt: "منظر واسع لأرض صحراوية قيد التشجير ضمن مشروع مكافحة التصحر",
+      url: "https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&q=80&w=800", // REPLACE WITH CLOUDINARY URL
+      alt: "الرياض الخضراء",
       type: "image"
     }
   ],
   nursery: [
     {
       id: "nursery-1",
-      url: "https://cdn.rayatnajd.com/06-media-library/nursery-photography-al-hair/rayat-najd-al-hair-nursery-riyadh-18.webp",
-      alt: "منظر عام لمشتل رايات نجد في الحائر بالرياض",
+      url: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=800", // REPLACE WITH CLOUDINARY URL
+      alt: "مشاتل رايات نجد",
       type: "image"
     }
   ],
@@ -105,36 +101,36 @@ export const mediaData = {
     {
       category: "palms",
       product: "sabal-palm",
-      url: "https://cdn.rayatnajd.com/04-products/palm-trees/rayat-najd-palm-tree-nursery-02.webp",
-      alt: "نخيل في مشتل رايات نجد جاهز للزراعة",
+      url: "https://images.unsplash.com/photo-1595191833504-48615ff2786a?auto=format&fit=crop&q=80&w=600", // REPLACE WITH CLOUDINARY URL
+      alt: "نخيل البلميط",
       type: "image"
     },
     {
       category: "native",
-      product: "native-tree",
-      url: "https://cdn.rayatnajd.com/04-products/trees/native-drought-tolerant/rayat-najd-native-drought-tolerant-tree-01.webp",
-      alt: "شجرة محلية مقاومة للجفاف في مشتل رايات نجد",
+      product: "bajli-almond",
+      url: "https://images.unsplash.com/photo-1444312645910-faa973a8d0c8?auto=format&fit=crop&q=80&w=600", // REPLACE WITH CLOUDINARY URL
+      alt: "أشجار اللوز البجلي",
       type: "image"
     },
     {
       category: "shade",
-      product: "shade-tree",
-      url: "https://cdn.rayatnajd.com/04-products/mixed-nursery-stock/rayat-najd-young-nursery-stock-49.webp",
-      alt: "شتلة شجرة في المشتل معدّة لمشاريع التظليل",
+      product: "neem-tree",
+      url: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=600", // REPLACE WITH CLOUDINARY URL
+      alt: "أشجار النيم",
       type: "image"
     },
     {
-      category: "ornamental",
-      product: "flowering-shrub",
-      url: "https://cdn.rayatnajd.com/04-products/mixed-nursery-stock/rayat-najd-young-nursery-stock-17.webp",
-      alt: "شجيرة مزهرة من تشكيلة رايات نجد",
+      category: "fruit",
+      product: "date-palm",
+      url: "https://images.unsplash.com/photo-1505370390141-8db221cacc55?auto=format&fit=crop&q=80&w=600", // REPLACE WITH CLOUDINARY URL
+      alt: "نخيل بلدي (تمر)",
       type: "image"
     },
     {
       category: "native",
-      product: "drought-tolerant",
-      url: "https://cdn.rayatnajd.com/04-products/trees/native-drought-tolerant/rayat-najd-native-drought-tolerant-tree-19.webp",
-      alt: "شجرة سعودية محلية مقاومة للجفاف",
+      product: "ziziphus",
+      url: "https://images.unsplash.com/photo-1542314831-c6a4d14eff3e?auto=format&fit=crop&q=80&w=600", // REPLACE WITH CLOUDINARY URL
+      alt: "أشجار السدر",
       type: "image"
     }
   ],
@@ -147,53 +143,37 @@ export const mediaData = {
     }
   ],
   gallery: [
-    { url: "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-21.webp", category: "projects" },
-    { url: "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-22.webp", category: "projects" },
-    { url: "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-23.webp", category: "projects" },
-    { url: "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-24.webp", category: "projects" },
-    { url: "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-25.webp", category: "projects" },
-    { url: "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-26.webp", category: "projects" },
-    { url: "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-27.webp", category: "projects" },
-    { url: "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-28.webp", category: "projects" },
-    { url: "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-29.webp", category: "projects" },
-    { url: "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-30.webp", category: "projects" },
-    { url: "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-31.webp", category: "projects" },
-    { url: "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-32.webp", category: "projects" },
-    { url: "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-33.webp", category: "projects" },
-    { url: "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-34.webp", category: "projects" },
-    { url: "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-35.webp", category: "projects" },
-    { url: "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-36.webp", category: "projects" },
-    { url: "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-37.webp", category: "projects" },
-    { url: "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-38.webp", category: "projects" },
-    { url: "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-39.webp", category: "projects" },
-    { url: "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-40.webp", category: "projects" },
-    { url: "https://cdn.rayatnajd.com/06-media-library/nursery-photography-al-hair/rayat-najd-al-hair-nursery-riyadh-18.webp", category: "nurseries" },
-    { url: "https://cdn.rayatnajd.com/06-media-library/nursery-photography-al-hair/rayat-najd-al-hair-nursery-riyadh-20.webp", category: "nurseries" },
-    { url: "https://cdn.rayatnajd.com/06-media-library/nursery-photography-al-hair/rayat-najd-al-hair-nursery-riyadh-22.webp", category: "nurseries" },
-    { url: "https://cdn.rayatnajd.com/06-media-library/nursery-photography-al-hair/rayat-najd-al-hair-nursery-riyadh-23.webp", category: "nurseries" },
-    { url: "https://cdn.rayatnajd.com/06-media-library/nursery-photography-al-hair/rayat-najd-al-hair-nursery-riyadh-24.webp", category: "nurseries" },
-    { url: "https://cdn.rayatnajd.com/06-media-library/nursery-photography-al-hair/rayat-najd-al-hair-nursery-riyadh-25.webp", category: "nurseries" },
-    { url: "https://cdn.rayatnajd.com/06-media-library/nursery-photography-al-hair/rayat-najd-al-hair-nursery-riyadh-26.webp", category: "nurseries" },
-    { url: "https://cdn.rayatnajd.com/06-media-library/nursery-photography-al-hair/rayat-najd-al-hair-nursery-riyadh-27.webp", category: "nurseries" },
-    { url: "https://cdn.rayatnajd.com/06-media-library/nursery-photography-al-hair/rayat-najd-al-hair-nursery-riyadh-28.webp", category: "nurseries" },
-    { url: "https://cdn.rayatnajd.com/06-media-library/nursery-photography-al-hair/rayat-najd-al-hair-nursery-riyadh-29.webp", category: "nurseries" },
-    { url: "https://cdn.rayatnajd.com/06-media-library/nursery-photography-al-hair/rayat-najd-al-hair-nursery-riyadh-30.webp", category: "nurseries" },
-    { url: "https://cdn.rayatnajd.com/06-media-library/nursery-photography-al-hair/rayat-najd-al-hair-nursery-riyadh-31.webp", category: "nurseries" },
-    { url: "https://cdn.rayatnajd.com/04-products/mixed-nursery-stock/rayat-najd-young-nursery-stock-33.webp", category: "trees" },
-    { url: "https://cdn.rayatnajd.com/04-products/mixed-nursery-stock/rayat-najd-young-nursery-stock-34.webp", category: "trees" },
-    { url: "https://cdn.rayatnajd.com/04-products/mixed-nursery-stock/rayat-najd-young-nursery-stock-35.webp", category: "trees" },
-    { url: "https://cdn.rayatnajd.com/04-products/mixed-nursery-stock/rayat-najd-young-nursery-stock-36.webp", category: "trees" },
-    { url: "https://cdn.rayatnajd.com/04-products/mixed-nursery-stock/rayat-najd-young-nursery-stock-37.webp", category: "trees" },
-    { url: "https://cdn.rayatnajd.com/04-products/mixed-nursery-stock/rayat-najd-young-nursery-stock-38.webp", category: "trees" },
-    { url: "https://cdn.rayatnajd.com/04-products/mixed-nursery-stock/rayat-najd-young-nursery-stock-39.webp", category: "trees" },
-    { url: "https://cdn.rayatnajd.com/04-products/mixed-nursery-stock/rayat-najd-young-nursery-stock-40.webp", category: "trees" },
-    { url: "https://cdn.rayatnajd.com/04-products/mixed-nursery-stock/rayat-najd-young-nursery-stock-41.webp", category: "trees" },
-    { url: "https://cdn.rayatnajd.com/04-products/mixed-nursery-stock/rayat-najd-young-nursery-stock-42.webp", category: "trees" },
-    { url: "https://cdn.rayatnajd.com/04-products/mixed-nursery-stock/rayat-najd-young-nursery-stock-43.webp", category: "trees" },
-    { url: "https://cdn.rayatnajd.com/04-products/mixed-nursery-stock/rayat-najd-young-nursery-stock-44.webp", category: "trees" },
-    { url: "https://cdn.rayatnajd.com/04-products/mixed-nursery-stock/rayat-najd-young-nursery-stock-45.webp", category: "trees" },
-    { url: "https://cdn.rayatnajd.com/04-products/mixed-nursery-stock/rayat-najd-young-nursery-stock-46.webp", category: "trees" },
-    { url: "https://cdn.rayatnajd.com/04-products/mixed-nursery-stock/rayat-najd-young-nursery-stock-47.webp", category: "trees" },
-    { url: "https://cdn.rayatnajd.com/04-products/mixed-nursery-stock/rayat-najd-young-nursery-stock-48.webp", category: "trees" }
+    { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783274473/WhatsApp_Image_2026-07-03_at_6.59.15_PM_1_mqafij.jpg", category: "projects" },
+    { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783274476/WhatsApp_Image_2026-07-03_at_6.59.15_PM_2_ljvh2f.jpg", category: "projects" },
+    { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783274485/WhatsApp_Image_2026-07-03_at_6.59.15_PM_5_vd3uup.jpg", category: "projects" },
+    { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783274472/WhatsApp_Image_2026-07-03_at_6.59.15_PM_6_tiqsaa.jpg", category: "projects" },
+    { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783274484/WhatsApp_Image_2026-07-03_at_6.59.15_PM_ysrnor.jpg", category: "projects" },
+    { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783274486/WhatsApp_Image_2026-07-03_at_6.59.16_PM_13_orvhre.jpg", category: "projects" },
+    { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783274487/WhatsApp_Image_2026-07-03_at_6.59.16_PM_1_gfnath.jpg", category: "projects" },
+    { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783274476/WhatsApp_Image_2026-07-03_at_6.59.16_PM_22_uc6x3b.jpg", category: "projects" },
+    { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783274484/WhatsApp_Image_2026-07-03_at_6.59.16_PM_24_jwozvi.jpg", category: "projects" },
+    { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783274477/WhatsApp_Image_2026-07-03_at_6.59.16_PM_2_f6bqkh.jpg", category: "projects" },
+    { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783274478/WhatsApp_Image_2026-07-03_at_6.59.16_PM_3_sd1ywi.jpg", category: "projects" },
+    { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783274486/WhatsApp_Image_2026-07-03_at_6.59.16_PM_4_czzxuu.jpg", category: "projects" },
+    { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783274472/WhatsApp_Image_2026-07-03_at_6.59.16_PM_5_hdqktb.jpg", category: "projects" },
+    { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783274484/WhatsApp_Image_2026-07-03_at_6.59.16_PM_6_tyqgrc.jpg", category: "projects" },
+    { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783274482/WhatsApp_Image_2026-07-03_at_6.59.16_PM_fk9qke.jpg", category: "projects" },
+    { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783274472/WhatsApp_Image_2026-07-03_at_7.02.09_PM_jfbnqc.jpg", category: "projects" },
+    { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783274475/WhatsApp_Image_2026-07-03_at_7.02.11_PM_23_qgs2da.jpg", category: "projects" },
+    { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783274481/WhatsApp_Image_2026-07-03_at_7.02.11_PM_24_remfcl.jpg", category: "projects" },
+    { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783374899/WhatsApp_Image_2026-07-04_at_11.52.06_PM_1_hjhdjs.jpg", category: "nurseries" },
+    { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783374899/WhatsApp_Image_2026-07-04_at_11.52.06_PM_2_esfzcu.jpg", category: "nurseries" },
+    { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783374905/WhatsApp_Image_2026-07-04_at_11.52.07_PM_5_qoi00h.jpg", category: "nurseries" },
+    { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783374906/WhatsApp_Image_2026-07-04_at_11.52.07_PM_nuqgxw.jpg", category: "nurseries" },
+    { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783374909/WhatsApp_Image_2026-07-04_at_11.52.08_PM_2_mlkari.jpg", category: "nurseries" },
+    { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783374911/WhatsApp_Image_2026-07-04_at_11.52.08_PM_cia8is.jpg", category: "nurseries" },
+    { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783374916/WhatsApp_Image_2026-07-04_at_11.52.12_PM_1_adrfjq.jpg", category: "nurseries" },
+    { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783374917/WhatsApp_Image_2026-07-04_at_11.52.12_PM_kybu8a.jpg", category: "nurseries" },
+    { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783374923/WhatsApp_Image_2026-07-04_at_11.56.59_PM_4_rmlfci.jpg", category: "trees" },
+    { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783374925/WhatsApp_Image_2026-07-04_at_11.56.59_PM_7_dizmsn.jpg", category: "trees" },
+    { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783374927/WhatsApp_Image_2026-07-04_at_11.57.00_PM_1_bujl3k.jpg", category: "trees" },
+    { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783374930/WhatsApp_Image_2026-07-04_at_11.57.00_PM_4_gs3sjz.jpg", category: "trees" },
+    { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783374932/WhatsApp_Image_2026-07-04_at_11.57.00_PM_l4wx3h.jpg", category: "trees" },
+    { url: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783374952/WhatsApp_Image_2026-07-04_at_11.57.04_PM_gl59wv.jpg", category: "trees" }
   ]
 };

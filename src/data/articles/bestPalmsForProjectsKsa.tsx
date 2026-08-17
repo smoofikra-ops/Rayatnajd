@@ -73,7 +73,7 @@ export const bestPalmsForProjectsKsa: Article = {
   clusterId: "palm-trees",
   titleAr: "أفضل أنواع النخيل للمشاريع في السعودية | دليل الاختيار للطرق والفلل والفنادق",
   titleEn: "Best Palm Trees for Projects in Saudi Arabia | Selection Guide",
-  heroImage: "https://cdn.rayatnajd.com/04-products/palm-trees/rayat-najd-palm-tree-nursery-35.webp",
+  heroImage: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1/clusters/palm-trees-types",
   authorId: "rayat-najd-editorial",
   publishedAt: "2024-05-20T08:00:00Z",
   readingTimeMinutes: 20,

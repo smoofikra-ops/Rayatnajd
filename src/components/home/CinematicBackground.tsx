@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { getCinematicBackgroundUrl } from '../../utils/cloudinary';
 
-export const cinematicBackgrounds: Record<string, { publicId: string; overlay: string; videoUrl?: string; imageUrl?: string }> = {
+export const cinematicBackgrounds: Record<string, { publicId: string; overlay: string; videoUrl?: string }> = {
   hero: {
     publicId: "WhatsApp_Image_2026-07-04_at_11.52.12_PM_kybu8a_r6r5td",
     overlay: "rgba(8, 34, 24, 0.50)",
@@ -9,38 +9,31 @@ export const cinematicBackgrounds: Record<string, { publicId: string; overlay: s
   },
   about: {
     publicId: "about-farm_dhu5w5",
-    overlay: "rgba(14, 45, 30, 0.44)",
-    imageUrl: "https://cdn.rayatnajd.com/06-media-library/nursery-photography-al-hair/rayat-najd-al-hair-nursery-riyadh-12.webp"
+    overlay: "rgba(14, 45, 30, 0.44)"
   },
   services: {
     publicId: "services-afforestation_g3rzrf",
-    overlay: "rgba(7, 38, 25, 0.52)",
-    imageUrl: "https://cdn.rayatnajd.com/02-website/backgrounds/rayat-najd-website-background-services.webp"
+    overlay: "rgba(7, 38, 25, 0.52)"
   },
   palms: {
     publicId: "arabic_palm_lzuutu",
-    overlay: "rgba(18, 46, 27, 0.48)",
-    imageUrl: "https://cdn.rayatnajd.com/04-products/palm-trees/rayat-najd-palm-tree-nursery-12.webp"
+    overlay: "rgba(18, 46, 27, 0.48)"
   },
   "palm-projects": {
     publicId: "palms-project_bgivil",
-    overlay: "rgba(10, 31, 24, 0.54)",
-    imageUrl: "https://cdn.rayatnajd.com/04-products/palm-trees/rayat-najd-palm-tree-nursery-38.webp"
+    overlay: "rgba(10, 31, 24, 0.54)"
   },
   trees: {
     publicId: "trees-project_ttapby",
-    overlay: "rgba(10, 31, 24, 0.54)",
-    imageUrl: "https://cdn.rayatnajd.com/04-products/trees/native-drought-tolerant/rayat-najd-native-drought-tolerant-tree-59.webp"
+    overlay: "rgba(10, 31, 24, 0.54)"
   },
   projects: {
     publicId: "projects-landscape_eulurg",
-    overlay: "rgba(10, 31, 24, 0.54)",
-    imageUrl: "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-77.webp"
+    overlay: "rgba(10, 31, 24, 0.54)"
   },
   sustainability: {
     publicId: "sustainability-green_shcmju",
-    overlay: "rgba(5, 42, 25, 0.50)",
-    imageUrl: "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-78.webp"
+    overlay: "rgba(5, 42, 25, 0.50)"
   }
 };
 
@@ -119,9 +112,8 @@ export default function CinematicBackground() {
 
   const getImgUrl = (key: string) => {
     if (!key || !cinematicBackgrounds[key]) return '';
-    const { publicId, imageUrl } = cinematicBackgrounds[key];
-    if (imageUrl) return imageUrl;
-
+    const { publicId } = cinematicBackgrounds[key];
+    
     if (isMobile) {
       return getCinematicBackgroundUrl(publicId, 768, 1024, 'eco');
     } else if (windowSize.width <= 1280) {

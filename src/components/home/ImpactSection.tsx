@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import { TreeDeciduous, Wind, Binoculars } from "lucide-react";
 import { useSettings } from "../../contexts/SettingsContext";
+import impactImg1 from "../../assets/images/regenerated_image_1783950636798.png";
 
 export default function ImpactSection() {
   const { t } = useSettings();
@@ -13,7 +14,7 @@ export default function ImpactSection() {
         "From combating desertification to creating life. We stabilize the soil and repel sand encroachment to protect cities and roads from environmental erosion using sustainable methods."
       ),
       icon: <Wind />,
-      image: "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-46.webp"
+      image: impactImg1
     },
     {
       title: t("الأثر البيئي والمناخي", "Environmental and Climatic Impact"),
@@ -22,7 +23,7 @@ export default function ImpactSection() {
         "Reducing carbon rates, providing urban shaded areas, mitigating global warming, and improving air quality and biodiversity."
       ),
       icon: <TreeDeciduous />,
-      image: "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-74.webp"
+      image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=800"
     },
     {
       title: t("دعم السياحة ونمط الحياة", "Supporting Tourism and Lifestyle"),
@@ -31,7 +32,7 @@ export default function ImpactSection() {
         "Developing green spaces that create exceptional destinations, elevate resort standards, and enhance the daily quality of life for residents."
       ),
       icon: <Binoculars />,
-      image: "https://cdn.rayatnajd.com/02-website/backgrounds/rayat-najd-website-background-palms.webp"
+      image: "https://images.unsplash.com/photo-1519331379826-f10be5486c6f?auto=format&fit=crop&q=80&w=800"
     }
   ];
 
