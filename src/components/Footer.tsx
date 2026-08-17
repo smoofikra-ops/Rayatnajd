@@ -66,7 +66,7 @@ export default function Footer() {
             <Link to="/" className="flex items-center justify-center md:justify-start gap-2">
               <div className="relative w-12 h-12 rounded-full shadow-lg overflow-hidden border-2 border-primary/20 bg-white flex items-center justify-center">
                 <img 
-                  src="https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783298171/%D9%84%D9%82%D8%B7%D8%A9_%D8%A7%D9%84%D8%B4%D8%A7%D8%B4%D8%A9_2026-06-28_%D9%81%D9%8A_4.03.31_%D8%B5_mfq3dq.png" 
+                  src="https://cdn.rayatnajd.com/01-brand/logo/rayatnajd-logo.png"
                   alt="Rayat Najd Logo"
                   className="w-full h-full object-cover"
                 />
