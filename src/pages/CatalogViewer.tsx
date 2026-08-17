@@ -3,17 +3,36 @@ import { useSettings } from "../contexts/SettingsContext";
 import { Link } from "react-router-dom";
 import { ArrowRight, Download, Printer, Box } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
+import { getVerifiedImageForSku, categoryMediaAssets } from "../data/plantImageAssets";
+
+// Verified-image audit fix (see plantImageAssets.ts / Image Asset Mapping Layer):
+// three of this page's hand-written palm entries previously pointed at Bunny
+// images whose species could not actually be confirmed by visual audit.
+// Pulling the URLs from the verified mapping layer instead of hardcoding new
+// literals keeps this page's palm images honest without building a second
+// mapping system: RN-PLANT-007 has a species-confirmed Date Palm photo, while
+// the other two entries fall back to audited category-level palm imagery
+// (species unknown) rather than an unverified image or a false species claim.
+const VERIFIED_DATE_PALM_IMG =
+  getVerifiedImageForSku("RN-PLANT-007")?.url ??
+  "https://cdn.rayatnajd.com/04-products/palm-trees/rayat-najd-palm-tree-nursery-31.webp";
+const CATEGORY_PALM_IMG_1 =
+  categoryMediaAssets.find((a) => a.url.endsWith("-48.webp"))?.url ??
+  "https://cdn.rayatnajd.com/04-products/palm-trees/rayat-najd-palm-tree-nursery-48.webp";
+const CATEGORY_PALM_IMG_2 =
+  categoryMediaAssets.find((a) => a.url.endsWith("-50.webp"))?.url ??
+  "https://cdn.rayatnajd.com/04-products/palm-trees/rayat-najd-palm-tree-nursery-50.webp";
 
 export default function CatalogViewer() {
   const { t, language } = useSettings();
   const [activeTab, setActiveTab] = useState('products'); // products, values, services, vision
-  
+
   const products = [
-    { title: t("نخيل البلميط", "Sabal Palm"), category: t("نخيل الزينة", "Ornamental Palms"), height: t("حتى 20 متر", "Up to 20m"), img: "https://cdn.rayatnajd.com/04-products/palm-trees/rayat-najd-palm-tree-nursery-52.webp", desc: t("يعد نخيل البلميط من أنواع النخيل المميزة التي تنتمي إلى الفصيلة الفوفلية...", "Sabal palm is a distinctive type of palm...") },
+    { title: t("نخيل زينة (أنواع متعددة)", "Ornamental Palm (Assorted)"), category: t("نخيل الزينة", "Ornamental Palms"), height: t("حتى 20 متر", "Up to 20m"), img: CATEGORY_PALM_IMG_2, desc: t("مخزون متنوع من نخيل الزينة من مشتل رايات نجد، مناسب للمساحات الحضرية والمشاريع التجميلية.", "A varied stock of ornamental palms from the Rayat Najd nursery, suited to urban landscaping and beautification projects.") },
     { title: t("أشجار اللوز البجلي", "Bajli Almond Trees"), category: t("الأشجار المحلية", "Native Trees"), height: t("5-10 أمتار", "5-10 meters"), img: "https://cdn.rayatnajd.com/04-products/trees/native-drought-tolerant/rayat-najd-native-drought-tolerant-tree-58.webp", desc: t("شجرة محلية مميزة تتحمل البيئة القاسية", "A distinctive native tree that withstands harsh environments") },
     { title: t("أشجار النيم", "Neem Trees"), category: t("أشجار الظل", "Shade Trees"), height: t("20+ متر", "20+ meters"), img: "https://cdn.rayatnajd.com/04-products/mixed-nursery-stock/rayat-najd-young-nursery-stock-11.webp", desc: t("شجرة ظل كثيفة سريعة النمو", "Fast-growing dense shade tree") },
-    { title: t("نخيل بلدي (تمر)", "Date Palms"), category: t("نخيل مثمر", "Fruit Palms"), height: t("متعددة الأحجام", "Various Sizes"), img: "https://cdn.rayatnajd.com/04-products/palm-trees/rayat-najd-palm-tree-nursery-53.webp", desc: t("نخيل إنتاج التمور عالي الجودة", "High-quality date-producing palm") },
-    { title: t("نخيل واشنطونيا", "Washingtonia Palm"), category: t("نخيل الزينة", "Ornamental Palms"), height: t("تصل إلى 30 متر", "Up to 30m"), img: "https://cdn.rayatnajd.com/04-products/palm-trees/rayat-najd-palm-tree-nursery-54.webp", desc: t("نخل مجمل للشوارع والميادين الكبيرة", "Beautifying palm for large streets and squares") },
+    { title: t("نخيل بلدي (تمر)", "Date Palms"), category: t("نخيل مثمر", "Fruit Palms"), height: t("متعددة الأحجام", "Various Sizes"), img: VERIFIED_DATE_PALM_IMG, desc: t("نخيل إنتاج التمور عالي الجودة (Phoenix dactylifera) — صورة موثقة من مشتل رايات نجد.", "High-quality date-producing palm (Phoenix dactylifera) — verified Rayat Najd nursery photo.") },
+    { title: t("نخيل واشنطونيا", "Washingtonia Palm"), category: t("نخيل الزينة", "Ornamental Palms"), height: t("تصل إلى 30 متر", "Up to 30m"), img: CATEGORY_PALM_IMG_1, desc: t("نخل مجمل للشوارع والميادين الكبيرة", "Beautifying palm for large streets and squares") },
   ];
 
   const handlePrint = () => {
