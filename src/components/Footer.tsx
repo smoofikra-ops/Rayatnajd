@@ -111,7 +111,7 @@ export default function Footer() {
             <ul className="space-y-4">
               <li><Link to="/about" className="text-white/80 hover:text-white transition-colors text-sm mercury-effect inline-block px-3 py-1 -mx-3 rounded-lg">{t("من نحن", "About Us")}</Link></li>
               <li><Link to="/#services" className="text-white/80 hover:text-white transition-colors text-sm mercury-effect inline-block px-3 py-1 -mx-3 rounded-lg">{t("خدماتنا", "Services")}</Link></li>
-              <li><Link to="/#projects" className="text-white/80 hover:text-white transition-colors text-sm mercury-effect inline-block px-3 py-1 -mx-3 rounded-lg">{t("مشاريعنا", "Projects")}</Link></li>
+              <li><Link to="/projects" className="text-white/80 hover:text-white transition-colors text-sm mercury-effect inline-block px-3 py-1 -mx-3 rounded-lg">{t("مشاريعنا", "Projects")}</Link></li>
               <li><Link to="/catalog" className="text-white/80 hover:text-white transition-colors text-sm mercury-effect inline-block px-3 py-1 -mx-3 rounded-lg">{t("الكتالوج", "Catalog")}</Link></li>
               <li>
                 <Link to="/tools" className="text-white/80 hover:text-white transition-colors text-sm mercury-effect inline-block px-3 py-1 -mx-3 rounded-lg">

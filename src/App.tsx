@@ -21,6 +21,8 @@ const ProjectUploadTool = lazy(() => import("./pages/tools/ProjectUploadTool"));
 const AiSiteAnalysisTool = lazy(() => import("./pages/tools/AiSiteAnalysisTool"));
 const BlogList = lazy(() => import("./pages/BlogList"));
 const BlogPost = lazy(() => import("./pages/BlogPost"));
+const Projects = lazy(() => import("./pages/Projects"));
+const ProjectDetail = lazy(() => import("./pages/ProjectDetail"));
 const About = lazy(() => import("./pages/About"));
 const Contact = lazy(() => import("./pages/Contact"));
 const KnowledgeHub = lazy(() => import("./pages/knowledge/KnowledgeHub"));
@@ -55,6 +57,8 @@ export default function App() {
               <Route path="about" element={<About />} />
               <Route path="contact" element={<Contact />} />
               <Route path="service/:id" element={<ServicePage />} />
+              <Route path="projects" element={<Projects />} />
+              <Route path="projects/:slug" element={<ProjectDetail />} />
               <Route path="tools" element={<ToolsCenter />} />
               <Route path="knowledge" element={<KnowledgeHub />} />
               <Route path="knowledge/pillar/:slug" element={<PillarPage />} />

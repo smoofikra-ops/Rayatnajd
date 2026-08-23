@@ -7,7 +7,6 @@ export default function TopBanner() {
   const { t, language } = useSettings();
 
   const messagesAr = [
-    "نلفت انتباه عملائنا الكرام بأن الموقع الإلكتروني يمر حالياً بمرحلة تطوير وتحديث مستمرة. نعتذر عن عدم إيقاف الموقع مؤقتاً لحرصنا على استمرار تواصلكم معنا. نعمل جاهدين على تحسين وتطوير المنصة لتوفير تجربة أفضل. لأي استفسارات أو طلبات، نحن على أتم الاستعداد لخدمتكم والتواصل معكم مباشرة عبر الاتصال أو الواتساب.",
     "نقدم خدمات متكاملة في تنسيق الحدائق وتطوير المشهد الحضري للجهات الحكومية والخاصة بأعلى معايير الجودة.",
     "حلول مبتكرة لتصميم وتنفيذ المساحات الخضراء في القصور والفلل، لنخلق لك بيئة طبيعية تنبض بالحياة.",
     "شريكك الأمثل من المقاولين لتنفيذ المشاريع الزراعية الكبرى، وتوريد النخيل والأشجار بمختلف الأنواع والأحجام.",
@@ -15,7 +14,6 @@ export default function TopBanner() {
   ];
 
   const messagesEn = [
-    "We would like to inform our valued customers that the website is currently undergoing continuous development and updates. We apologize for not temporarily suspending the site out of our commitment to maintaining communication with you. We are working hard to improve and develop the platform to provide a better experience. For any inquiries or requests, we are fully prepared to serve you and communicate directly via call or WhatsApp.",
     "We provide integrated services in landscaping and urban development for government and private sectors with the highest quality standards.",
     "Innovative solutions for designing and implementing green spaces in palaces and villas, creating a vibrant natural environment for you.",
     "Your ideal contractor partner for executing major agricultural projects and supplying palms and trees of various types and sizes.",

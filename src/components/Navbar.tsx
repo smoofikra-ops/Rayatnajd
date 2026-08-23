@@ -19,7 +19,7 @@ export default function Navbar() {
     { name: t("الرئيسية", "Home"), path: "/" },
     { name: t("من نحن", "About Us"), path: "/about" },
     { name: t("خدماتنا", "Services"), path: "/#services" },
-    { name: t("مشاريعنا", "Projects"), path: "/#projects" },
+    { name: t("مشاريعنا", "Projects"), path: "/projects" },
     { name: t("المشاتل والأشجار", "Nurseries & Trees"), path: "/#nurseries" },
     { name: t("المعرفة والذكاء", "Knowledge Center"), path: "/tools" },
     { name: t("المدونة", "Blog"), path: "/blog" },
