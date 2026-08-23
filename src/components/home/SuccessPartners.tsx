@@ -16,22 +16,12 @@ export default function SuccessPartners() {
       partners: [
         { nameAr: "وزارة البلديات والإسكان", nameEn: "Ministry of Municipalities and Housing", logo: "https://cdn.rayatnajd.com/11-partners-clients/partners/Ministry%20of%20Municipalities%20and%20Housing%20logo.jpeg", color: "#006253" },
         { nameAr: "وزارة البيئة والمياه والزراعة", nameEn: "Ministry of Environment, Water & Agriculture", logo: "https://cdn.rayatnajd.com/11-partners-clients/partners/Ministry%20of%20Environment%2C%20Water%20and%20Agriculture%20logo.jpeg", color: "#2E8B57" },
-        { nameAr: "وزارة الدفاع", nameEn: "Ministry of Defense", logo: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783900194/3_kc5r8o.jpg", color: "#8B7355" },
-        { nameAr: "الهيئة الملكية لمدينة الرياض", nameEn: "Royal Commission for Riyadh City", logo: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783900197/4_bgoo8s.jpg", color: "#927b4b" },
-      ]
-    },
-    {
-      titleAr: "البرامج الوطنية",
-      titleEn: "National Programs",
-      partners: [
-        { nameAr: "برنامج الرياض الخضراء", nameEn: "Green Riyadh Program", logo: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783900199/5_tzvkqg.jpg", color: "#228B22" }
       ]
     },
     {
       titleAr: "المشاريع الوطنية الكبرى",
       titleEn: "Major National Projects",
       partners: [
-        { nameAr: "روشن", nameEn: "ROSHN", logo: "https://res.cloudinary.com/erfajaoa/image/upload/f_auto,q_auto/v1783900201/6_rsmhm7.jpg", color: "#006b7a" },
         { nameAr: "نيوم", nameEn: "NEOM", logo: "https://cdn.rayatnajd.com/11-partners-clients/partners/neom%20logo.jpeg", color: "#b9975b" },
         { nameAr: "البحر الأحمر الدولية", nameEn: "Red Sea Global", logo: "https://cdn.rayatnajd.com/11-partners-clients/partners/red%20sea%20global%20logo%20.jpeg", color: "#007a99" },
       ]
