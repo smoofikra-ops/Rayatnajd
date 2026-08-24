@@ -1,0 +1,767 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2026-08-24T01:02:06.693Z",
+  "cdnBase": "https://cdn.rayatnajd.com",
+  "folderMappings": {
+    "umm-shalhah-al-asyah": "03-projects/environmental-sustainability/umm-shalfah-afforestation",
+    "saiysad-national-park-taif": "03-projects/saiysad-national-park-taif",
+    "university-of-khulais": "03-projects/university-of-khulais",
+    "makkah-desalination-plant": "03-projects/makkah-desalination-plant",
+    "al-shuqaiq-desalination-plant": "03-projects/al-shuqaiq-desalination-plant",
+    "al-tumayrat-al-jouf": "03-projects/al-tumayrat-al-jouf",
+    "umm-al-hamam-al-asyah": "03-projects/umm-al-hamam-al-asyah",
+    "al-owaisi-care-maintenance": "03-projects/al-owaisi-care-maintenance",
+    "umm-al-hamam-umm-shalhah-care-maintenance": "03-projects/umm-al-hamam-umm-shalhah-care-maintenance",
+    "al-jumum-afforestation": "03-projects/al-jumum-afforestation",
+    "khulais-afforestation": "03-projects/khulais-afforestation",
+    "al-nafthah-afforestation": "03-projects/al-nafthah-afforestation",
+    "al-aflaj-afforestation": "03-projects/al-aflaj-afforestation"
+  },
+  "projects": {
+    "03-projects/environmental-sustainability/umm-shalfah-afforestation": {
+      "slug": "umm-shalhah-al-asyah",
+      "bunnyFolder": "03-projects/environmental-sustainability/umm-shalfah-afforestation",
+      "mediaStatus": "verified-project-media",
+      "primaryImage": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-65.webp",
+      "images": [
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-01.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-01.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (1)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (1)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-02.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-02.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (2)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (2)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-03.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-03.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (3)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (3)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-04.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-04.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (4)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (4)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-05.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-05.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (5)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (5)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-06.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-06.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (6)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (6)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-07.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-07.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (7)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (7)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-08.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-08.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (8)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (8)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-09.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-09.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (9)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (9)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-10.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-10.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (10)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (10)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-11.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-11.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (11)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (11)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-12.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-12.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (12)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (12)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-13.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-13.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (13)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (13)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-14.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-14.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (14)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (14)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-15.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-15.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (15)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (15)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-16.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-16.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (16)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (16)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-17.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-17.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (17)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (17)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-18.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-18.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (18)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (18)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-19.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-19.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (19)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (19)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-20.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-20.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (20)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (20)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-21.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-21.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (21)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (21)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-22.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-22.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (22)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (22)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-23.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-23.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (23)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (23)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-24.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-24.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (24)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (24)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-25.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-25.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (25)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (25)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-26.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-26.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (26)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (26)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-27.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-27.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (27)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (27)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-28.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-28.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (28)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (28)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-29.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-29.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (29)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (29)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-30.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-30.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (30)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (30)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-31.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-31.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (31)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (31)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-32.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-32.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (32)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (32)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-33.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-33.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (33)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (33)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-34.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-34.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (34)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (34)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-35.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-35.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (35)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (35)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-36.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-36.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (36)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (36)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-37.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-37.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (37)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (37)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-38.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-38.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (38)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (38)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-39.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-39.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (39)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (39)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-40.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-40.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (40)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (40)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-41.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-41.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (41)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (41)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-42.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-42.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (42)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (42)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-43.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-43.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (43)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (43)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-44.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-44.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (44)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (44)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-45.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-45.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (45)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (45)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-46.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-46.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (46)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (46)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-47.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-47.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (47)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (47)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-48.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-48.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (48)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (48)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-49.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-49.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (49)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (49)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-50.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-50.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (50)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (50)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-51.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-51.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (51)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (51)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-52.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-52.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (52)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (52)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-53.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-53.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (53)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (53)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-54.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-54.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (54)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (54)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-55.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-55.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (55)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (55)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-56.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-56.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (56)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (56)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-57.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-57.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (57)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (57)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-58.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-58.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (58)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (58)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-59.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-59.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (59)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (59)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-60.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-60.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (60)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (60)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-61.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-61.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (61)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (61)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-62.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-62.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (62)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (62)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-63.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-63.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (63)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (63)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-64.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-64.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (64)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (64)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-65.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-65.webp",
+          "type": "image",
+          "captionAr": "أعمال التشجير والشتلات الصحراوية بمشروع أم شلحة",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (65)",
+          "isPrimary": true
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-66.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-66.webp",
+          "type": "image",
+          "captionAr": "تجهيز خطوط وشبكات الري بالتنقيط في الموقع",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (66)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-67.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-67.webp",
+          "type": "image",
+          "captionAr": "زراعة الغطاء النباتي البري المستدام",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (67)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-68.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-68.webp",
+          "type": "image",
+          "captionAr": "المتابعة الميدانية ونمو الأشجار في البيئة الطبيعية",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (68)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-69.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-69.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (69)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (69)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-70.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-70.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (70)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (70)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-71.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-71.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (71)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (71)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-72.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-72.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (72)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (72)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-73.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-73.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (73)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (73)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-74.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-74.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (74)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (74)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-75.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-75.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (75)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (75)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-76.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-76.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (76)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (76)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-77.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-77.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (77)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (77)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-78.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-78.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (78)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (78)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-79.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-79.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (79)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (79)",
+          "isPrimary": false
+        },
+        {
+          "filename": "rayat-najd-umm-shalfah-desert-afforestation-project-80.webp",
+          "url": "https://cdn.rayatnajd.com/03-projects/environmental-sustainability/umm-shalfah-afforestation/rayat-najd-umm-shalfah-desert-afforestation-project-80.webp",
+          "type": "image",
+          "captionAr": "توثيق ميداني لأعمال مشروع أم شلحة بالأسياح (80)",
+          "captionEn": "Umm Shalhah Afforestation Field Documentation (80)",
+          "isPrimary": false
+        }
+      ],
+      "videos": []
+    },
+    "03-projects/saiysad-national-park-taif": {
+      "slug": "saiysad-national-park-taif",
+      "bunnyFolder": "03-projects/saiysad-national-park-taif",
+      "mediaStatus": "awaiting-bunny-sync",
+      "primaryImage": null,
+      "images": [],
+      "videos": []
+    },
+    "03-projects/university-of-khulais": {
+      "slug": "university-of-khulais",
+      "bunnyFolder": "03-projects/university-of-khulais",
+      "mediaStatus": "awaiting-bunny-sync",
+      "primaryImage": null,
+      "images": [],
+      "videos": []
+    },
+    "03-projects/makkah-desalination-plant": {
+      "slug": "makkah-desalination-plant",
+      "bunnyFolder": "03-projects/makkah-desalination-plant",
+      "mediaStatus": "awaiting-bunny-sync",
+      "primaryImage": null,
+      "images": [],
+      "videos": []
+    },
+    "03-projects/al-shuqaiq-desalination-plant": {
+      "slug": "al-shuqaiq-desalination-plant",
+      "bunnyFolder": "03-projects/al-shuqaiq-desalination-plant",
+      "mediaStatus": "awaiting-bunny-sync",
+      "primaryImage": null,
+      "images": [],
+      "videos": []
+    },
+    "03-projects/al-tumayrat-al-jouf": {
+      "slug": "al-tumayrat-al-jouf",
+      "bunnyFolder": "03-projects/al-tumayrat-al-jouf",
+      "mediaStatus": "awaiting-bunny-sync",
+      "primaryImage": null,
+      "images": [],
+      "videos": []
+    },
+    "03-projects/umm-al-hamam-al-asyah": {
+      "slug": "umm-al-hamam-al-asyah",
+      "bunnyFolder": "03-projects/umm-al-hamam-al-asyah",
+      "mediaStatus": "awaiting-bunny-sync",
+      "primaryImage": null,
+      "images": [],
+      "videos": []
+    },
+    "03-projects/al-owaisi-care-maintenance": {
+      "slug": "al-owaisi-care-maintenance",
+      "bunnyFolder": "03-projects/al-owaisi-care-maintenance",
+      "mediaStatus": "awaiting-bunny-sync",
+      "primaryImage": null,
+      "images": [],
+      "videos": []
+    },
+    "03-projects/umm-al-hamam-umm-shalhah-care-maintenance": {
+      "slug": "umm-al-hamam-umm-shalhah-care-maintenance",
+      "bunnyFolder": "03-projects/umm-al-hamam-umm-shalhah-care-maintenance",
+      "mediaStatus": "awaiting-bunny-sync",
+      "primaryImage": null,
+      "images": [],
+      "videos": []
+    },
+    "03-projects/al-jumum-afforestation": {
+      "slug": "al-jumum-afforestation",
+      "bunnyFolder": "03-projects/al-jumum-afforestation",
+      "mediaStatus": "awaiting-bunny-sync",
+      "primaryImage": null,
+      "images": [],
+      "videos": []
+    },
+    "03-projects/khulais-afforestation": {
+      "slug": "khulais-afforestation",
+      "bunnyFolder": "03-projects/khulais-afforestation",
+      "mediaStatus": "awaiting-bunny-sync",
+      "primaryImage": null,
+      "images": [],
+      "videos": []
+    },
+    "03-projects/al-nafthah-afforestation": {
+      "slug": "al-nafthah-afforestation",
+      "bunnyFolder": "03-projects/al-nafthah-afforestation",
+      "mediaStatus": "awaiting-bunny-sync",
+      "primaryImage": null,
+      "images": [],
+      "videos": []
+    },
+    "03-projects/al-aflaj-afforestation": {
+      "slug": "al-aflaj-afforestation",
+      "bunnyFolder": "03-projects/al-aflaj-afforestation",
+      "mediaStatus": "awaiting-bunny-sync",
+      "primaryImage": null,
+      "images": [],
+      "videos": []
+    }
+  }
+}

@@ -155,7 +155,7 @@ export default function CinematicBackground() {
           muted
           loop
           playsInline
-          poster={prevUrl}
+          poster={prevUrl || undefined}
           className={`absolute inset-0 w-full h-full object-cover origin-center transition-all will-change-transform will-change-opacity`}
           style={{
             opacity: isTransitioning ? 0 : 0,
@@ -188,7 +188,7 @@ export default function CinematicBackground() {
           loop
           playsInline
           preload="auto"
-          poster={activeUrl}
+          poster={activeUrl || undefined}
           disablePictureInPicture
           ref={(el) => {
             if (el) {

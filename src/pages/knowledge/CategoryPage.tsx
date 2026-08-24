@@ -5,6 +5,7 @@ import { useSettings } from '../../contexts/SettingsContext';
 import KnowledgeBreadcrumb from '../../components/knowledge/Breadcrumb';
 import { categories, firstPillar } from '../../data/knowledgeArchitecture';
 import { LayoutGrid } from 'lucide-react';
+import { CloudinaryImage } from '../../components/cloudinary/CloudinaryImage';
 
 export default function CategoryPage() {
   const { slug } = useParams();
@@ -44,7 +45,7 @@ export default function CategoryPage() {
            {firstPillar.categoryId === category.id && (
              <div className="bg-card-background border border-card-border rounded-2xl p-6 flex flex-col md:flex-row gap-6 items-center hover:shadow-md transition-shadow">
                <div className="w-full md:w-1/3 h-48 bg-bg-secondary rounded-xl flex items-center justify-center text-text-muted text-sm border border-card-border/50 overflow-hidden">
-                 <img src={firstPillar.heroImage} alt="" className="w-full h-full object-cover" />
+                 <CloudinaryImage src={firstPillar.heroImage} alt="" className="w-full h-full object-cover" />
                </div>
                <div className="w-full md:w-2/3">
                  <span className="text-primary text-xs font-bold uppercase tracking-wider mb-2 block">Pillar Guide</span>

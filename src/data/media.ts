@@ -141,7 +141,7 @@ export const mediaData = {
   videos: [
     {
       id: "drone-view",
-      url: "https://www.w3schools.com/html/mov_bbb.mp4", // REPLACE WITH CLOUDINARY URL
+      url: "https://youtu.be/cvKABrwq05M",
       alt: "عرض جوي لمشاريعنا",
       type: "video"
     }

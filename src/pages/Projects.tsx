@@ -25,6 +25,7 @@ import {
 import { ProjectCategory } from "../types/project";
 import SEO from "../components/SEO";
 import { CloudinaryImage } from "../components/cloudinary/CloudinaryImage";
+import { ProjectMediaPlaceholder } from "../components/projects/ProjectMediaPlaceholder";
 
 export default function Projects() {
   const { t, language } = useSettings();
@@ -251,41 +252,55 @@ export default function Projects() {
                 >
                   {/* Card Media Header */}
                   <div className="relative aspect-[16/10] overflow-hidden bg-bg-secondary">
-                    <CloudinaryImage
-                      src={project.heroImage}
-                      alt={language === "ar" ? project.nameAr : project.nameEn}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                    {project.heroImage ? (
+                      <>
+                        <CloudinaryImage
+                          src={project.heroImage}
+                          alt={language === "ar" ? project.nameAr : project.nameEn}
+                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
-                    {/* Badges */}
-                    <div className="absolute top-3 rtl:right-3 ltr:left-3 flex flex-wrap gap-2">
-                      <span className="px-2.5 py-1 rounded-lg bg-primary/90 backdrop-blur-md text-white text-xs font-bold shadow-sm">
-                        {language === "ar" ? project.categoryNameAr : project.categoryNameEn}
-                      </span>
-                    </div>
+                        {/* Badges */}
+                        <div className="absolute top-3 rtl:right-3 ltr:left-3 flex flex-wrap gap-2">
+                          <span className="px-2.5 py-1 rounded-lg bg-primary/90 backdrop-blur-md text-white text-xs font-bold shadow-sm">
+                            {language === "ar" ? project.categoryNameAr : project.categoryNameEn}
+                          </span>
+                        </div>
 
-                    <div className="absolute top-3 rtl:left-3 ltr:right-3">
-                      {project.status === "completed" ? (
-                        <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-emerald-500/90 backdrop-blur-md text-white text-xs font-semibold shadow-sm">
-                          <CheckCircle2 className="w-3 h-3" />
-                          {t("مكتمل", "Completed")}
-                        </span>
-                      ) : (
-                        <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-amber-500/90 backdrop-blur-md text-white text-xs font-semibold shadow-sm">
-                          <Clock className="w-3 h-3" />
-                          {t("قائم ومستمر", "Ongoing")}
-                        </span>
-                      )}
-                    </div>
+                        <div className="absolute top-3 rtl:left-3 ltr:right-3">
+                          {project.status === "completed" ? (
+                            <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-emerald-500/90 backdrop-blur-md text-white text-xs font-semibold shadow-sm">
+                              <CheckCircle2 className="w-3 h-3" />
+                              {t("مكتمل", "Completed")}
+                            </span>
+                          ) : (
+                            <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-amber-500/90 backdrop-blur-md text-white text-xs font-semibold shadow-sm">
+                              <Clock className="w-3 h-3" />
+                              {t("قائم ومستمر", "Ongoing")}
+                            </span>
+                          )}
+                        </div>
 
-                    {/* Location Badge */}
-                    <div className="absolute bottom-3 rtl:right-3 ltr:left-3 text-white flex items-center gap-1.5 text-xs drop-shadow-md">
-                      <MapPin className="w-3.5 h-3.5 text-accent-gold shrink-0" />
-                      <span className="font-medium truncate max-w-[260px]">
-                        {language === "ar" ? project.locationAr : project.locationEn}
-                      </span>
-                    </div>
+                        {/* Location Badge */}
+                        <div className="absolute bottom-3 rtl:right-3 ltr:left-3 text-white flex items-center gap-1.5 text-xs drop-shadow-md">
+                          <MapPin className="w-3.5 h-3.5 text-accent-gold shrink-0" />
+                          <span className="font-medium truncate max-w-[260px]">
+                            {language === "ar" ? project.locationAr : project.locationEn}
+                          </span>
+                        </div>
+                      </>
+                    ) : (
+                      <ProjectMediaPlaceholder
+                        nameAr={project.nameAr}
+                        nameEn={project.nameEn}
+                        categoryNameAr={project.categoryNameAr}
+                        categoryNameEn={project.categoryNameEn}
+                        locationAr={project.locationAr}
+                        locationEn={project.locationEn}
+                        variant="card"
+                      />
+                    )}
                   </div>
 
                   {/* Card Content */}

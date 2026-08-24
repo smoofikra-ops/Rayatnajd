@@ -68,7 +68,7 @@ export default function HeroSlideshow({ isActive }: HeroSlideshowProps) {
       <div 
         className={`absolute inset-0 w-full h-full transition-opacity duration-[1200ms] ease-in-out ${activeLayer === 0 ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
       >
-        {layers[0] && (
+        {layers[0] && layers[0].src && (
           <img
             src={layers[0].src}
             alt={layers[0].altAr}
@@ -84,7 +84,7 @@ export default function HeroSlideshow({ isActive }: HeroSlideshowProps) {
       <div 
         className={`absolute inset-0 w-full h-full transition-opacity duration-[1200ms] ease-in-out ${activeLayer === 1 ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
       >
-        {layers[1] && (
+        {layers[1] && layers[1].src && (
           <img
             src={layers[1].src}
             alt={layers[1].altAr}

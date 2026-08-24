@@ -24,6 +24,12 @@ export interface ProjectStat {
   value: string;
 }
 
+export type ProjectMediaStatus =
+  | "verified-project-media"
+  | "media-missing"
+  | "video-only"
+  | "awaiting-bunny-sync";
+
 export interface Project {
   id: string;
   slug: string;
@@ -44,8 +50,12 @@ export interface Project {
   status: ProjectStatus;
   featured: boolean;
   featuredOrder?: number; // 1 to 6 for homepage
+  bunnyFolder?: string;
+  primaryImage?: string;
   heroImage: string;
+  mediaStatus: ProjectMediaStatus;
   gallery: ProjectMedia[];
+  videos?: ProjectMedia[];
   stats?: ProjectStat[];
   tags?: string[];
   highlightsAr?: string[];
