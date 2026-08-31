@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
-import { Leaf, MapPin, Phone, Mail, Instagram, Twitter, Linkedin, ChevronDown } from "lucide-react";
+import { Leaf, MapPin, Phone, Mail, Instagram, Twitter, Linkedin, ChevronDown, Youtube } from "lucide-react";
 import { useSettings } from "../contexts/SettingsContext";
 import { motion, AnimatePresence } from "motion/react";
 
@@ -84,14 +84,14 @@ export default function Footer() {
                 "Your premier partner in afforestation and environmental sustainability. We work on developing the urban landscape."
               )}
             </p>
-            <div className="flex gap-4 justify-center md:justify-start">
-              <a href="#" className="w-10 h-10 rounded-full flex items-center justify-center transition-all hover:scale-110 shadow-lg bg-black text-white hover:brightness-110">
+            <div className="flex gap-3 sm:gap-4 flex-wrap justify-center md:justify-start">
+              <a href="#" aria-label="X (Twitter)" className="w-10 h-10 rounded-full flex items-center justify-center transition-all hover:scale-110 shadow-lg bg-black text-white hover:brightness-110 border border-white/10">
                 <Twitter className="w-4 h-4" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full flex items-center justify-center transition-all hover:scale-110 shadow-lg bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] text-white hover:brightness-110">
+              <a href="#" aria-label="Instagram" className="w-10 h-10 rounded-full flex items-center justify-center transition-all hover:scale-110 shadow-lg bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] text-white hover:brightness-110">
                 <Instagram className="w-4 h-4" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full flex items-center justify-center transition-all hover:scale-110 shadow-lg bg-[#0077b5] text-white hover:brightness-110">
+              <a href="#" aria-label="LinkedIn" className="w-10 h-10 rounded-full flex items-center justify-center transition-all hover:scale-110 shadow-lg bg-[#0077b5] text-white hover:brightness-110">
                 <Linkedin className="w-4 h-4" />
               </a>
               <a 
@@ -106,7 +106,16 @@ export default function Footer() {
                   referrerPolicy="no-referrer"
                 />
               </a>
-              <a href="https://www.tiktok.com/@rayatnajd.sa" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full flex items-center justify-center transition-all hover:scale-110 shadow-lg bg-black text-white hover:brightness-110 border border-white/20">
+              <a 
+                href="https://www.youtube.com/@rayatnajd-sa" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="YouTube"
+                className="w-10 h-10 rounded-full flex items-center justify-center transition-all hover:scale-110 shadow-lg bg-[#FF0000] text-white hover:brightness-110"
+              >
+                <Youtube className="w-4 h-4" />
+              </a>
+              <a href="https://www.tiktok.com/@rayatnajd.sa" target="_blank" rel="noopener noreferrer" aria-label="TikTok" className="w-10 h-10 rounded-full flex items-center justify-center transition-all hover:scale-110 shadow-lg bg-black text-white hover:brightness-110 border border-white/20">
                 <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.12-3.44-3.17-3.61-5.46-.02-.33-.02-.66-.01-.99.14-2.08 1.14-4 2.8-5.3 1.7-1.3 3.87-1.92 5.96-1.67V11.6c-1.14-.23-2.35-.14-3.41.36-1.23.54-2.14 1.6-2.45 2.89-.13.51-.15 1.05-.08 1.57.17 1.34.98 2.54 2.14 3.21 1.05.62 2.31.78 3.47.53 1.31-.28 2.4-1.12 2.99-2.32.34-.67.49-1.43.48-2.18-.04-4.83-.02-9.67-.03-14.51h-.03z"/>
                 </svg>
