@@ -34,7 +34,7 @@ export default function Footer() {
   const { t, language, setLanguage } = useSettings();
 
   return (
-    <footer className="relative text-white pt-16 md:pt-24 pb-8 md:pb-10 mt-0 border-t-0">
+    <footer className="relative text-white pt-16 md:pt-24 pb-8 md:pb-10 mt-0 border-t-0 overflow-hidden">
       {/* Background with seamless mask transition */}
       <div 
         className="absolute inset-0 bg-gradient-animated pointer-events-none -z-20"
@@ -164,7 +164,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3 text-white/80 text-sm">
                 <Phone className="w-5 h-5 text-accent-gold shrink-0" />
-                <span dir="ltr" className="text-[14px] leading-[20px] -ml-[33px]">0557555716</span>
+                <span dir="ltr" className="text-[14px] leading-[20px]">0557555716</span>
               </li>
               <li className="flex items-center gap-3 text-white/80 text-sm">
                 <Mail className="w-5 h-5 text-accent-gold shrink-0" />

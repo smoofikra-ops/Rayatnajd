@@ -108,12 +108,12 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-6xl md:text-[80px] lg:text-[100px] leading-tight md:leading-[116px] font-bold mb-4 md:mb-10 tracking-tight py-2 md:py-4"
+          className="text-4xl sm:text-5xl md:text-[80px] lg:text-[100px] leading-tight md:leading-[116px] font-bold mb-4 md:mb-10 tracking-tight py-2 md:py-4 max-w-full"
         >
           <span className="pb-2 md:pb-4 inline-block font-black text-white drop-shadow-md">
             {t("رايات نجد", "Rayat Najd")}
           </span> <br className="hidden md:block" />
-          <span className="text-xl sm:text-2xl md:text-4xl leading-snug mt-2 md:mt-4 max-w-[90vw] block whitespace-normal md:whitespace-nowrap py-2 text-transparent bg-clip-text bg-gradient-to-r from-white via-[#bbf7d0] to-white animate-gradient-wave font-medium drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">
+          <span className="text-xl sm:text-2xl md:text-4xl leading-snug mt-2 md:mt-4 max-w-full block whitespace-normal md:whitespace-nowrap py-2 text-transparent bg-clip-text bg-gradient-to-r from-white via-[#bbf7d0] to-white animate-gradient-wave font-medium drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)] px-2">
             {t("نصنع مساحات خضراء تنبض بالحياة والاستدامة", "We create green spaces that thrive with life and sustainability")}
           </span>
         </motion.h1>
