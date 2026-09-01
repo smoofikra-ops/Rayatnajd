@@ -4,6 +4,7 @@ import { X, Send, Trash2, ClipboardList } from "lucide-react";
 import { useSettings } from "../../contexts/SettingsContext";
 import { useInterestList } from "../../contexts/InterestListContext";
 import { CloudinaryImage } from "../cloudinary/CloudinaryImage";
+import { trackWhatsappLead } from "../../lib/whatsappTracking";
 
 export default function InterestListDrawer() {
   const { t, language } = useSettings();
@@ -54,6 +55,7 @@ export default function InterestListDrawer() {
     message += `الرجاء تزويدي بالمعلومات المناسبة أو عرض السعر إن أمكن.`;
 
     const encodedMessage = encodeURIComponent(message);
+    trackWhatsappLead("interest_list");
     window.open(`https://wa.me/966557555716?text=${encodedMessage}`, "_blank");
     setIsInterestListOpen(false);
   };

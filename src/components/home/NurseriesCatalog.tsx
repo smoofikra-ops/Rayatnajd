@@ -4,6 +4,7 @@ import { ArrowLeft, Plus, Info, X, CheckCircle2, Trees, Leaf, TreePine } from "l
 import { useSettings } from "../../contexts/SettingsContext";
 import { useInterestList } from "../../contexts/InterestListContext";
 import { CloudinaryImage } from "../cloudinary/CloudinaryImage";
+import { trackWhatsappLead } from "../../lib/whatsappTracking";
 
 const categories = [
   {
@@ -224,6 +225,7 @@ export default function NurseriesCatalog() {
   };
 
   const handleInquire = () => {
+    trackWhatsappLead("nurseries_catalog");
     window.open("https://wa.me/966557555716?text=" + encodeURIComponent(
       `مرحباً رايات نجد، أرغب في الاستفسار عن قسم: ${selectedCategory?.nameAr}`
     ), "_blank");
