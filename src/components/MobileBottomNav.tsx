@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Home, Trees, BookOpen, FileText, MessageCircle } from 'lucide-react';
 import { useSettings } from '../contexts/SettingsContext';
+import { trackWhatsappLead } from '../lib/whatsappTracking';
 
 export default function MobileBottomNav() {
   const { t } = useSettings();
@@ -12,7 +13,7 @@ export default function MobileBottomNav() {
     { name: t("الأشجار", "Trees"), path: "/#nurseries", icon: Trees },
     { name: t("المعرفة", "Knowledge"), path: "/tools", icon: BookOpen },
     { name: t("عرض سعر", "Quote"), action: () => window.dispatchEvent(new CustomEvent('openQuoteModal')), icon: FileText },
-    { name: t("واتساب", "WhatsApp"), path: "https://wa.me/966503923506", icon: MessageCircle, external: true }
+    { name: t("واتساب", "WhatsApp"), path: "https://wa.me/966557555716", icon: MessageCircle, external: true, onExternalClick: () => trackWhatsappLead("mobile_bottom_nav") }
   ];
 
   return (
@@ -44,6 +45,7 @@ export default function MobileBottomNav() {
                 href={item.path}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={item.onExternalClick}
                 className={`flex flex-col items-center justify-center w-16 h-12 transition-all active:scale-95 ${isActive ? 'text-primary' : 'text-text-muted hover:text-text-main'}`}
               >
                 <div className={`p-1.5 rounded-xl mb-1 ${isActive ? 'bg-primary/10 text-primary' : ''}`}>
