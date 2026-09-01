@@ -8,6 +8,7 @@ import { CloudinaryImage } from "../components/cloudinary/CloudinaryImage";
 import ContactForm from "../components/home/ContactForm";
 import { ScrollReveal } from "../components/ui/ScrollReveal";
 import React, { useState } from "react";
+import { trackWhatsappLead } from "../lib/whatsappTracking";
 
 const FaqItem: React.FC<{ q: any, language: string }> = ({ q, language }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -44,9 +45,10 @@ export default function ServicePage() {
   };
 
   const handleWhatsApp = () => {
-    const text = language === 'ar' 
+    const text = language === 'ar'
       ? `مرحباً رايات نجد، أرغب في الاستفسار عن قسم: ${data.titleAr}`
       : `Hello Rayat Najd, I would like to inquire about: ${data.titleEn}`;
+    trackWhatsappLead("service_page");
     window.open(`https://wa.me/966557555716?text=${encodeURIComponent(text)}`, "_blank");
   };
 
