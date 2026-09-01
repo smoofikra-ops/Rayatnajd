@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion } from "motion/react";
 import { useSettings } from "../../contexts/SettingsContext";
 import { Send, MapPin, Phone, Mail } from "lucide-react";
+import { trackWhatsappLead, trackQuoteFormWhatsappIntent } from "../../lib/whatsappTracking";
 
 export default function ContactForm() {
   const { t, language } = useSettings();
@@ -11,7 +12,10 @@ export default function ContactForm() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
+    // Form has passed HTML5 required-field validation at this point.
+    trackQuoteFormWhatsappIntent("contact_form");
+
     const form = e.target as HTMLFormElement;
     const name = (form.elements.namedItem('name') as HTMLInputElement)?.value || '';
     const phone = (form.elements.namedItem('phone') as HTMLInputElement)?.value || '';
@@ -34,6 +38,7 @@ export default function ContactForm() {
     setTimeout(() => {
       setIsSubmitting(false);
       setSuccess(true);
+      trackWhatsappLead("contact_form");
       window.open(whatsappUrl, '_blank');
       setTimeout(() => setSuccess(false), 5000);
       form.reset();

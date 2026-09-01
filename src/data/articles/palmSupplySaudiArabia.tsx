@@ -2,6 +2,7 @@ import React from 'react';
 import { Article } from '../../types/knowledge';
 import { CheckCircle2, AlertTriangle, Lightbulb, TrendingUp, ShieldCheck, PhoneCall } from 'lucide-react';
 import { CloudinaryImage } from '../../components/cloudinary/CloudinaryImage';
+import { trackWhatsappLead } from '../../lib/whatsappTracking';
 
 const KeyTakeaway = ({ children }: { children: React.ReactNode }) => (
   <div className="bg-primary/5 border-r-4 border-primary p-6 rounded-xl my-8">
@@ -536,7 +537,7 @@ export const palmSupplySaudiArabia: Article = {
             تحدث مع خبرائنا المهندسين اليوم لمناقشة تفاصيل مشروعك، ومراجعة كراسة الشروط، والحصول على عرض سعر تنافسي مدعوم بأقوى الضمانات الفنية في السوق السعودي.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="https://wa.me/966557555716" target="_blank" rel="noreferrer" className="flex items-center justify-center gap-2 bg-white text-primary px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-50 transition-colors w-full sm:w-auto shadow-sm">
+            <a href="https://wa.me/966557555716" target="_blank" rel="noreferrer" onClick={() => trackWhatsappLead("article_palm_supply")} className="flex items-center justify-center gap-2 bg-white text-primary px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-50 transition-colors w-full sm:w-auto shadow-sm">
               <PhoneCall className="w-5 h-5" />
               تحدث مع المختص عبر واتساب
             </a>

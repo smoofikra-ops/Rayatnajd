@@ -2,6 +2,7 @@ import { useSettings } from "../contexts/SettingsContext";
 import { Info, Phone, MessageSquare, TreePine, Sprout, Leaf } from "lucide-react";
 import { motion } from "motion/react";
 import React from "react";
+import { trackWhatsappLead } from "../lib/whatsappTracking";
 
 export default function TopBanner() {
   const { t, language } = useSettings();
@@ -56,7 +57,7 @@ export default function TopBanner() {
               <Phone className="w-3.5 h-3.5 md:w-4 md:h-4" />
               <span className="hidden sm:inline" dir="ltr">0557555716</span>
             </a>
-            <a href="https://wa.me/966557555716" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 hover:text-white/80 transition-colors bg-green-500/80 hover:bg-green-500 px-2 py-1 md:px-3 md:py-1.5 rounded-full text-xs md:text-sm font-medium">
+            <a href="https://wa.me/966557555716" target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsappLead("top_banner")} className="flex items-center gap-1.5 hover:text-white/80 transition-colors bg-green-500/80 hover:bg-green-500 px-2 py-1 md:px-3 md:py-1.5 rounded-full text-xs md:text-sm font-medium">
               <MessageSquare className="w-3.5 h-3.5 md:w-4 md:h-4" />
               <span className="hidden sm:inline">{t("واتساب", "WhatsApp")}</span>
             </a>

@@ -1,6 +1,7 @@
 import { MessageCircle, Phone } from "lucide-react";
 import { motion } from "motion/react";
 import { useSettings } from "../contexts/SettingsContext";
+import { trackWhatsappLead } from "../lib/whatsappTracking";
 
 export default function WhatsAppButton() {
   const { t } = useSettings();
@@ -33,6 +34,7 @@ export default function WhatsAppButton() {
         href={`https://wa.me/${whatsappNumber}?text=${defaultMessage}`}
         target="_blank"
         rel="noopener noreferrer"
+        onClick={() => trackWhatsappLead("floating_whatsapp")}
         className="relative flex items-center justify-center p-4 rounded-full bg-[#25D366] hover:bg-[#128C7E] text-white shadow-xl shadow-primary/30 transition-colors cursor-pointer"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}

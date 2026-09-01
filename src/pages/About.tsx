@@ -8,6 +8,7 @@ import {
 } from 'lucide-react';
 import AnimatedCounter from '../components/AnimatedCounter';
 import SEO from '../components/SEO';
+import { trackWhatsappLead } from '../lib/whatsappTracking';
 
 export default function About() {
   const { t, language } = useSettings();
@@ -159,7 +160,7 @@ export default function About() {
               <Link to="/catalog" className="bg-white hover:bg-gray-50 text-primary px-8 py-3.5 rounded-full font-bold shadow-lg transition-all hover:-translate-y-1 w-full sm:w-auto">
                 {t("استعرض مشاريعنا", "View Our Projects")}
               </Link>
-              <a href="https://wa.me/966557555716" target="_blank" rel="noreferrer" className="bg-green-600 hover:bg-green-500 text-white px-8 py-3.5 rounded-full font-bold shadow-lg shadow-green-600/30 transition-all hover:-translate-y-1 w-full sm:w-auto">
+              <a href="https://wa.me/966557555716" target="_blank" rel="noreferrer" onClick={() => trackWhatsappLead("about")} className="bg-green-600 hover:bg-green-500 text-white px-8 py-3.5 rounded-full font-bold shadow-lg shadow-green-600/30 transition-all hover:-translate-y-1 w-full sm:w-auto">
                 {t("تحدث مع أحد المختصين", "Talk to an Expert")}
               </a>
             </motion.div>
@@ -451,7 +452,7 @@ export default function About() {
               <button onClick={() => window.dispatchEvent(new CustomEvent('openQuoteModal'))} className="bg-accent-gold hover:bg-yellow-500 text-gray-900 px-8 py-4 rounded-full font-bold shadow-xl transition-all hover:-translate-y-1 w-full sm:w-auto">
                 {t("اطلب عرض سعر", "Request a Quote")}
               </button>
-              <a href="https://wa.me/966557555716" target="_blank" rel="noreferrer" className="bg-green-500 hover:bg-green-400 text-white px-8 py-4 rounded-full font-bold shadow-xl transition-all hover:-translate-y-1 w-full sm:w-auto flex items-center justify-center gap-2">
+              <a href="https://wa.me/966557555716" target="_blank" rel="noreferrer" onClick={() => trackWhatsappLead("about")} className="bg-green-500 hover:bg-green-400 text-white px-8 py-4 rounded-full font-bold shadow-xl transition-all hover:-translate-y-1 w-full sm:w-auto flex items-center justify-center gap-2">
                 {t("تحدث عبر واتساب", "Talk via WhatsApp")}
               </a>
               <Link to="/#services" className="bg-white/10 hover:bg-white/20 text-white border border-white/20 px-8 py-4 rounded-full font-bold transition-all hover:-translate-y-1 w-full sm:w-auto">

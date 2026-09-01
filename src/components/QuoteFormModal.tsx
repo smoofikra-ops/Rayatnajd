@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { X } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { useSettings } from "../contexts/SettingsContext";
+import { trackWhatsappLead, trackQuoteFormWhatsappIntent } from "../lib/whatsappTracking";
 
 export default function QuoteFormModal() {
   const { t } = useSettings();
@@ -80,7 +81,10 @@ export default function QuoteFormModal() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const phone = "966557555716";
-    
+
+    // Form has passed HTML5 required-field validation at this point.
+    trackQuoteFormWhatsappIntent("quote_form_modal");
+
     let text = `مرحباً رايات نجد،\n\nأرغب في طلب عرض سعر.\n\n`;
     text += `بيانات العميل:\n`;
     text += `الاسم: ${formData.name}\n`;
@@ -102,6 +106,7 @@ export default function QuoteFormModal() {
     text += `الرجاء التواصل معي لتجهيز العرض المناسب.`;
 
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
+    trackWhatsappLead("quote_form_modal");
     window.open(url, "_blank");
     setIsOpen(false);
   };
