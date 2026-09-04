@@ -52,17 +52,21 @@ export default function ProjectsGallery() {
       locationEn: "Kingdom of Saudi Arabia",
     };
 
-    const projectItems: CarouselProjectItem[] = featuredProjects.map((p) => ({
-      type: "image" as const,
-      url: p.heroImage || p.primaryImage || "",
-      nameAr: p.nameAr,
-      nameEn: p.nameEn,
-      categoryAr: p.categoryNameAr,
-      categoryEn: p.categoryNameEn,
-      locationAr: p.locationAr,
-      locationEn: p.locationEn,
-      slug: p.slug,
-    }));
+    const projectItems: CarouselProjectItem[] = featuredProjects.map((p) => {
+      const hasVideo = p.videos && p.videos.length > 0 && !!p.videos[0].url;
+      return {
+        type: hasVideo ? ("video" as const) : ("image" as const),
+        url: hasVideo ? p.videos![0].url : (p.heroImage || p.primaryImage || ""),
+        thumbnailUrl: p.heroImage || p.primaryImage || "",
+        nameAr: p.nameAr,
+        nameEn: p.nameEn,
+        categoryAr: p.categoryNameAr,
+        categoryEn: p.categoryNameEn,
+        locationAr: p.locationAr,
+        locationEn: p.locationEn,
+        slug: p.slug,
+      };
+    });
 
     return [videoItem, ...projectItems];
   }, [featuredProjects]);

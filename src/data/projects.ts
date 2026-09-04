@@ -24,7 +24,7 @@ export const projectsData: Project[] = [
     year: "2024",
     status: "ongoing",
     featured: true,
-    featuredOrder: 1,
+    featuredOrder: 2,
     bunnyFolder: "03-projects/saiysad-national-park-taif",
     primaryImage: "",
     heroImage: "",
@@ -400,6 +400,61 @@ export const projectsData: Project[] = [
     stats: [
       { labelAr: "الموقع", labelEn: "Location", value: "محافظة الأفلاج" },
       { labelAr: "الأنواع الرئيسية", labelEn: "Key Species", value: "سدر، طلح، غاف" }
+    ]
+  },
+  {
+    id: "proj-14",
+    slug: "montjaa-othaib",
+    nameAr: "منتجع عذيب - الرياض - ديراب",
+    nameEn: "Othaib Resort - Riyadh, Dirab",
+    shortDescriptionAr: "زراعة نخل واشنطن عربي - توريد وتركيب.",
+    shortDescriptionEn: "Planting of Washingtonia and Arab palms - supply and installation.",
+    descriptionAr: "مشروع متكامل لتوريد وتركيب وزراعة نخيل واشنطن ونخيل عربي لمنتجع عذيب في منطقة ديراب بالرياض، وفق أعلى المعايير الهندسية والزراعية المعتمدة لدى رايات نجد.",
+    descriptionEn: "Comprehensive supply, installation, and planting of Washingtonia and Arab palms for Othaib Resort in Dirab, Riyadh, executed to Rayat Najd's highest horticultural standards.",
+    category: "palms",
+    categoryNameAr: "توريد وزراعة النخيل",
+    categoryNameEn: "Palms Supply & Planting",
+    locationAr: "الرياض - ديراب",
+    locationEn: "Riyadh - Dirab",
+    clientAr: "منتجع عذيب",
+    clientEn: "Othaib Resort",
+    year: "2024",
+    status: "completed",
+    featured: true,
+    featuredOrder: 1,
+    bunnyFolder: "03-projects/montjaa-othaib-dirab",
+    primaryImage: `${BUNNY_BASE}/04-products/palm-trees/rayat-najd-palm-tree-nursery-48.webp`,
+    heroImage: `${BUNNY_BASE}/04-products/palm-trees/rayat-najd-palm-tree-nursery-48.webp`,
+    mediaStatus: "verified-project-media",
+    gallery: [
+      {
+        type: "image",
+        url: `${BUNNY_BASE}/04-products/palm-trees/rayat-najd-palm-tree-nursery-48.webp`,
+        captionAr: "نخيل واشنطن في منتجع عذيب بديراب",
+        captionEn: "Washingtonia palms at Othaib Resort, Dirab",
+        isPrimary: true
+      },
+      {
+        type: "image",
+        url: `${BUNNY_BASE}/04-products/palm-trees/rayat-najd-palm-tree-nursery-50.webp`,
+        captionAr: "أعمال زراعة وتنسيق النخيل",
+        captionEn: "Palm planting and landscaping works"
+      }
+    ],
+    videos: [
+      {
+        type: "video",
+        url: "https://nmolabs-cdn.b-cdn.net/Rayat-najd/03-projects/montjaa-othaib-dirab/montjaa-othaib-dirab-video.mp4",
+        thumbnailUrl: `${BUNNY_BASE}/04-products/palm-trees/rayat-najd-palm-tree-nursery-48.webp`,
+        captionAr: "فيديو توثيقي لأعمال توريد وزراعة نخيل واشنطن وعربي بمنتجع عذيب بديراب",
+        captionEn: "Video documenting Washingtonia and Arab palm installation at Othaib Resort, Dirab",
+        isPrimary: true
+      }
+    ],
+    stats: [
+      { labelAr: "نوع الأعمال", labelEn: "Scope", value: "توريد وتركيب وزراعة" },
+      { labelAr: "نوع النخيل", labelEn: "Palm Variety", value: "نخل واشنطن وعربي" },
+      { labelAr: "الموقع", labelEn: "Location", value: "الرياض - ديراب" }
     ]
   }
 ];

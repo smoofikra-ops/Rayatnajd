@@ -762,6 +762,22 @@
       "primaryImage": null,
       "images": [],
       "videos": []
+    },
+    "03-projects/montjaa-othaib-dirab": {
+      "slug": "montjaa-othaib",
+      "bunnyFolder": "03-projects/montjaa-othaib-dirab",
+      "mediaStatus": "verified-project-media",
+      "primaryImage": "https://cdn.rayatnajd.com/04-products/palm-trees/rayat-najd-palm-tree-nursery-48.webp",
+      "images": [],
+      "videos": [
+        {
+          "filename": "montjaa-othaib-dirab-video.mp4",
+          "url": "https://nmolabs-cdn.b-cdn.net/Rayat-najd/03-projects/montjaa-othaib-dirab/montjaa-othaib-dirab-video.mp4",
+          "thumbnailUrl": "https://cdn.rayatnajd.com/04-products/palm-trees/rayat-najd-palm-tree-nursery-48.webp",
+          "captionAr": "فيديو توثيقي لأعمال توريد وزراعة نخيل واشنطن وعربي بمنتجع عذيب بديراب",
+          "captionEn": "Video documenting Washingtonia and Arab palm installation at Othaib Resort, Dirab"
+        }
+      ]
     }
   }
 }

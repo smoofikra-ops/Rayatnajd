@@ -388,7 +388,7 @@ export default function About() {
               </div>
               <div className="space-y-4">
                 <div>
-                  <h3 className="text-2xl font-bold text-gray-900">{isRtl ? "م. سعيد بن علي القرني" : "Eng. Saeed Bin Ali Al-Qarni"}</h3>
+                  <h3 className="text-2xl font-bold text-gray-900">{isRtl ? "م. سعيد بن علي بن محمد آل مضحي" : "Eng. Saeed Bin Ali Bin Mohammed Al-Madhi"}</h3>
                   <p className="text-primary font-bold">{t("رئيس مجلس الإدارة", "Chairman of the Board")}</p>
                 </div>
                 <div className="text-gray-600 leading-relaxed text-lg italic border-r-4 border-primary/30 pr-4 space-y-4">

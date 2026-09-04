@@ -56,6 +56,7 @@ export const FOLDER_MAPPINGS: Record<string, string> = {
   "khulais-afforestation": "03-projects/khulais-afforestation",
   "al-nafthah-afforestation": "03-projects/al-nafthah-afforestation",
   "al-aflaj-afforestation": "03-projects/al-aflaj-afforestation",
+  "montjaa-othaib": "03-projects/montjaa-othaib-dirab",
   ...(manifestData.folderMappings || {})
 };
 
@@ -182,11 +183,11 @@ export function hydrateProjectWithMedia(project: Project): Project {
   return {
     ...project,
     bunnyFolder: resolved.bunnyFolder,
-    primaryImage: resolved.primaryImage || "",
-    heroImage: resolved.heroImage || "",
-    gallery: resolved.gallery,
-    videos: resolved.videos,
-    mediaStatus: resolved.mediaStatus
+    primaryImage: resolved.primaryImage || project.primaryImage || "",
+    heroImage: resolved.heroImage || project.heroImage || "",
+    gallery: resolved.gallery.length > 0 ? resolved.gallery : (project.gallery || []),
+    videos: resolved.videos.length > 0 ? resolved.videos : (project.videos || []),
+    mediaStatus: resolved.mediaStatus !== "awaiting-bunny-sync" ? resolved.mediaStatus : (project.mediaStatus || "awaiting-bunny-sync")
   };
 }
 

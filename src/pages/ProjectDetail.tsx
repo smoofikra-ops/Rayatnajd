@@ -22,7 +22,9 @@ import {
   ShieldCheck, 
   Send,
   Camera,
-  Info
+  Info,
+  Video,
+  Play
 } from "lucide-react";
 import { useSettings } from "../contexts/SettingsContext";
 import { 
@@ -278,6 +280,42 @@ export default function ProjectDetail() {
                       <div key={hIdx} className="flex items-start gap-3 p-3.5 rounded-2xl bg-bg-secondary border border-card-border/60">
                         <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
                         <span className="text-xs md:text-sm text-text-main leading-snug">{highlight}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Videos Section */}
+              {project.videos && project.videos.length > 0 && (
+                <div className="bg-card-background rounded-3xl p-6 md:p-8 border border-card-border shadow-sm">
+                  <div className="flex items-center justify-between mb-6">
+                    <h2 className="text-xl md:text-2xl font-bold text-text-main flex items-center gap-2.5">
+                      <Video className="w-5 h-5 text-primary" />
+                      <span>{t("توثيق الفيديو الميداني", "Field Video Documentation")}</span>
+                    </h2>
+                    <span className="text-xs text-text-muted font-semibold">
+                      {project.videos.length} {t("مقطع فيديو", "Video(s)")}
+                    </span>
+                  </div>
+
+                  <div className="space-y-6">
+                    {project.videos.map((vid, vIdx) => (
+                      <div key={vIdx} className="space-y-3">
+                        <div className="w-full aspect-video rounded-2xl overflow-hidden bg-black shadow-lg border border-card-border">
+                          <video
+                            src={vid.url}
+                            poster={vid.thumbnailUrl || project.heroImage || project.primaryImage}
+                            controls
+                            playsInline
+                            className="w-full h-full object-contain"
+                          />
+                        </div>
+                        {(vid.captionAr || vid.captionEn) && (
+                          <p className="text-xs md:text-sm text-text-muted font-medium px-1">
+                            {language === "ar" ? vid.captionAr : vid.captionEn}
+                          </p>
+                        )}
                       </div>
                     ))}
                   </div>

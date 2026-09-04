@@ -11,12 +11,6 @@
  * are not available (e.g. server-side rendering, tests).
  */
 
-declare global {
-  interface Window {
-    dataLayer?: any[];
-  }
-}
-
 export type WhatsappSource =
   | "floating_whatsapp"
   | "top_banner"
