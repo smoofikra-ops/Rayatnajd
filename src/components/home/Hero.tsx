@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { ArrowLeft, Leaf, TreePine, Sprout, Award, Map } from "lucide-react";
+import { ArrowLeft, Leaf, TreePine, Sprout, Award, Map, BookOpen } from "lucide-react";
 import AnimatedCounter from "../AnimatedCounter";
 import StatsCarousel from "./StatsCarousel";
 import { useEffect, useState, useRef } from "react";
@@ -164,17 +164,29 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.4 }}
-          className="mt-4 mb-8"
+          className="mt-4 mb-8 flex flex-col sm:flex-row items-center justify-center gap-4 w-full px-4"
         >
           <button 
             onClick={() => window.dispatchEvent(new CustomEvent('openQuoteModal'))}
-            className="group relative inline-flex items-center justify-center px-8 py-4 bg-primary text-white font-bold text-lg rounded-2xl overflow-hidden transition-transform hover:scale-105 shadow-[0_10px_40px_-10px_rgba(14,90,54,0.8)]"
+            className="group relative inline-flex items-center justify-center px-8 py-4 bg-primary text-white font-bold text-lg rounded-2xl overflow-hidden transition-transform hover:scale-105 shadow-[0_10px_40px_-10px_rgba(14,90,54,0.8)] w-full sm:w-auto"
           >
             <span className="relative flex items-center gap-2">
               {t("طلب عرض سعر", "Request a Quote")}
               <ArrowLeft className={`w-5 h-5 transition-transform ${language === 'en' ? 'rotate-180 group-hover:translate-x-1' : 'group-hover:-translate-x-1'}`} />
             </span>
           </button>
+
+          <a
+            href="https://profile.rayatnajd.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative inline-flex items-center justify-center px-7 sm:px-8 py-4 bg-white/10 hover:bg-white/20 text-white border border-white/25 hover:border-white/40 backdrop-blur-md font-bold text-base sm:text-lg rounded-2xl transition-all duration-300 hover:scale-105 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.3)] w-full sm:w-auto"
+          >
+            <span className="relative flex items-center gap-2.5">
+              <BookOpen className="w-5 h-5 text-accent-gold transition-transform group-hover:scale-110" />
+              <span>{t("بروفايل وكتالوج رايات نجد", "Rayat Najd Profile & Catalog")}</span>
+            </span>
+          </a>
         </motion.div>
       </div>
 

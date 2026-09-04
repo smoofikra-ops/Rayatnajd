@@ -32,7 +32,7 @@ export default function TableOfContents({ sections }: Props) {
   }, [sections]);
 
   return (
-    <div className="bg-card-background border border-card-border rounded-2xl p-6 sticky top-24">
+    <div className="bg-card-background border border-card-border rounded-2xl p-6 sticky top-[140px]">
       <div className="flex items-center gap-2 mb-4">
         <List className="w-5 h-5 text-primary" />
         <h3 className="font-bold text-lg text-text-main">

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Download, Printer, Box } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { getVerifiedImageForSku, categoryMediaAssets } from "../data/plantImageAssets";
+import SEO from "../components/SEO";
 
 // Verified-image audit fix (see plantImageAssets.ts / Image Asset Mapping Layer):
 // three of this page's hand-written palm entries previously pointed at Bunny
@@ -41,7 +42,15 @@ export default function CatalogViewer() {
 
   return (
     <div className="min-h-screen bg-bg-secondary flex flex-col font-sans" dir={language === "ar" ? "rtl" : "ltr"}>
-      
+      <SEO
+        title={t("كتالوج رايات نجد | منتجات النخيل والأشجار ونباتات المشاتل", "Rayat Najd Catalog | Palms, Trees & Plants")}
+        description={t("استعرض كتالوج رايات نجد لمنتجات النخيل العربي والواشنطونيا وأشجار الظل والنباتات المحلية لمشاريع التشجير في السعودية.", "Explore Rayat Najd's catalog of palms, shade trees, and native plants for afforestation projects in Saudi Arabia.")}
+        canonicalUrl="https://www.rayatnajd.com/catalog"
+        breadcrumbs={[
+          { name: "الرئيسية", item: "/" },
+          { name: "الكتالوج", item: "/catalog" }
+        ]}
+      />
       {/* Header toolbar - Hidden when printing */}
       <div className="print:hidden bg-bg-primary border-b border-text-main/10 sticky top-0 z-50 px-6 py-4 flex items-center justify-between shadow-sm">
         <div className="flex items-center gap-4">

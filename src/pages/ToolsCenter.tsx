@@ -19,7 +19,7 @@ import {
   Sparkles,
   Search
 } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
+import SEO from '../components/SEO';
 
 const TOOLS = [
   { id: "ai-designer", titleAr: "المصمم الذكي", titleEn: "Smart Designer", icon: Sparkles, path: "/tools/ai-designer" },
@@ -134,11 +134,15 @@ export default function ToolsCenter() {
 
   return (
     <div className="pt-24 lg:pt-32 pb-24 min-h-screen bg-bg-primary">
-      <Helmet>
-        <title>{language === 'ar' ? 'مركز المعرفة والذكاء | رايات نجد' : 'Knowledge & Intelligence Center | Rayat Najd'}</title>
-        <meta name="description" content={language === 'ar' ? 'المركز المرجعي الأول للتشجير، النخيل، الاستدامة البيئية، والأدوات الذكية في المملكة العربية السعودية.' : 'The premier reference center for landscaping, palm trees, environmental sustainability, and smart tools in Saudi Arabia.'} />
-        <meta name="keywords" content="موسوعة الأشجار, دليل النخيل, التشجير, اللاندسكيب, مشاتل الأشجار, الاستدامة البيئية, شبكات الري, توريد النخيل, زراعة الأشجار, Saudi Landscaping, Palm Trees Saudi Arabia, Tree Nursery Saudi Arabia, Green Infrastructure" />
-      </Helmet>
+      <SEO
+        title={language === 'ar' ? 'مركز الأدوات الذكية للتشجير | رايات نجد' : 'Smart Landscaping Tools | Rayat Najd'}
+        description={language === 'ar' ? 'أدوات ذكية متقدمة لحساب تكاليف التشجير، واختيار الأشجار والنباتات الملائمة، وتخطيط المشهد الحضري بالمملكة.' : 'Advanced smart tools for landscaping cost calculation, tree selection, and urban greenery planning in Saudi Arabia.'}
+        canonicalUrl="https://www.rayatnajd.com/tools"
+        breadcrumbs={[
+          { name: "الرئيسية", item: "/" },
+          { name: "الأدوات الذكية", item: "/tools" }
+        ]}
+      />
 
       <div className="container mx-auto px-4 lg:px-6 max-w-7xl">
         {/* Header Section */}

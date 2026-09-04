@@ -1,11 +1,21 @@
 import { motion } from "motion/react";
 import { useSettings } from "../../contexts/SettingsContext";
+import SEO from "../../components/SEO";
 
 export default function ReturnPolicy() {
   const { t } = useSettings();
 
   return (
     <div className="pt-32 pb-20 min-h-screen bg-bg-secondary text-text-main">
+      <SEO
+        title={t("سياسة الاسترجاع والإلغاء | رايات نجد", "Return & Cancellation Policy | Rayat Najd")}
+        description={t("سياسة الاسترجاع والإلغاء وتوريد المواد في شركة رايات نجد للتشجير والاستدامة البيئية.", "Return, cancellation and material supply policies at Rayat Najd.")}
+        canonicalUrl="https://www.rayatnajd.com/return-policy"
+        breadcrumbs={[
+          { name: "الرئيسية", item: "/" },
+          { name: "سياسة الاسترجاع", item: "/return-policy" }
+        ]}
+      />
       <div className="container mx-auto px-4 max-w-4xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

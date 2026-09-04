@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
 import { useSettings } from '../../contexts/SettingsContext';
 import KnowledgeBreadcrumb from '../../components/knowledge/Breadcrumb';
 import { CloudinaryImage } from '../../components/cloudinary/CloudinaryImage';
@@ -9,6 +8,7 @@ import { bestPalmsForProjectsKsa } from '../../data/articles/bestPalmsForProject
 import { washingtoniaSupplyRiyadh } from '../../data/articles/washingtoniaSupplyRiyadh';
 import { Article } from '../../types/knowledge';
 import { Calendar, User, Clock, ChevronRight, ChevronLeft, ChevronDown } from 'lucide-react';
+import SEO from '../../components/SEO';
 
 const allArticles: Record<string, Article> = {
   'palm-supply-saudi-arabia': palmSupplySaudiArabia,
@@ -57,43 +57,69 @@ export default function ArticlePage() {
   }
 
   const Chevron = language === 'ar' ? ChevronLeft : ChevronRight;
+  const canonicalUrl = `https://www.rayatnajd.com/knowledge/article/${article.slug}`;
+
+  // Build JSON-LD schemas
+  const schemas: any[] = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": article.seo.title,
+      "description": article.seo.description,
+      "image": article.heroImage,
+      "author": { 
+        "@type": "Organization", 
+        "name": "رايات نجد للتشجير والاستدامة البيئية" 
+      },
+      "publisher": { 
+        "@type": "Organization", 
+        "name": "رايات نجد للتشجير والاستدامة البيئية",
+        "url": "https://www.rayatnajd.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://cdn.rayatnajd.com/01-brand/logo/rayatnajd-logo.png"
+        }
+      },
+      "datePublished": article.publishedAt,
+      "dateModified": article.publishedAt,
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": canonicalUrl
+      }
+    }
+  ];
+
+  if (article.faqs && article.faqs.length > 0) {
+    schemas.push({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": article.faqs.map(faq => ({
+        "@type": "Question",
+        "name": faq.questionAr,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.answerAr
+        }
+      }))
+    });
+  }
 
   return (
     <div className="min-h-screen bg-bg-primary pt-24 lg:pt-32 pb-24">
-      <Helmet>
-        <title>{article.seo.title}</title>
-        <meta name="description" content={article.seo.description} />
-        {article.seo.canonicalUrl && <link rel="canonical" href={article.seo.canonicalUrl} />}
-        {/* Basic Schema Injection */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": article.seo.title,
-            "description": article.seo.description,
-            "image": article.heroImage,
-            "author": { "@type": "Organization", "name": "Rayat Najd" },
-            "publisher": { "@type": "Organization", "name": "Rayat Najd" },
-            "datePublished": article.publishedAt
-          })}
-        </script>
-        {article.faqs && article.faqs.length > 0 && (
-          <script type="application/ld+json">
-            {JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
-              "mainEntity": article.faqs.map(faq => ({
-                "@type": "Question",
-                "name": faq.questionAr,
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": faq.answerAr
-                }
-              }))
-            })}
-          </script>
-        )}
-      </Helmet>
+      <SEO
+        title={article.seo.title}
+        description={article.seo.description}
+        canonicalUrl={canonicalUrl}
+        ogType="article"
+        ogImage={article.heroImage}
+        publishedTime={article.publishedAt}
+        structuredData={schemas}
+        breadcrumbs={[
+          { name: "الرئيسية", item: "/" },
+          { name: "مركز المعرفة", item: "/knowledge" },
+          { name: article.titleAr, item: `/knowledge/article/${article.slug}` }
+        ]}
+      />
 
       <div className="container mx-auto px-4 lg:px-6 max-w-7xl">
         <div className="mb-6">
@@ -197,7 +223,7 @@ export default function ArticlePage() {
 
           {/* Table of Contents Sidebar */}
           <aside className="lg:w-1/3 xl:w-1/4 shrink-0 hidden lg:block">
-            <div className="sticky top-32 p-6 rounded-2xl border border-card-border bg-card-background">
+            <div className="sticky top-[140px] p-6 rounded-2xl border border-card-border bg-card-background">
                <h3 className="font-bold text-xl text-text-main mb-4">{t("محتويات الدليل", "Table of Contents")}</h3>
                <ul className="space-y-3">
                  {article.sections.map(section => (

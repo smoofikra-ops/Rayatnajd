@@ -1,11 +1,11 @@
 import React, { useState, useMemo } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
 import { motion } from 'motion/react';
 import { useSettings } from '../../contexts/SettingsContext';
 import { categories, firstPillar, clusters } from '../../data/knowledgeArchitecture';
 import { ArrowLeft, ArrowRight, Search, BookOpen, TreePine, Recycle } from 'lucide-react';
 import { CloudinaryImage } from '../../components/cloudinary/CloudinaryImage';
+import SEO from '../../components/SEO';
 
 export default function KnowledgeHub() {
   const { t, language } = useSettings();
@@ -49,10 +49,15 @@ export default function KnowledgeHub() {
 
   return (
     <div className="min-h-screen bg-bg-primary pt-24 lg:pt-32 pb-24">
-      <Helmet>
-        <title>{language === 'ar' ? 'مركز المعرفة | رايات نجد' : 'Knowledge Center | Rayat Najd'}</title>
-        <meta name="description" content={language === 'ar' ? 'المرجع العربي الأول لتشجير، اللاندسكيب، والنخيل في المملكة العربية السعودية.' : 'The premier Arabic reference for afforestation, landscaping, and palm trees in Saudi Arabia.'} />
-      </Helmet>
+      <SEO
+        title={language === 'ar' ? 'مركز المعرفة والتشجير | رايات نجد' : 'Knowledge Center | Rayat Najd'}
+        description={language === 'ar' ? 'المرجع العربي الشامل لتشجير، اللاندسكيب، وتوريد النخيل والأشجار في المملكة العربية السعودية.' : 'The premier Arabic reference for afforestation, landscaping, and palm trees in Saudi Arabia.'}
+        canonicalUrl="https://www.rayatnajd.com/knowledge"
+        breadcrumbs={[
+          { name: "الرئيسية", item: "/" },
+          { name: "مركز المعرفة", item: "/knowledge" }
+        ]}
+      />
 
       <div className="container mx-auto px-4 lg:px-6 max-w-7xl">
         

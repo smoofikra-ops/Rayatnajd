@@ -79,8 +79,12 @@
     --card-border: rgba(255, 255, 255, 0.1);
   }
   
+  html {
+    overflow-x: clip;
+  }
+
   body {
-    @apply font-sans text-text-main overflow-x-hidden transition-colors duration-300 bg-bg-primary;
+    @apply font-sans text-text-main overflow-x-clip transition-colors duration-300 bg-bg-primary;
     min-height: 100vh;
   }
 }

@@ -77,11 +77,19 @@ export default function About() {
 
   return (
     <div className="bg-white min-h-screen font-sans text-gray-800 flex flex-col" dir={isRtl ? 'rtl' : 'ltr'}>
-      <SEO title={t("من نحن | رايات نجد للتشجير والاستدامة البيئية", "About Us | Rayat Najd") as string} description={t("تعرف على رايات نجد، مؤسسة سعودية متخصصة في التشجير والمقاولات الزراعية ونقل الأشجار والاستدامة البيئية منذ 2010.", "Learn about Rayat Najd, a Saudi establishment specialized in afforestation, agricultural contracting, tree relocation, and environmental sustainability since 2010.") as string} />
+      <SEO 
+        title={t("من نحن | رايات نجد للتشجير والاستدامة البيئية", "About Us | Rayat Najd") as string} 
+        description={t("تعرف على رايات نجد، مؤسسة سعودية متخصصة في التشجير والمقاولات الزراعية ونقل الأشجار والاستدامة البيئية منذ 2010.", "Learn about Rayat Najd, a Saudi establishment specialized in afforestation, agricultural contracting, tree relocation, and environmental sustainability since 2010.") as string}
+        canonicalUrl="https://www.rayatnajd.com/about"
+        breadcrumbs={[
+          { name: "الرئيسية", item: "/" },
+          { name: "من نحن", item: "/about" }
+        ]}
+      />
       
 
       {/* Inner Navigation Bar */}
-      <div className="sticky top-[60px] md:top-[72px] z-40 bg-white/90 backdrop-blur-md border-b border-gray-100 shadow-sm py-3 px-4 flex items-center justify-between">
+      <div className="sticky top-[121px] md:top-[127px] z-40 bg-white/90 backdrop-blur-md border-b border-gray-100 shadow-sm py-3 px-4 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <button onClick={() => navigate(-1)} className="flex items-center gap-1.5 text-sm font-medium text-gray-600 hover:text-primary transition-colors px-3 py-1.5 rounded-full hover:bg-gray-50" aria-label="Back">
             {isRtl ? <ArrowRight className="w-4 h-4" /> : <ArrowLeft className="w-4 h-4" />}

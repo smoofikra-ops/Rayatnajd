@@ -1,24 +1,34 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
 import { useSettings } from '../../contexts/SettingsContext';
 import KnowledgeBreadcrumb from '../../components/knowledge/Breadcrumb';
 import { categories, firstPillar } from '../../data/knowledgeArchitecture';
 import { LayoutGrid } from 'lucide-react';
 import { CloudinaryImage } from '../../components/cloudinary/CloudinaryImage';
+import SEO from '../../components/SEO';
 
 export default function CategoryPage() {
   const { slug } = useParams();
-  const { t } = useSettings();
+  const { t, language } = useSettings();
   
   // Mock data fetching
   const category = categories.find(c => c.slug === slug) || categories[0];
 
+  const catTitle = `${t(category.titleAr, category.titleEn)} | مركز المعرفة | رايات نجد`;
+  const catDesc = language === 'ar' ? category.descriptionAr : category.descriptionEn;
+
   return (
     <div className="min-h-screen bg-bg-primary pt-24 lg:pt-32 pb-24">
-      <Helmet>
-        <title>{t(category.titleAr, category.titleEn)} | {t("رايات نجد", "Rayat Najd")}</title>
-      </Helmet>
+      <SEO
+        title={catTitle}
+        description={catDesc}
+        canonicalUrl={`https://www.rayatnajd.com/knowledge/category/${category.slug}`}
+        breadcrumbs={[
+          { name: "الرئيسية", item: "/" },
+          { name: "مركز المعرفة", item: "/knowledge" },
+          { name: language === 'ar' ? category.titleAr : category.titleEn, item: `/knowledge/category/${category.slug}` }
+        ]}
+      />
 
       <div className="container mx-auto px-4 lg:px-6 max-w-7xl">
         <div className="mb-8">

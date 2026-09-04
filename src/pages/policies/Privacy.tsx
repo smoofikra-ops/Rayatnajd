@@ -1,11 +1,21 @@
 import { motion } from "motion/react";
 import { useSettings } from "../../contexts/SettingsContext";
+import SEO from "../../components/SEO";
 
 export default function Privacy() {
   const { t } = useSettings();
 
   return (
     <div className="pt-32 pb-20 min-h-screen bg-bg-secondary text-text-main">
+      <SEO
+        title={t("سياسة الخصوصية | رايات نجد", "Privacy Policy | Rayat Najd")}
+        description={t("سياسة الخصوصية وحماية البيانات في موقع رايات نجد للتشجير والاستدامة البيئية.", "Privacy policy and data protection at Rayat Najd.")}
+        canonicalUrl="https://www.rayatnajd.com/privacy"
+        breadcrumbs={[
+          { name: "الرئيسية", item: "/" },
+          { name: "سياسة الخصوصية", item: "/privacy" }
+        ]}
+      />
       <div className="container mx-auto px-4 max-w-4xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

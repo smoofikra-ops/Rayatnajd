@@ -9,6 +9,7 @@ import ContactForm from "../components/home/ContactForm";
 import { ScrollReveal } from "../components/ui/ScrollReveal";
 import React, { useState } from "react";
 import { trackWhatsappLead } from "../lib/whatsappTracking";
+import SEO from "../components/SEO";
 
 const FaqItem: React.FC<{ q: any, language: string }> = ({ q, language }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -52,8 +53,41 @@ export default function ServicePage() {
     window.open(`https://wa.me/966557555716?text=${encodeURIComponent(text)}`, "_blank");
   };
 
+  const serviceTitle = language === 'ar' ? `${data.titleAr} | خدمات رايات نجد` : `${data.titleEn} | Rayat Najd Services`;
+  const serviceDesc = language === 'ar' 
+    ? `${data.subtitleAr || ''} - ${data.introAr || ''}`.trim()
+    : `${data.subtitleEn || ''} - ${data.introEn || ''}`.trim();
+
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": language === 'ar' ? data.titleAr : data.titleEn,
+    "description": serviceDesc,
+    "provider": {
+      "@type": "Organization",
+      "name": "رايات نجد للتشجير والاستدامة البيئية",
+      "url": "https://www.rayatnajd.com/"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "Saudi Arabia"
+    }
+  };
+
   return (
     <div className="flex flex-col min-h-screen bg-bg-primary">
+      <SEO
+        title={serviceTitle}
+        description={serviceDesc}
+        canonicalUrl={`https://www.rayatnajd.com/service/${id}`}
+        ogImage={data.bannerImg || undefined}
+        structuredData={serviceSchema}
+        breadcrumbs={[
+          { name: "الرئيسية", item: "/" },
+          { name: "الخدمات", item: "/#services" },
+          { name: language === 'ar' ? data.titleAr : data.titleEn, item: `/service/${id}` }
+        ]}
+      />
       {/* 1. Professional Banner */}
       <section className="relative h-[60vh] min-h-[400px] w-full flex items-center justify-center overflow-hidden">
         <motion.div 

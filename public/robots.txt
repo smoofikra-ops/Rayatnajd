@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /internal/
 
-Sitemap: https://rayatnajd.com/sitemap.xml
+Sitemap: https://www.rayatnajd.com/sitemap.xml
+

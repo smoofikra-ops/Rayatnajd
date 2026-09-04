@@ -30,7 +30,15 @@ export default function Contact() {
 
   return (
     <>
-      <SEO title={t("تواصل معنا | رايات نجد", "Contact Us | Rayat Najd") as string} description={t("تواصل مع فريق رايات نجد للتشجير للحصول على استشارات زراعية.", "Contact the Rayat Najd landscaping team.") as string} />
+      <SEO 
+        title={t("تواصل معنا | رايات نجد للتشجير والاستدامة البيئية", "Contact Us | Rayat Najd") as string} 
+        description={t("تواصل مع فريق رايات نجد للتشجير والاستدامة البيئية بالرياض لطلب عروض الأسعار واستشارات توريد الأشجار والنخيل والمقاولات الزراعية.", "Contact the Rayat Najd team in Riyadh for quotes and consultation on afforestation and agricultural contracting.") as string}
+        canonicalUrl="https://www.rayatnajd.com/contact"
+        breadcrumbs={[
+          { name: "الرئيسية", item: "/" },
+          { name: "تواصل معنا", item: "/contact" }
+        ]}
+      />
     <div className="flex flex-col min-h-screen pt-24 bg-gray-50">
       {/* Hero Section */}
       <section className="py-16 md:py-24 bg-primary relative overflow-hidden">

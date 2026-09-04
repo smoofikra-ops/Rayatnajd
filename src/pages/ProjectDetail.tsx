@@ -111,9 +111,15 @@ export default function ProjectDetail() {
   return (
     <div className="min-h-screen bg-bg-primary text-text-main">
       <SEO
-        title={`${language === "ar" ? project.nameAr : project.nameEn} | رايات نجد`}
+        title={`${language === "ar" ? project.nameAr : project.nameEn} | مشاريع رايات نجد`}
         description={language === "ar" ? project.shortDescriptionAr : project.shortDescriptionEn}
+        canonicalUrl={`https://www.rayatnajd.com/projects/${project.slug}`}
         ogImage={project.heroImage || undefined}
+        breadcrumbs={[
+          { name: "الرئيسية", item: "/" },
+          { name: "المشاريع", item: "/projects" },
+          { name: language === "ar" ? project.nameAr : project.nameEn, item: `/projects/${project.slug}` }
+        ]}
       />
 
       {/* Hero Header */}

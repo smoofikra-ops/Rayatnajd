@@ -1,10 +1,10 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
 import { useSettings } from '../../contexts/SettingsContext';
 import KnowledgeBreadcrumb from '../../components/knowledge/Breadcrumb';
 import { clusters, firstPillar } from '../../data/knowledgeArchitecture';
 import { ArrowLeft, ArrowRight, Layers } from 'lucide-react';
+import SEO from '../../components/SEO';
 
 export default function ClusterPage() {
   const { slug } = useParams();
@@ -16,11 +16,24 @@ export default function ClusterPage() {
 
   const Arrow = language === 'ar' ? ArrowLeft : ArrowRight;
 
+  const clusterTitle = `${t(cluster.titleAr, cluster.titleEn)} | رايات نجد`;
+  const clusterDesc = language === 'ar'
+    ? `دليل ومقالات متخصصة حول ${cluster.titleAr} في المملكة العربية السعودية ضمن مشروعات ومبادرات رايات نجد للتشجير والاستدامة البيئية.`
+    : `Specialized articles and guides on ${cluster.titleEn} in Saudi Arabia by Rayat Najd for afforestation and environmental sustainability.`;
+
   return (
     <div className="min-h-screen bg-bg-primary pt-24 lg:pt-32 pb-24">
-      <Helmet>
-        <title>{t(cluster.titleAr, cluster.titleEn)} | {t("رايات نجد", "Rayat Najd")}</title>
-      </Helmet>
+      <SEO
+        title={clusterTitle}
+        description={clusterDesc}
+        canonicalUrl={`https://www.rayatnajd.com/knowledge/cluster/${cluster.slug}`}
+        breadcrumbs={[
+          { name: "الرئيسية", item: "/" },
+          { name: "مركز المعرفة", item: "/knowledge" },
+          { name: language === 'ar' ? pillar.titleAr : pillar.titleEn, item: `/knowledge/pillar/${pillar.slug}` },
+          { name: language === 'ar' ? cluster.titleAr : cluster.titleEn, item: `/knowledge/cluster/${cluster.slug}` }
+        ]}
+      />
 
       <div className="container mx-auto px-4 lg:px-6 max-w-5xl">
         <div className="mb-8">

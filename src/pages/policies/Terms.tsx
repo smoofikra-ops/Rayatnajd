@@ -1,11 +1,21 @@
 import { motion } from "motion/react";
 import { useSettings } from "../../contexts/SettingsContext";
+import SEO from "../../components/SEO";
 
 export default function Terms() {
   const { t } = useSettings();
 
   return (
     <div className="pt-32 pb-20 min-h-screen bg-bg-secondary text-text-main">
+      <SEO
+        title={t("الشروط والأحكام | رايات نجد", "Terms and Conditions | Rayat Najd")}
+        description={t("الشروط والأحكام الخاصة باستخدام موقع وخدمات رايات نجد للتشجير والاستدامة البيئية.", "Terms and conditions for using Rayat Najd website and services.")}
+        canonicalUrl="https://www.rayatnajd.com/terms"
+        breadcrumbs={[
+          { name: "الرئيسية", item: "/" },
+          { name: "الشروط والأحكام", item: "/terms" }
+        ]}
+      />
       <div className="container mx-auto px-4 max-w-4xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

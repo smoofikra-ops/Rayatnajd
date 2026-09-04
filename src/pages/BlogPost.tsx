@@ -1,8 +1,8 @@
 import { useParams, Navigate, Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
 import { BLOG_POSTS } from '../data/blogData';
 import { Calendar, User, Tag, ArrowRight } from 'lucide-react';
 import { motion } from 'motion/react';
+import SEO from '../components/SEO';
 
 export default function BlogPost() {
   const { slug } = useParams<{ slug: string }>();
@@ -12,6 +12,8 @@ export default function BlogPost() {
     return <Navigate to="/blog" replace />;
   }
 
+  const postUrl = `https://www.rayatnajd.com/blog/${post.slug}`;
+
   // Schema.org structured data for SEO
   const structuredData = {
     "@context": "https://schema.org",
@@ -20,45 +22,46 @@ export default function BlogPost() {
     "image": post.image,
     "author": {
       "@type": "Organization",
-      "name": post.author
+      "name": post.author || "رايات نجد"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "رايات نجد",
+      "name": "رايات نجد للتشجير والاستدامة البيئية",
+      "url": "https://www.rayatnajd.com/",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://rayatnajd.com/logo.png" // Placeholder
+        "url": "https://cdn.rayatnajd.com/01-brand/logo/rayatnajd-logo.png"
       }
     },
     "datePublished": post.date,
+    "dateModified": post.date,
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": postUrl
+    },
     "description": post.metaDescription
   };
 
   return (
     <>
-      <Helmet>
-        <title>{post.metaTitle}</title>
-        <meta name="description" content={post.metaDescription} />
-        <meta name="keywords" content={post.tags.join(', ')} />
-        <link rel="canonical" href={`https://rayatnajd.com/blog/${post.slug}`} />
-        
-        {/* Open Graph */}
-        <meta property="og:title" content={post.title} />
-        <meta property="og:description" content={post.metaDescription} />
-        <meta property="og:image" content={post.image} />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content={`https://rayatnajd.com/blog/${post.slug}`} />
-        
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={post.title} />
-        <meta name="twitter:description" content={post.metaDescription} />
-        <meta name="twitter:image" content={post.image} />
-        
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
-        </script>
-      </Helmet>
+      <SEO
+        title={post.metaTitle}
+        description={post.metaDescription}
+        keywords={post.tags.join(', ')}
+        canonicalUrl={postUrl}
+        ogType="article"
+        ogTitle={post.title}
+        ogDescription={post.metaDescription}
+        ogImage={post.image}
+        publishedTime={post.date}
+        author={post.author || "رايات نجد"}
+        breadcrumbs={[
+          { name: "الرئيسية", item: "/" },
+          { name: "المدونة", item: "/blog" },
+          { name: post.title, item: `/blog/${post.slug}` }
+        ]}
+        structuredData={structuredData}
+      />
       
       <div className="pt-32 pb-20 bg-white dark:bg-bg-primary min-h-screen">
         <div className="container mx-auto px-6 max-w-4xl">

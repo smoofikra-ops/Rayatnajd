@@ -5,7 +5,7 @@ export const categories: KnowledgeCategory[] = [
     id: "landscaping",
     titleAr: "هندسة اللاندسكيب",
     titleEn: "Landscaping",
-    descriptionAr: "כל ما يتعلق بهندسة المناظر الطبيعية وتنسيق الحدائق.",
+    descriptionAr: "كل ما يتعلق بهندسة المناظر الطبيعية وتنسيق الحدائق.",
     descriptionEn: "Everything related to landscape engineering and gardening.",
     icon: "TreePine",
     slug: "landscaping"

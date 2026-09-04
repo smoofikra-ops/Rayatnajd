@@ -1,22 +1,21 @@
-import { Helmet } from 'react-helmet-async';
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 import { BLOG_POSTS } from '../data/blogData';
 import { Calendar, User, Tag } from 'lucide-react';
+import SEO from '../components/SEO';
 
 export default function BlogList() {
   return (
     <>
-      <Helmet>
-        <title>مدونة رايات نجد | أحدث المقالات عن التشجير والاستدامة</title>
-        <meta name="description" content="اقرأ أحدث المقالات المتخصصة في الزراعة، التشجير الحضري، مشاريع الرياض الخضراء، ومبادرات رؤية 2030 للقطاعات الحكومية والمؤسسات الكبرى." />
-        <meta name="keywords" content="الزراعة, التشجير, المشهد الحضري, الاستدامة, النمو, رؤية 2030, الرياض الخضراء, مشاريع التشجير" />
-        <link rel="canonical" href="https://rayatnajd.com/blog" />
-        <meta property="og:title" content="مدونة رايات نجد | أحدث المقالات عن التشجير والاستدامة" />
-        <meta property="og:description" content="اقرأ أحدث المقالات المتخصصة في الزراعة، التشجير الحضري، مشاريع الرياض الخضراء، ومبادرات رؤية 2030 للقطاعات الحكومية والمؤسسات الكبرى." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://rayatnajd.com/blog" />
-      </Helmet>
+      <SEO
+        title="مدونة رايات نجد | مقالات التشجير والاستدامة البيئية بالمملكة"
+        description="مقالات متخصصة في التشجير البيئي وتوريد الأشجار والنخيل وتقنيات الري الحديثة والمشهد الحضري في السعودية ومبادرة السعودية الخضراء."
+        canonicalUrl="https://www.rayatnajd.com/blog"
+        breadcrumbs={[
+          { name: "الرئيسية", item: "/" },
+          { name: "المدونة", item: "/blog" }
+        ]}
+      />
       
       <div className="pt-32 pb-20 bg-bg-primary min-h-screen">
         <div className="container mx-auto px-6 max-w-7xl">

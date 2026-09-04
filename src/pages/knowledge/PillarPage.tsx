@@ -1,6 +1,5 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
 import { motion } from 'motion/react';
 import { firstPillar, clusters } from '../../data/knowledgeArchitecture';
 import { useSettings } from '../../contexts/SettingsContext';
@@ -9,6 +8,7 @@ import TableOfContents from '../../components/knowledge/TableOfContents';
 import ReadingProgress from '../../components/knowledge/ReadingProgress';
 import { ArrowLeft, ArrowRight, Download, FileText, LayoutGrid, Leaf, Sparkles } from 'lucide-react';
 import { CloudinaryImage } from '../../components/cloudinary/CloudinaryImage';
+import SEO from '../../components/SEO';
 
 export default function PillarPage() {
   const { slug } = useParams();
@@ -18,14 +18,48 @@ export default function PillarPage() {
   const pillar = firstPillar;
   const Arrow = language === 'ar' ? ArrowLeft : ArrowRight;
 
+  const pillarUrl = `https://www.rayatnajd.com/knowledge/pillar/${pillar.slug}`;
+
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": pillar.seo.title,
+    "description": pillar.seo.description,
+    "image": pillar.heroImage,
+    "author": {
+      "@type": "Organization",
+      "name": "رايات نجد للتشجير والاستدامة البيئية"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "رايات نجد للتشجير والاستدامة البيئية",
+      "url": "https://www.rayatnajd.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cdn.rayatnajd.com/01-brand/logo/rayatnajd-logo.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": pillarUrl
+    }
+  };
+
   return (
     <div className="min-h-screen bg-bg-primary pt-24 lg:pt-32 pb-24">
-      <Helmet>
-        <title>{pillar.seo.title}</title>
-        <meta name="description" content={pillar.seo.description} />
-        {pillar.seo.canonicalUrl && <link rel="canonical" href={pillar.seo.canonicalUrl} />}
-        {/* GEO structured data would go here */}
-      </Helmet>
+      <SEO
+        title={pillar.seo.title}
+        description={pillar.seo.description}
+        canonicalUrl={pillarUrl}
+        ogType="article"
+        ogImage={pillar.heroImage}
+        structuredData={articleSchema}
+        breadcrumbs={[
+          { name: "الرئيسية", item: "/" },
+          { name: "مركز المعرفة", item: "/knowledge" },
+          { name: language === 'ar' ? pillar.titleAr : pillar.titleEn, item: `/knowledge/pillar/${pillar.slug}` }
+        ]}
+      />
 
       <ReadingProgress />
 

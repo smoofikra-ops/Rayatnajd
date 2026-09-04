@@ -71,6 +71,11 @@ export default function Projects() {
           "استكشف مشاريع رايات نجد الكبرى في التشجير البيئي، وتوريد النخيل، ونقل الأشجار المعمرة، وتطوير المشهد الحضري بالمملكة العربية السعودية.",
           "Explore Rayat Najd's flagship projects in environmental afforestation, palm supply, mature tree relocation, and urban landscaping across Saudi Arabia."
         )}
+        canonicalUrl="https://www.rayatnajd.com/projects"
+        breadcrumbs={[
+          { name: "الرئيسية", item: "/" },
+          { name: "المشاريع", item: "/projects" }
+        ]}
       />
 
       {/* Hero Banner */}
@@ -133,7 +138,7 @@ export default function Projects() {
       </section>
 
       {/* Filter & Search Bar */}
-      <section className="sticky top-16 md:top-20 z-30 bg-bg-secondary/95 backdrop-blur-xl border-y border-card-border shadow-sm py-4">
+      <section className="sticky top-[121px] md:top-[127px] z-30 bg-bg-secondary/95 backdrop-blur-xl border-y border-card-border shadow-sm py-4">
         <div className="container mx-auto px-4 sm:px-6 max-w-7xl">
           <div className="flex flex-col lg:flex-row gap-4 items-stretch lg:items-center justify-between">
             {/* Category Pills */}

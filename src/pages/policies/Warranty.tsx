@@ -1,11 +1,21 @@
 import { motion } from "motion/react";
 import { useSettings } from "../../contexts/SettingsContext";
+import SEO from "../../components/SEO";
 
 export default function Warranty() {
   const { t } = useSettings();
 
   return (
     <div className="pt-32 pb-20 min-h-screen bg-bg-secondary text-text-main">
+      <SEO
+        title={t("سياسة الضمان الزراعي | رايات نجد", "Warranty Policy | Rayat Najd")}
+        description={t("تفاصيل وسياسة الضمان الزراعي للأشجار والنخيل ومشاريع التشجير المقدمة من رايات نجد.", "Details and terms of agricultural warranty on trees, palms, and landscaping projects by Rayat Najd.")}
+        canonicalUrl="https://www.rayatnajd.com/warranty"
+        breadcrumbs={[
+          { name: "الرئيسية", item: "/" },
+          { name: "سياسة الضمان", item: "/warranty" }
+        ]}
+      />
       <div className="container mx-auto px-4 max-w-4xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
