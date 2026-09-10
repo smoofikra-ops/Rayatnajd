@@ -9,6 +9,7 @@ import { washingtoniaSupplyRiyadh } from '../../data/articles/washingtoniaSupply
 import { Article } from '../../types/knowledge';
 import { Calendar, User, Clock, ChevronRight, ChevronLeft, ChevronDown } from 'lucide-react';
 import SEO from '../../components/SEO';
+import NotFound from '../NotFound';
 
 const allArticles: Record<string, Article> = {
   'palm-supply-saudi-arabia': palmSupplySaudiArabia,
@@ -20,17 +21,12 @@ export default function ArticlePage() {
   const { slug } = useParams();
   const { t, language } = useSettings();
   
-  const [article, setArticle] = useState<Article | null>(null);
-  const [activeSection, setActiveSection] = useState<string>('');
+  if (!slug || !allArticles[slug]) {
+    return <NotFound />;
+  }
 
-  useEffect(() => {
-    if (slug && allArticles[slug]) {
-      setArticle(allArticles[slug]);
-    } else {
-      // Fallback for preview or unknown routes
-      setArticle(palmSupplySaudiArabia);
-    }
-  }, [slug]);
+  const article = allArticles[slug];
+  const [activeSection, setActiveSection] = useState<string>('');
 
   // TOC Intersection Observer
   useEffect(() => {

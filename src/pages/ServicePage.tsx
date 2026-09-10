@@ -3,13 +3,14 @@ import { useParams, Link } from "react-router-dom";
 import { motion } from "motion/react";
 import { CheckCircle2, ChevronDown, ChevronUp } from "lucide-react";
 import { useSettings } from "../contexts/SettingsContext";
-import { getServiceData } from "../data/servicesData";
+import { getServiceData, servicesData } from "../data/servicesData";
 import { CloudinaryImage } from "../components/cloudinary/CloudinaryImage";
 import ContactForm from "../components/home/ContactForm";
 import { ScrollReveal } from "../components/ui/ScrollReveal";
 import React, { useState } from "react";
 import { trackWhatsappLead } from "../lib/whatsappTracking";
 import SEO from "../components/SEO";
+import NotFound from "./NotFound";
 
 const FaqItem: React.FC<{ q: any, language: string }> = ({ q, language }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,7 +35,12 @@ const FaqItem: React.FC<{ q: any, language: string }> = ({ q, language }) => {
 export default function ServicePage() {
   const { id } = useParams<{ id: string }>();
   const { t, language } = useSettings();
-  const data = getServiceData(id || "");
+
+  if (!id || !servicesData[id]) {
+    return <NotFound />;
+  }
+
+  const data = getServiceData(id);
 
   // Scroll to top on mount
   useEffect(() => {

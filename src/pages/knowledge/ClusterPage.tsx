@@ -5,13 +5,16 @@ import KnowledgeBreadcrumb from '../../components/knowledge/Breadcrumb';
 import { clusters, firstPillar } from '../../data/knowledgeArchitecture';
 import { ArrowLeft, ArrowRight, Layers } from 'lucide-react';
 import SEO from '../../components/SEO';
+import NotFound from '../NotFound';
 
 export default function ClusterPage() {
   const { slug } = useParams();
   const { t, language } = useSettings();
   
-  // Mock data fetching
-  const cluster = clusters.find(c => c.slug === slug) || clusters[0];
+  const cluster = clusters.find(c => c.slug === slug);
+  if (!cluster) {
+    return <NotFound />;
+  }
   const pillar = firstPillar;
 
   const Arrow = language === 'ar' ? ArrowLeft : ArrowRight;

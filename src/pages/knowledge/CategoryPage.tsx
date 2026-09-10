@@ -6,13 +6,16 @@ import { categories, firstPillar } from '../../data/knowledgeArchitecture';
 import { LayoutGrid } from 'lucide-react';
 import { CloudinaryImage } from '../../components/cloudinary/CloudinaryImage';
 import SEO from '../../components/SEO';
+import NotFound from '../NotFound';
 
 export default function CategoryPage() {
   const { slug } = useParams();
   const { t, language } = useSettings();
   
-  // Mock data fetching
-  const category = categories.find(c => c.slug === slug) || categories[0];
+  const category = categories.find(c => c.slug === slug);
+  if (!category) {
+    return <NotFound />;
+  }
 
   const catTitle = `${t(category.titleAr, category.titleEn)} | مركز المعرفة | رايات نجد`;
   const catDesc = language === 'ar' ? category.descriptionAr : category.descriptionEn;

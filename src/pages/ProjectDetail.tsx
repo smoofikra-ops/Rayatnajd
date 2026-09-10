@@ -37,6 +37,7 @@ import SEO from "../components/SEO";
 import { CloudinaryImage } from "../components/cloudinary/CloudinaryImage";
 import { ProjectMediaPlaceholder } from "../components/projects/ProjectMediaPlaceholder";
 import { toast } from "sonner";
+import NotFound from "./NotFound";
 
 const IMAGES_PER_PAGE = 12;
 
@@ -61,24 +62,7 @@ export default function ProjectDetail() {
   }, [project]);
 
   if (!project) {
-    return (
-      <div className="min-h-screen bg-bg-primary text-text-main flex items-center justify-center pt-24 pb-16 px-4">
-        <div className="text-center max-w-md bg-card-background p-8 rounded-3xl border border-card-border shadow-lg">
-          <Trees className="w-16 h-16 text-text-muted mx-auto mb-4 opacity-40" />
-          <h1 className="text-2xl font-bold mb-2">{t("المشروع غير موجود", "Project Not Found")}</h1>
-          <p className="text-text-muted text-sm mb-6">
-            {t("عذراً، لم نتمكن من العثور على بيانات هذا المشروع أو قد تم نقله.", "Sorry, the requested project could not be found.")}
-          </p>
-          <Link
-            to="/projects"
-            className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-white text-sm font-semibold rounded-xl hover:bg-primary-dark transition-colors"
-          >
-            {language === "ar" ? <ArrowRight className="w-4 h-4" /> : <ArrowLeft className="w-4 h-4" />}
-            <span>{t("العودة لدليل المشاريع", "Back to Projects")}</span>
-          </Link>
-        </div>
-      </div>
-    );
+    return <NotFound />;
   }
 
   const handleShare = () => {

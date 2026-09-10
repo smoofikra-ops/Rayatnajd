@@ -1,12 +1,17 @@
 import { motion } from "motion/react";
 import { useSettings } from "../../contexts/SettingsContext";
 import { Hammer } from "lucide-react";
+import SEO from "../../components/SEO";
 
 export default function PlaceholderTool({ titleEn, titleAr }: { titleEn: string, titleAr: string }) {
   const { t } = useSettings();
   
   return (
     <div className="pt-32 pb-24 min-h-screen flex items-center justify-center">
+      <SEO 
+        title={`${titleAr} | أدوات رايات نجد الذكية`}
+        description={`أداة ${titleAr} الذكية من شركة رايات نجد لمساعدة المطورين وأصحاب المشاريع في التخطيط الزراعي وحساب التكاليف.`}
+      />
       <div className="container mx-auto px-6 max-w-3xl text-center">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}

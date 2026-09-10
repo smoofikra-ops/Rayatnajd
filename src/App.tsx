@@ -36,6 +36,7 @@ const Terms = lazy(() => import("./pages/policies/Terms"));
 const Privacy = lazy(() => import("./pages/policies/Privacy"));
 const Warranty = lazy(() => import("./pages/policies/Warranty"));
 const ReturnPolicy = lazy(() => import("./pages/policies/ReturnPolicy"));
+const NotFound = lazy(() => import("./pages/NotFound"));
 
 // A simple loading fallback
 const PageLoader = () => (
@@ -71,6 +72,7 @@ export default function App() {
               <Route path="privacy" element={<Privacy />} />
               <Route path="warranty" element={<Warranty />} />
               <Route path="return-policy" element={<ReturnPolicy />} />
+              <Route path="*" element={<NotFound />} />
             </Route>
             
             <Route path="/tools/ai-designer" element={<AiDesignerTool />} />

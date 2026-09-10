@@ -1,15 +1,16 @@
-import { useParams, Navigate, Link } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { BLOG_POSTS } from '../data/blogData';
 import { Calendar, User, Tag, ArrowRight } from 'lucide-react';
 import { motion } from 'motion/react';
 import SEO from '../components/SEO';
+import NotFound from './NotFound';
 
 export default function BlogPost() {
   const { slug } = useParams<{ slug: string }>();
   const post = BLOG_POSTS.find(p => p.slug === slug);
 
   if (!post) {
-    return <Navigate to="/blog" replace />;
+    return <NotFound />;
   }
 
   const postUrl = `https://www.rayatnajd.com/blog/${post.slug}`;
