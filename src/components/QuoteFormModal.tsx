@@ -83,7 +83,10 @@ export default function QuoteFormModal() {
     const phone = "966557555716";
 
     // Form has passed HTML5 required-field validation at this point.
-    trackQuoteFormWhatsappIntent("quote_form_modal");
+    trackQuoteFormWhatsappIntent("quote_form_modal", {
+      name: formData.name,
+      phone: formData.phone,
+    });
 
     let text = `مرحباً رايات نجد،\n\nأرغب في طلب عرض سعر.\n\n`;
     text += `بيانات العميل:\n`;

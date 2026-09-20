@@ -13,15 +13,15 @@ export default function ContactForm() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Form has passed HTML5 required-field validation at this point.
-    trackQuoteFormWhatsappIntent("contact_form");
-
     const form = e.target as HTMLFormElement;
     const name = (form.elements.namedItem('name') as HTMLInputElement)?.value || '';
     const phone = (form.elements.namedItem('phone') as HTMLInputElement)?.value || '';
     const clientType = (form.elements.namedItem('clientType') as HTMLSelectElement)?.value || '';
     const service = (form.elements.namedItem('service') as HTMLSelectElement)?.value || '';
     const message = (form.elements.namedItem('message') as HTMLTextAreaElement)?.value || '';
+
+    // Form has passed HTML5 required-field validation at this point.
+    trackQuoteFormWhatsappIntent("contact_form", { name, phone });
 
     const serviceText = form.querySelector(`#service option[value="${service}"]`)?.textContent || service;
     const clientTypeText = form.querySelector(`#clientType option[value="${clientType}"]`)?.textContent || clientType;
