@@ -7,7 +7,6 @@ import { HelmetProvider } from 'react-helmet-async';
 import { lazy, Suspense } from 'react';
 import Layout from "./components/Layout";
 import FloatingHomeButton from "./components/FloatingHomeButton";
-import GoogleAnalytics from "./components/GoogleAnalytics";
 
 const Home = lazy(() => import("./pages/Home"));
 const ServicePage = lazy(() => import("./pages/ServicePage"));
@@ -49,7 +48,6 @@ export default function App() {
   return (
     <HelmetProvider>
       <BrowserRouter>
-        <GoogleAnalytics />
         <FloatingHomeButton />
         <Suspense fallback={<PageLoader />}>
           <Routes>
