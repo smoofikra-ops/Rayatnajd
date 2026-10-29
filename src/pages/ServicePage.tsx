@@ -178,7 +178,11 @@ export default function ServicePage() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {data.types.map((type: any, idx: number) => (
-                <div key={idx} className="bg-bg-primary p-8 rounded-3xl shadow-sm hover:shadow-xl hover:shadow-primary/5 border border-text-main/5 hover:border-primary/30 transition-all duration-300 flex flex-col group">
+                <div key={idx} className="bg-bg-primary p-8 rounded-3xl shadow-sm hover:shadow-xl hover:shadow-primary/5 border border-text-main/5 hover:border-primary/30 transition-all duration-300 flex flex-col group ${id === 'palms' && type.nameAr === 'النخيل العربي' ? 'cursor-pointer' : ''}"
+                  onClick={id === 'palms' && type.nameAr === 'النخيل العربي' ? () => { window.location.href = '/arabian-palm-guide.html'; } : undefined}
+                  role={id === 'palms' && type.nameAr === 'النخيل العربي' ? 'link' : undefined}
+                  tabIndex={id === 'palms' && type.nameAr === 'النخيل العربي' ? 0 : undefined}
+                  onKeyDown={id === 'palms' && type.nameAr === 'النخيل العربي' ? (event) => { if (event.key === 'Enter') window.location.href = '/arabian-palm-guide.html'; } : undefined}>
                   <div className="text-4xl bg-bg-secondary w-16 h-16 flex items-center justify-center rounded-2xl mb-6 group-hover:scale-110 transition-transform">
                     {type.icon}
                   </div>
