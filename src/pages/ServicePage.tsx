@@ -187,21 +187,32 @@ export default function ServicePage() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {data.types.map((type: any, idx: number) => (
-                <div key={idx} className="bg-bg-primary p-8 rounded-3xl shadow-sm hover:shadow-xl hover:shadow-primary/5 border border-text-main/5 hover:border-primary/30 transition-all duration-300 flex flex-col group ${id === 'palms' && palmGuideLinks[type.nameAr] ? 'cursor-pointer' : ''}"
+                <motion.div key={idx}
+                  initial={{ opacity: 0, x: language === 'ar' ? 35 : -35, y: 24 }}
+                  whileInView={{ opacity: 1, x: 0, y: 0 }}
+                  viewport={{ once: true, amount: 0.12 }}
+                  transition={{ duration: 0.48, delay: Math.min(idx * 0.055, 0.28), ease: 'easeOut' }}
+                  className={`bg-card-background rounded-3xl shadow-sm hover:shadow-xl hover:shadow-primary/5 border border-card-border hover:border-primary/30 transition-all duration-300 flex flex-col group overflow-hidden ${id === 'palms' && palmGuideLinks[type.nameAr] ? 'cursor-pointer' : ''}`}
                   onClick={id === 'palms' && palmGuideLinks[type.nameAr] ? () => { window.location.href = palmGuideLinks[type.nameAr]; } : undefined}
                   role={id === 'palms' && palmGuideLinks[type.nameAr] ? 'link' : undefined}
                   tabIndex={id === 'palms' && palmGuideLinks[type.nameAr] ? 0 : undefined}
                   onKeyDown={id === 'palms' && palmGuideLinks[type.nameAr] ? (event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); window.location.href = palmGuideLinks[type.nameAr]; } } : undefined}>
-                  <div className="text-4xl bg-bg-secondary w-16 h-16 flex items-center justify-center rounded-2xl mb-6 group-hover:scale-110 transition-transform">
-                    {type.icon}
+                  <div className="relative aspect-[16/10] bg-bg-secondary overflow-hidden">
+                    <CloudinaryImage
+                      src={type.image || (data.gallery?.length ? data.gallery[(idx * 3) % data.gallery.length].url : data.bannerImg)}
+                      alt={language === 'ar' ? `صورة توضيحية لخدمة ${type.nameAr} — رايات نجد` : `Illustrative image for ${type.nameEn} — Rayat Najd`}
+                      width={680}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <span className="absolute bottom-2 right-2 rounded-md bg-black/60 px-2 py-1 text-[10px] text-white">{t('صورة توضيحية', 'Illustrative image')}</span>
                   </div>
-                  <h3 className="font-bold text-xl text-text-main mb-3">
-                    {language === 'ar' ? type.nameAr : type.nameEn}
-                  </h3>
-                  <p className="text-sm text-text-muted leading-relaxed flex-1">
-                    {language === 'ar' ? type.descAr : type.descEn}
-                  </p>
-                </div>
+                  <div className="p-7 flex flex-col flex-1">
+                    <div className="text-3xl bg-bg-secondary w-12 h-12 flex items-center justify-center rounded-xl mb-4" aria-hidden="true">{type.icon}</div>
+                    <h3 className="font-bold text-xl text-text-main mb-3">{language === 'ar' ? type.nameAr : type.nameEn}</h3>
+                    <p className="text-sm text-text-muted leading-relaxed flex-1">{language === 'ar' ? type.descAr : type.descEn}</p>
+                    {id === 'palms' && palmGuideLinks[type.nameAr] && <span className="mt-5 font-bold text-primary text-sm">{t('استعرض التفاصيل ←', 'View details →')}</span>}
+                  </div>
+                </motion.div>
               ))}
             </div>
           </ScrollReveal>
