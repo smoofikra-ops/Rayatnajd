@@ -12,6 +12,15 @@ import { trackWhatsappLead } from "../lib/whatsappTracking";
 import SEO from "../components/SEO";
 import NotFound from "./NotFound";
 
+const palmGuideLinks: Record<string, string> = {
+  "النخيل العربي": "/arabian-palm-guide.html",
+  "نخيل واشنطونيا": "/washingtonia-palm.html",
+  "النخل الملوكي": "/royal-palm.html",
+  "نخيل جوز الهند": "/coconut-palm.html",
+  "نقل النخيل": "/palm-relocation.html",
+  "زراعة النخيل": "/palm-planting.html",
+};
+
 const FaqItem: React.FC<{ q: any, language: string }> = ({ q, language }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
@@ -178,11 +187,11 @@ export default function ServicePage() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {data.types.map((type: any, idx: number) => (
-                <div key={idx} className="bg-bg-primary p-8 rounded-3xl shadow-sm hover:shadow-xl hover:shadow-primary/5 border border-text-main/5 hover:border-primary/30 transition-all duration-300 flex flex-col group ${id === 'palms' && type.nameAr === 'النخيل العربي' ? 'cursor-pointer' : ''}"
-                  onClick={id === 'palms' && type.nameAr === 'النخيل العربي' ? () => { window.location.href = '/arabian-palm-guide.html'; } : undefined}
-                  role={id === 'palms' && type.nameAr === 'النخيل العربي' ? 'link' : undefined}
-                  tabIndex={id === 'palms' && type.nameAr === 'النخيل العربي' ? 0 : undefined}
-                  onKeyDown={id === 'palms' && type.nameAr === 'النخيل العربي' ? (event) => { if (event.key === 'Enter') window.location.href = '/arabian-palm-guide.html'; } : undefined}>
+                <div key={idx} className="bg-bg-primary p-8 rounded-3xl shadow-sm hover:shadow-xl hover:shadow-primary/5 border border-text-main/5 hover:border-primary/30 transition-all duration-300 flex flex-col group ${id === 'palms' && palmGuideLinks[type.nameAr] ? 'cursor-pointer' : ''}"
+                  onClick={id === 'palms' && palmGuideLinks[type.nameAr] ? () => { window.location.href = palmGuideLinks[type.nameAr]; } : undefined}
+                  role={id === 'palms' && palmGuideLinks[type.nameAr] ? 'link' : undefined}
+                  tabIndex={id === 'palms' && palmGuideLinks[type.nameAr] ? 0 : undefined}
+                  onKeyDown={id === 'palms' && palmGuideLinks[type.nameAr] ? (event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); window.location.href = palmGuideLinks[type.nameAr]; } } : undefined}>
                   <div className="text-4xl bg-bg-secondary w-16 h-16 flex items-center justify-center rounded-2xl mb-6 group-hover:scale-110 transition-transform">
                     {type.icon}
                   </div>
