@@ -14,12 +14,13 @@ interface SettingsContextType {
 const SettingsContext = createContext<SettingsContextType | undefined>(undefined);
 
 export const SettingsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [language, setLanguage] = useState<Language>("ar");
-  const [theme, setTheme] = useState<Theme>("light");
+  const [language, setLanguage] = useState<Language>(() => { try { return localStorage.getItem("rayat-language") === "en" ? "en" : "ar"; } catch { return "ar"; } });
+  const [theme, setTheme] = useState<Theme>(() => { try { return localStorage.getItem("rayat-theme") === "dark" ? "dark" : "light"; } catch { return "light"; } });
 
   useEffect(() => {
     document.documentElement.dir = language === "ar" ? "rtl" : "ltr";
     document.documentElement.lang = language;
+    try { localStorage.setItem("rayat-language", language); } catch {}
   }, [language]);
 
   useEffect(() => {
@@ -30,6 +31,8 @@ export const SettingsProvider: React.FC<{ children: React.ReactNode }> = ({ chil
       document.documentElement.classList.add("light");
       document.documentElement.classList.remove("dark");
     }
+    document.documentElement.style.colorScheme = theme;
+    try { localStorage.setItem("rayat-theme", theme); } catch {}
   }, [theme]);
 
   const t = (ar: string | React.ReactNode, en: string | React.ReactNode) => {
