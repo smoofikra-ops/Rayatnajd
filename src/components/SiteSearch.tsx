@@ -3,7 +3,7 @@ import { Search, X, ArrowUpLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useSettings } from "../contexts/SettingsContext";
 import { servicesData } from "../data/servicesData";
-import { projects } from "../data/projects";
+import { projectsData } from "../data/projects";
 
 export default function SiteSearch() {
   const [open,setOpen]=useState(false);
@@ -22,7 +22,7 @@ export default function SiteSearch() {
       {ar:"النخل الملوكي",en:"Royal Palm",url:"/service/palms"},
       {ar:"نخيل جوز الهند",en:"Coconut Palm",url:"/service/palms"}
     ];
-    return [...base,...Object.values(servicesData).map((s:any)=>({ar:s.titleAr,en:s.titleEn,url:`/service/${s.id}`})),...projects.map((p:any)=>({ar:p.nameAr||p.titleAr||"",en:p.nameEn||p.titleEn||"",url:`/projects/${p.slug}`}))];
+    return [...base,...Object.values(servicesData).map((s:any)=>({ar:s.titleAr,en:s.titleEn,url:`/service/${s.id}`})),...projectsData.map((p:any)=>({ar:p.nameAr||p.titleAr||"",en:p.nameEn||p.titleEn||"",url:`/projects/${p.slug}`}))];
   },[]);
   const results=records.filter(r=>!query.trim()||(`${r.ar} ${r.en}`).toLocaleLowerCase().includes(query.trim().toLocaleLowerCase())).slice(0,15);
   return <>
