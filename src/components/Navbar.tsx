@@ -1,8 +1,9 @@
 
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Sun, Moon, Globe, ArrowLeft, ArrowRight, ClipboardList } from "lucide-react";
+import { Menu, X, Sun, Moon, Globe, ArrowLeft, ArrowRight, ClipboardList, Home } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
+import SiteSearch from "./SiteSearch";
 import { cn } from "../lib/utils";
 import { useSettings } from "../contexts/SettingsContext";
 import { useInterestList } from "../contexts/InterestListContext";
@@ -110,6 +111,8 @@ export default function Navbar() {
           </div>
 
           <div className="hidden lg:flex items-center gap-2 xl:gap-4 shrink-0">
+            <SiteSearch />
+            {!isHome && <Link to="/" title={t("العودة للرئيسية","Back to home") as string} aria-label={t("العودة للرئيسية","Back to home") as string} className="p-2 text-text-muted hover:text-primary"><Home className="w-5 h-5"/></Link>}
             <button 
               onClick={() => setIsInterestListOpen(true)}
               className="relative p-2 text-text-muted hover:text-text-main transition-colors flex items-center gap-2 group"
@@ -144,7 +147,9 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Menu Toggle */}
-          <div className="lg:hidden flex items-center gap-4 shrink-0">
+          <div className="lg:hidden flex items-center gap-2 shrink-0">
+            <SiteSearch />
+            {!isHome && <Link to="/" aria-label={t("العودة للرئيسية","Back to home") as string} className="p-2 text-text-muted"><Home className="w-5 h-5"/></Link>}
             <button 
               onClick={() => setIsInterestListOpen(true)}
               className="relative p-2 text-text-muted hover:text-text-main transition-colors"
